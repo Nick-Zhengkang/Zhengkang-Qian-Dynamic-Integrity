@@ -1,0 +1,30 @@
+config_id,changed_parameter,level,value_label,discr,num_of_cell_around_equilibrium,tfinal,Ts,reltol,abstol,number_of_steps,rep_fix_point,rep_periodic,divR,num_gen,num_crossover,selected_opt,newcomers,num_almost_clones,population_size,newcomer_fraction
+baseline,baseline,baseline,baseline,701,3,2000,0.05,1e-08,1e-08,100,40,10,40,5,9,3,8,2,20,0.4
+discr__low,discr,low,351,351,3,2000,0.05,1e-08,1e-08,100,40,10,40,5,9,3,8,2,20,0.4
+discr__high,discr,high,1051,1051,3,2000,0.05,1e-08,1e-08,100,40,10,40,5,9,3,8,2,20,0.4
+target_neighborhood_cells__low,target_neighborhood_cells,low,1,701,1,2000,0.05,1e-08,1e-08,100,40,10,40,5,9,3,8,2,20,0.4
+target_neighborhood_cells__high,target_neighborhood_cells,high,7,701,7,2000,0.05,1e-08,1e-08,100,40,10,40,5,9,3,8,2,20,0.4
+tfinal__low,tfinal,low,1000,701,3,1000,0.05,1e-08,1e-08,100,40,10,40,5,9,3,8,2,20,0.4
+tfinal__high,tfinal,high,4000,701,3,4000,0.05,1e-08,1e-08,100,40,10,40,5,9,3,8,2,20,0.4
+Ts__low,Ts,low,0.025,701,3,2000,0.025,1e-08,1e-08,100,40,10,40,5,9,3,8,2,20,0.4
+Ts__high,Ts,high,0.1,701,3,2000,0.1,1e-08,1e-08,100,40,10,40,5,9,3,8,2,20,0.4
+number_of_steps__low,number_of_steps,low,50,701,3,2000,0.05,1e-08,1e-08,50,40,10,40,5,9,3,8,2,20,0.4
+number_of_steps__high,number_of_steps,high,200,701,3,2000,0.05,1e-08,1e-08,200,40,10,40,5,9,3,8,2,20,0.4
+rep_fix_point__low,rep_fix_point,low,20,701,3,2000,0.05,1e-08,1e-08,100,20,10,40,5,9,3,8,2,20,0.4
+rep_fix_point__high,rep_fix_point,high,80,701,3,2000,0.05,1e-08,1e-08,100,80,10,40,5,9,3,8,2,20,0.4
+rep_periodic__low,rep_periodic,low,5,701,3,2000,0.05,1e-08,1e-08,100,40,5,40,5,9,3,8,2,20,0.4
+rep_periodic__high,rep_periodic,high,20,701,3,2000,0.05,1e-08,1e-08,100,40,20,40,5,9,3,8,2,20,0.4
+divR__low,divR,low,20,701,3,2000,0.05,1e-08,1e-08,100,40,10,20,5,9,3,8,2,20,0.4
+divR__high,divR,high,80,701,3,2000,0.05,1e-08,1e-08,100,40,10,80,5,9,3,8,2,20,0.4
+num_gen__low,num_gen,low,2,701,3,2000,0.05,1e-08,1e-08,100,40,10,40,2,9,3,8,2,20,0.4
+num_gen__high,num_gen,high,10,701,3,2000,0.05,1e-08,1e-08,100,40,10,40,10,9,3,8,2,20,0.4
+selected_opt__low,selected_opt,low,2,701,3,2000,0.05,1e-08,1e-08,100,40,10,40,5,9,2,8,2,20,0.4
+selected_opt__high,selected_opt,high,5,701,3,2000,0.05,1e-08,1e-08,100,40,10,40,5,9,5,8,2,20,0.4
+ode_tolerance__low,ode_tolerance,low,1e-6 / 1e-8,701,3,2000,0.05,1e-06,1e-08,100,40,10,40,5,9,3,8,2,20,0.4
+ode_tolerance__high,ode_tolerance,high,1e-10 / 1e-10,701,3,2000,0.05,1e-10,1e-10,100,40,10,40,5,9,3,8,2,20,0.4
+population_size__low,population_size,low,10 (4/4/1 + best),701,3,2000,0.05,1e-08,1e-08,100,40,10,40,5,4,3,4,1,10,0.4
+population_size__high,population_size,high,40 (18/17/4 + best),701,3,2000,0.05,1e-08,1e-08,100,40,10,40,5,18,3,17,4,40,0.425
+newcomer_fraction__low,newcomer_fraction,low,0.2 (4/20),701,3,2000,0.05,1e-08,1e-08,100,40,10,40,5,13,3,4,2,20,0.2
+newcomer_fraction__high,newcomer_fraction,high,0.6 (12/20),701,3,2000,0.05,1e-08,1e-08,100,40,10,40,5,5,3,12,2,20,0.6
+num_almost_clones__low,num_almost_clones,low,0,701,3,2000,0.05,1e-08,1e-08,100,40,10,40,5,11,3,8,0,20,0.4
+num_almost_clones__high,num_almost_clones,high,4,701,3,2000,0.05,1e-08,1e-08,100,40,10,40,5,7,3,8,4,20,0.4

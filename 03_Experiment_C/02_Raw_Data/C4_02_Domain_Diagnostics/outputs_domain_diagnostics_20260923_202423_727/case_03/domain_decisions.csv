@@ -1,0 +1,4 @@
+alpha,profile,calibration_exit_trigger,both_regression_sets_pass,ready_for_separate_GA_design,fresh_independent_validation,grid_limit
+1,original_domain,1,0,0,0,0
+1,energy_envelope,1,1,1,0,0
+1,trajectory_envelope,1,0,0,0,0

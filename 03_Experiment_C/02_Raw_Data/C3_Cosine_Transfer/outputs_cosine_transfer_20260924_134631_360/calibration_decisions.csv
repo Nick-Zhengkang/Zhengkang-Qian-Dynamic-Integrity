@@ -1,0 +1,4 @@
+pass,block,check,old_T,candidate_T,old_Ts,candidate_Ts,old_grid,candidate_grid,old_cells,candidate_cells,old_false_safe,candidate_false_safe,old_false_unsafe,candidate_false_unsafe,old_unresolved,candidate_unresolved,label_change,path_distance_change,old_pass,candidate_pass,verified,action
+1,time,1,680,1360,0.0502654824574367,0.0502654824574367,635,635,19,19,0,0,0,0,0,0,0,0,1,1,1,retain_verified
+1,sampling,1,680,680,0.0502654824574367,0.0251327412287183,635,635,19,19,0,0,0,0,0,0,0,0.00018488109674567,1,1,1,retain_verified
+1,grid,1,680,680,0.0502654824574367,0.0502654824574367,635,1269,19,39,0,0,0,0,0,0,0,0,1,1,1,retain_verified

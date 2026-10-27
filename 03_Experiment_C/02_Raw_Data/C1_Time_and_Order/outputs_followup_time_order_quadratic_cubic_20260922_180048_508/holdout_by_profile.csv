@@ -1,0 +1,6 @@
+n_points,n_inside,n_domain_excluded,n_truth_unresolved,n_true_target,n_true_non_target,n_near_boundary_known,n_false_safe,n_false_unsafe,n_unresolved,n_exceptions,n_domain_exit_false_unsafe,n_new_attractor_false_unsafe,false_safe_rate,false_unsafe_rate,unresolved_rate,truth_unresolved_rate,classifier_wall_s,diagnostic_pass,cache_key,rule_id
+72,68,4,0,51,17,24,0,0,39,0,0,0,0,0,0.573529411764706,0,18.7901999,0,holdout_N561_k15_T130_dt0p0502654824574_rep10,period_only
+72,68,4,0,51,17,24,0,0,0,0,0,0,0,0,0,0,21.3239308,1,holdout_N561_k15_T260_dt0p0502654824574_rep10,double_period
+72,68,4,0,51,17,24,0,0,0,0,0,0,0,0,0,0,21.3613827,1,holdout_N561_k15_T300_dt0p0502654824574_rep10,decay_estimate
+72,68,4,0,51,17,24,0,0,0,0,0,0,0,0,0,0,22.4780973,1,holdout_N2247_k69_T260_dt0p0502654824574_rep10,grid_first
+72,68,4,0,51,17,24,0,0,0,0,0,0,0,0,0,0,21.3239308,1,holdout_N561_k15_T260_dt0p0502654824574_rep10,time_first

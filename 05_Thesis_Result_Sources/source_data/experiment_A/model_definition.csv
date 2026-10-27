@@ -1,0 +1,2 @@
+model,alpha,target,distance_weights,domain,reference_LIM,reference_kind,reference_source
+Genda bistable Duffing with quadratic damping,0.7,[-1 0],[1 1],[-3 -2 3 4],0.728927859156115,analytical_equations_evaluated_numerically,https://doi.org/10.1007/s11071-026-12948-0

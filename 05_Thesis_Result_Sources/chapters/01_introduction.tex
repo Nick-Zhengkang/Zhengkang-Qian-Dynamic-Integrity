@@ -1,0 +1,57 @@
+\chapter{Introduction}
+
+\label{ch:introduction}
+
+\section{Research Motivation}
+
+\purplerevision{A mechanical system may be locally stable yet fail to return to its intended operating state after a finite disturbance. Instead, its motion may approach another stable equilibrium or settle onto a stable limit cycle. In numerical studies, leaving the computational domain may also be treated as a non-target outcome. These possibilities motivate a practical question: how large a disturbance can the system tolerate while still returning to its intended operating state?}
+
+\purplerevision{For example, consider a friction system that normally stays in steady sliding.} After a short disturbance, it may develop sustained oscillations instead of returning to its original motion. The disturbance has ended, but the unwanted response remains. Stender et al. studied this coexistence of steady sliding and oscillation in friction-excited systems \cite{ref1}.
+
+\begin{revision}
+Checking local stability alone does not answer this question. It describes the response to small disturbances near the operating state, but a larger disturbance can lead to a different outcome. For an engineer, knowing that an operating state is stable is therefore only a starting point. Identifying its safe basin helps determine which initial disturbances still allow the intended response to recover. This is the practical motivation behind studies of dynamical integrity, as discussed in the reviews by Thompson \cite{ref2} and Lenci \cite{ref3}. This thesis focuses on the numerical estimation of the local integrity measure (LIM) as a way to assess this robustness. The theoretical definitions are introduced in Chapter 2.
+\end{revision}
+
+The problem becomes more difficult when several stable responses coexist. Nearby initial states may lead to different outcomes, and the boundaries separating them can have a complicated shape. Daza et al. examined this uncertainty through basin entropy \cite{ref4}. Yue et al. also showed that a forced Duffing system can contain rare and hidden attractors, which makes the choice of initial conditions important when exploring its responses \cite{ref5}. In addition, returning to an acceptable final state does not necessarily mean that the whole motion is acceptable. Orlando et al. studied how transient escape and added load noise affect dynamical integrity \cite{ref6}. These studies show why a reliable assessment needs more information than the stability of the intended state alone.
+
+Different numerical methods have been developed to obtain this information. A direct approach is to test many initial states and classify the resulting trajectories. Datseris and Wagemakers proposed an automated method for estimating basins of attraction from trajectory information \cite{ref7}. Stender and Hoffmann developed bSTAB, which uses repeated sampling and trajectory classification to calculate basin stability \cite{ref8}. Such methods help explore the responses of a system, but many simulations may be required when the region is large or the state space has more dimensions.
+
+Another approach is to estimate a region in which stability can be established using mathematical conditions. Sidorov and Zacksenhouse used polynomial Lyapunov functions to estimate inner bounds of basins for Poincare maps, with an application to walking models \cite{ref9}. Berthier et al. derived sufficient conditions for verifying stability within a region, using bounds on the first or second derivatives of the system dynamics \cite{ref10}. Colbert and Peet used trajectory measurements to construct estimates of the region of attraction \cite{ref11}. These approaches use different types of model information and assumptions. They provide alternatives to a dense search over initial states, although their objectives are not all the same as estimating the LIM.
+
+For LIM estimation, Habib proposed a rapid iterative procedure that avoids computing the entire basin of attraction \cite{ref12}. It combines forward trajectory integration with stored grid information and repeated selection of new initial conditions. The method was tested on mechanical systems with state-space dimensions from two to eight. This makes it a useful starting point for studying how reliable estimates can be obtained with a limited number of simulations.
+
+\begin{revision}
+However, applying a numerical method to a new model still involves practical choices. How fine should the grid be? How long should a trajectory be followed? Where should the next initial condition be placed? These choices affect both the result and the computational cost. This thesis studies these questions through hyperparameter experiments and a comparison between the original DynIn algorithm and an adaptive angular-radial method.
+\end{revision}
+
+\section{Research Gap}
+
+The first part of this thesis concerns hyperparameter selection. DynIn results depend on settings such as grid resolution, target neighbourhood, integration horizon and genetic algorithm (GA) search budget. Habib investigated the influence of some settings and discussed further parameter studies as a possible improvement \cite{ref12}. However, the original paper does not provide a systematic hyperparameter-tuning procedure for transferring the method to a new model.
+
+\begin{revision}
+This matters because models can have different state scales, equilibrium locations and convergence behaviour. A parameter set that works well for one model may not work well for another. Furthermore, increasing a parameter does not always improve the result. For example, a larger search budget cannot by itself correct an unreliable trajectory classification. The study first investigates which parameters have the strongest effects, then examines two approaches to choosing suitable settings.
+\end{revision}
+
+\begin{bluerevision}
+This part includes three experiments. Experiment A studies individual hyperparameters on the Duffing oscillator with quadratic damping, using an analytically based LIM reference. It compares error distributions, diagnostic classification errors and calculation time. Experiment B minimizes pooled median absolute error across multiple damping values of the quadratic-cubic model, validates the frozen candidate at unused damping values, and transfers it without retuning to the bistable Duffing model. Its comparator is a direct transfer of Habib-based hyperparameters, not a published LIM value or a different algorithm. Experiment C uses model characteristics and diagnostic signals without a reference LIM during tuning. These approaches address different information settings. Experiment B tests the range over which one fixed configuration remains useful, whereas Experiment C develops a model-dependent tuning procedure.
+\end{bluerevision}
+
+The second part concerns the selection of initial conditions. The original DynIn GA uses a distance-based objective to explore regions that are relatively far from previously sampled states. However, it does not directly prioritise the closest basin boundary. This is a difference in the search objective, rather than evidence that the GA is unsuitable. It raises the question of whether a more focused search can improve LIM estimation. Habib also identified alternative initial-condition selection strategies as a subject for further investigation \cite{ref12}.
+
+\begin{revision}
+An adaptive angular-radial method is used to investigate this question. It first searches along several directions from the target state and then refines the search near promising directions, while continuing to explore less-tested regions. The idea is also extended to four-dimensional state spaces. The proposed method is compared with DynIn on four two-dimensional and two four-dimensional benchmarks. This study uses DynIn v1.1.0 released by Habib, with type\_x0 = 1, corresponding to the original GA-based initial condition selection branch.
+\end{revision}
+
+The thesis addresses the following research questions:
+
+RQ1: How sensitive is DynIn GA to different hyperparameters, and which parameters have the largest effects on LIM error, classification errors and computation time?
+
+\begin{bluerevision}
+RQ2: Can reference-assisted Bayesian optimization across damping values produce a fixed DynIn configuration that improves accuracy at unused damping values and after transfer to another model, compared with Habib-based settings, and at what computational cost?
+\end{bluerevision}
+
+RQ3: For a new two-dimensional model, can model characteristics and diagnostic signals provide a reusable parameter-selection procedure without using a reference LIM during tuning?
+
+RQ4: Can the adaptive angular-radial method estimate the LIM more accurately and consistently than the original DynIn GA in two- and four-dimensional models, and at what computational cost?
+
+The two parts answer different questions: how to choose suitable parameters for DynIn, and how the proposed method performs compared with DynIn. The tuning study focuses on two-dimensional models; it does not establish a general rule for high-dimensional systems. The following chapters introduce the theoretical background and experimental methodology, present the hyperparameter experiments and method comparison, and discuss the main findings.

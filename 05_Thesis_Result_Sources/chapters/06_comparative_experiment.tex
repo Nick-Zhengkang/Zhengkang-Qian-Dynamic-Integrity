@@ -1,0 +1,94 @@
+\chapter{Comparative Experiment}
+\label{ch:comparison}
+
+This chapter compares original DynIn GA and the proposed adaptive angular-radial method on the six benchmarks introduced in Section~\ref{sec:benchmarks}. The aim is to examine the estimated LIM, the variation between seeds and the calculation time. Both methods use forward grid-label reuse.
+
+\section{Experimental Design}
+
+Each method was run on each model with 30 seeds, giving $6\times2\times30=360$ runs. The seeds were paired between methods, and the execution order was randomized. The same seed does not produce the same initial states because the two search procedures are different. All 360 runs completed without an execution failure.
+
+Original DynIn used \code{type\_x0}=1. Proposed used the method described in Chapter~\ref{ch:proposed}, with one \code{ode45} call per integrated trajectory and classification checks at the requested sample times. The domain, grid resolution, target cells and integration horizon were matched within each model (Table~\ref{tab:comparison-settings}). The target states and distance weights remained those in Chapter~\ref{ch:background}.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Shared spatial and time settings in the comparison. Intervals follow the state ordering in Chapter~\ref{ch:background}. The listed $k$ is the effective target-cell count along each state coordinate.}
+\label{tab:comparison-settings}
+\begin{tabularx}{\linewidth}{@{}Y Y r r r@{}}
+\toprule
+Model & Computational domain & \code{discr} & $k$ & $T$ \\
+\midrule
+Quadratic-cubic & $[-1,1]\times[-1,1]$ & 401 & 11 & 1200 \\
+Bistable Duffing & $[-2,1]\times[-2,2]$ & 401 & 11 & 1200 \\
+Unforced Duffing & $[-3,3]\times[-2,4]$ & 701 & 3 & 2000 \\
+Cosine potential & $[-\pi,\pi]\times[-8,8]$ & 501 & 11 & 1200 \\
+Separable 4D & $([-4,2]\times[-4,4])^2$ & 801 & 7 & 1200 \\
+Coupled 4D & $[-3,3]^4$ & 701 & 3 & 2000 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+For all models, \code{Ts}=0.05, relative and absolute ODE tolerances were $10^{-8}$, and the maximum ODE step was 0.005. The recurrence controls were \code{rep\_fix\_point}=40 and \code{rep\_periodic}=10. Both methods retained \code{automatic}=1, which assigns a non-target label if the trajectory remains unclassified at the time limit. Learned cell labels were reset at the start of each run.
+
+The search budgets were different because the methods select points in different ways. DynIn used 100 outer trajectory iterations, except for the coupled four-dimensional model, which used 40. Proposed allowed up to 4096 queries and 64 directions in two dimensions, and 700 queries and 200 directions in four dimensions. Its time guard was 3600 seconds per run. In each four-dimensional model, four Proposed runs reached the direction limit. They are included in all summaries, together with the other runs.
+
+The saved data contain review flags for all 180 Proposed runs. These flags identify the use of numerical grid, domain or recurrence rules; they are not execution failures or counts of proven wrong classifications. No separate boundary validation was run for these 360 results. The analysis therefore compares the numerical estimates obtained under the stated settings.
+
+\begin{revision}
+For models with a reference, the reported measures are the median relative error, P95 and the fraction within 1\%. The box plots also show all individual runs. Their whiskers follow the 1.5-IQR rule, while a separate diamond marks P95. The coupled model has no independent reference, so its estimated radii are shown directly. Core algorithm time includes point selection, integration and learned-grid handling, but not surrounding experiment setup or file writing.
+\end{revision}
+
+\section{Two Dimensional Results}
+
+\input{tables/ch6_accuracy_2d}
+
+Table~\ref{tab:comparison-2d} and Figure~\ref{fig:comparison-2d} show that Proposed has a lower median error on three of the four two-dimensional models. The improvement is not the same for every model.
+
+For the quadratic-cubic model, the median error decreases from 0.689\% to 0.485\%, and P95 decreases from 2.332\% to 1.012\%. The number of runs within 1\% increases from 18 to 27 out of 30. For the bistable Duffing model, the median error decreases from 0.974\% to 0.473\%, with 24 Proposed runs within 1\%, compared with 16 for DynIn.
+
+For the unforced Duffing model, the median difference from the published numerical reference decreases from 1.198\% to 0.510\%. Proposed has 28 runs within 1\%, compared with 13 for DynIn. This is agreement with Habib's reported value, not an error against an exact analytical solution.
+
+The cosine model gives a different result. Proposed has a median error of 1.362\%, compared with 0.436\% for DynIn. Its P95 is also higher, and only 9 runs are within 1\%, compared with 25 for DynIn. Thus, the improvement seen in the first three models does not extend to this model at the tested settings.
+
+\studyfigure{Fig_6_2D_Error.pdf}{Relative LIM errors for the four two-dimensional models, with 30 runs per method. The vertical axes are logarithmic. Boxes show the interquartile range and median; dots show individual runs. Diamonds mark P95 separately from the whiskers.}{fig:comparison-2d}
+
+Proposed estimates are below the reference in 29 quadratic-cubic runs, 26 bistable Duffing runs, 28 unforced Duffing runs and 29 cosine runs. This pattern matters when interpreting the smaller radii. A lower estimate is not automatically a better estimate. The finite grid and reused labels can affect where the search detects a transition, but these runs alone do not isolate the cause of the bias.
+
+\section{Separable Four Dimensional Results}
+
+\input{tables/ch6_accuracy_separable}
+
+The separable model allows a four-dimensional comparison with an analytically based reference. The reference follows from the smaller LIM of its two independent component systems. Table~\ref{tab:comparison-separable} shows a median error of 7.278\% for DynIn and 0.751\% for Proposed. P95 decreases from 15.611\% to 3.760\%.
+
+Proposed has 19 runs within 1\% and 26 within 2\%. DynIn has no run within 1\% and one within 2\%. Proposed has a smaller error in 28 of the 30 paired seeds. These results show a clear improvement in reference agreement for this model, although not every Proposed run is accurate: its largest error is 9.448\%.
+
+Figure~\ref{fig:comparison-4d}(a) shows the spread across seeds. Twenty-four Proposed estimates are below the reference, while all DynIn estimates are above it. The smaller typical error should therefore be read together with the error distribution, rather than interpreted as correct classification of every candidate point.
+
+\section{Coupled Four Dimensional Results}
+
+\input{tables/ch6_coupled}
+
+For the Duffing-van der Pol oscillator with a TMD, no independent reference LIM is assigned. Table~\ref{tab:comparison-coupled} therefore reports the estimated radii, quartiles and full ranges. The median is 0.572497 for DynIn and 0.533949 for Proposed.
+
+The middle half of the Proposed estimates lies between 0.528443 and 0.536648, compared with 0.563502 to 0.586142 for DynIn. Proposed therefore produces smaller radii with a narrower interquartile range in this experiment. Figure~\ref{fig:comparison-4d}(b) shows this difference.
+
+These observations support statements about the returned values and their repeatability, but not about which method is closer to the true LIM. The two methods can learn different grid labels because they visit different trajectories. Without an independent reference or boundary validation for these runs, a lower estimate cannot be called more accurate.
+
+\studyfigure{Fig_6_4D_Results.pdf}{Four-dimensional results over 30 seeds. Panel (a) shows relative error for the separable model on a logarithmic axis. Panel (b) shows estimated LIM for the coupled model, without a reference error. Diamonds mark P95 of the plotted quantity; in panel (b), this is a percentile of the estimates, not of their errors.}{fig:comparison-4d}
+
+\section{Computational Cost}
+
+\input{tables/ch6_cost}
+
+Table~\ref{tab:comparison-cost} compares the median core algorithm time. Proposed is faster in all 30 paired seeds for the quadratic-cubic, bistable Duffing, unforced Duffing and separable four-dimensional models. The ratios of median times are 3.68, 2.51, 1.86 and 1.95, respectively. In these four models, the lower median reference error is accompanied by a lower median calculation time.
+
+For the cosine model, the median times are close: 2.638 seconds for DynIn and 2.583 seconds for Proposed. Proposed is faster in 18 of the 30 pairs. This small time difference does not compensate for its larger reference error. For the coupled four-dimensional model, Proposed is slower: 22.466 seconds compared with 16.517 seconds, an increase of about 36\%. It is faster in only one paired seed.
+
+\input{tables/ch6_calls}
+
+The solver-call counts help explain why query count alone is not a useful time comparison (Table~\ref{tab:comparison-calls}). A query is a request to classify an initial state. In original DynIn, one trajectory can require many short ODE calls. In Proposed, the trajectory is followed within one call, with classification checks at the requested sample times.
+
+For example, on the quadratic-cubic model, Proposed uses a median of 627 queries, compared with 100 for DynIn. However, its median ODE-call count is 627, compared with 15583 for DynIn. Keeping one solver call active avoids repeated solver restarts. The query locations, trajectory lengths, learned-cell hits and search overhead also differ, so the measured speed-up cannot be attributed to solver restarts alone.
+
+An ODE call is not a fixed amount of work. The coupled model illustrates this: Proposed uses far fewer calls, but takes more time overall. A single call may follow many sample intervals before a label is found. The core time therefore remains the main cost measure; query and call counts provide supporting information.
+
+Overall, the results favour Proposed on four benchmarks when both reference error and time are considered. The cosine model shows a limitation at the selected spatial settings, while the coupled model gives smaller, more closely grouped estimates at a higher cost. These outcomes describe the complete implementations with forward grid-label reuse. They do not establish a universal advantage of the angular-radial search or verify all trajectory labels.

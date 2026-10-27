@@ -1,0 +1,37 @@
+\section{From Two Dimensions to Higher Dimensions}
+\label{sec:dimension-bridge}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\linewidth]{figures/Fig_5_Directions_Four_Panels.pdf}
+\caption[Four direction-selection operations in three dimensions]{\bluecaption{Direction selection on $S^2$. (a) Six axis directions and eight normalized cube corners. (b) One shared rotation; hollow markers show original directions and arrows trace three example displacements. (c) Enlarged spherical neighbourhood of a promising direction $u$: four neighbours at $12^\circ$ and at $6^\circ$ illustrate angular refinement. (d) A selected global candidate maximizes the nearest-tested angle in a finite pool; shading marks its empty spherical cap and the orange arc reaches its nearest tested direction. Only a subset of untested candidates is drawn; rear-hemisphere points are faded. The local patch has a different magnification and view.}}
+\label{fig:3d-direction-bridge}
+\end{figure}
+\FloatBarrier
+\clearpage
+
+\begin{bluerevision}
+Direction and radius remain separate in higher dimensions. Unit directions lie on the circle in two dimensions, on $S^2$ in three dimensions and on $S^3$ in four dimensions. Figure~\ref{fig:3d-direction-bridge} illustrates four direction-selection operations on $S^2$: initialization, whole-set rotation, local angular refinement and global gap probing. It is a geometric illustration, not an additional benchmark. The sphere represents directions, not a basin boundary.
+
+\paragraph{Initial directions and one transformation.}
+The three-dimensional set contains six positive and negative coordinate directions and eight normalized cube-corner directions, giving 14 unit vectors. For example, $(1,1,1)^{\mathsf T}$ becomes $(1,1,1)^{\mathsf T}/\sqrt{3}$. One orthogonal matrix $Q$ is applied to the entire set once per run, so $u_i'=Qu_i$. Lengths and pairwise angles are preserved. Panel (b) uses a rotation chosen to make the displacement visible. The four-dimensional implementation uses a random orthogonal transformation, which may also include reflection; the whole set is not repeatedly rotated during refinement.
+
+\paragraph{Local angular refinement.}
+Radial queries identify promising directions with small estimated boundary radii. At a promising unit vector $u\in S^2$, choose two orthonormal tangent vectors $e_1,e_2$, both perpendicular to $u$. Four new directions are
+\[
+ u_{\mathrm{new}}=\cos\delta\,u\pm\sin\delta\,e_j,
+ \qquad j=1,2.
+\]
+They remain on the sphere at angular distance $\delta$ from $u$. Panel (c) enlarges the curved neighbourhood so the four offsets are visible. The outer orange points use $\delta=12^\circ$; the inner blue-green points use $\delta/2=6^\circ$. These represent successive angular scales, not two sets that must always be queried together. New radial results determine whether to retain the angle and update promising centres or reduce the angular offset after insufficient improvement.
+
+\paragraph{Global gap probing.}
+Local refinement is supplemented by a search among all tested directions $v_i$. Normalize independent three-component standard normal vectors to obtain a candidate pool $P$ on $S^2$. The next global direction is
+\[
+ u_* = \underset{u\in P}{\operatorname{arg\,max}}\;
+       \min_i\arccos(u^{\mathsf T}v_i).
+\]
+The inner minimum is the angle to the nearest tested direction. Maximizing it chooses the least covered candidate in the finite pool, not a proven largest gap over the continuous sphere. In panel (d), the selected star lies inside an empty spherical cap whose edge reaches the nearest tested direction. Candidate generation and scoring need no trajectory integrations; only the selected direction receives radial queries. Apparent overlap with a faded rear-hemisphere point is a projection effect, not a tested point inside the cap.
+
+\paragraph{Connection to the four-dimensional algorithm.}
+Every selected direction defines states through Equation~\eqref{eq:initial-direction}, $z_0=z_e+rW^{-1/2}u$. Holding $u$ fixed, radial bracketing and bisection estimate a boundary radius; the new result updates local refinement and global coverage choices. In four dimensions, eight axis directions and sixteen normalized hypercube corners give 24 initial directions on $S^3$. Its three-dimensional tangent space supplies six local neighbours per centre instead of four. Global candidates have four components, but use the same nearest-angle criterion. The next section gives the implemented four-dimensional budgets and stopping rules.
+\end{bluerevision}

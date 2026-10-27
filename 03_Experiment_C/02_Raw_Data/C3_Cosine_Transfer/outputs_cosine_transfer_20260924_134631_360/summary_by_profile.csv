@@ -1,0 +1,3 @@
+profile,n_runs,n_completed,median_R_hat,median_relative_error,p95_relative_error,median_signed_error,within_1pct_rate,within_2pct_rate,within_5pct_rate,median_wall_s,median_cpu_s,total_tipo3_iterations,horizon_exhausted_proxy,n_timing_flags,n_failed
+historical_cosine,30,30,2.10240646785215,0.00776595514155979,0.0154229891964294,0.00730524155562711,0.633333333333333,1,1,2.7889584,6.171875,188,0,0,0
+physics_rule,30,30,2.09405281137261,0.00330283665122008,0.0118210751812052,0.00330283665122008,0.833333333333333,1,1,7.1615321,23.1796875,199,0,1,0

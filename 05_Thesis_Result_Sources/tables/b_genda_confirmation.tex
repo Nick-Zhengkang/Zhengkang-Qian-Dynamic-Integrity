@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering\small
+\caption[Independent confirmation using 100 new paired seeds]{\revcaption{Independent confirmation using 100 new paired seeds}}
+\label{tab:b-confirmation}
+\begingroup\rowcolors{1}{revisionyellow}{revisionyellow}
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabularx}{\linewidth}{@{}Y r r@{}}
+\toprule
+Measure & Habib-based transfer & BO candidate \\
+\midrule
+Median absolute error & 0.0199131 & 0.00448417 \\
+Median relative error (\%) & 2.732 & 0.615 \\
+P95 relative error (\%) & 98.409 & 2.351 \\
+Runs within 1\% & 24/100 & 66/100 \\
+Runs within 2\% & 43/100 & 90/100 \\
+Runs with error above 50\% & 48/100 & 0/100 \\
+Median core wall-clock time (s) & 4.490 & 5.408 \\
+Time relative to transferred & 1.000 & 1.204 \\
+\bottomrule
+\end{tabularx}\endgroup
+\par\smallskip\footnotesize\revcaption{Every error uses $R_{\mathrm{ref}}\approx0.728927859156115$ for the quadratic-damping model at $\alpha=0.7$. The above-50\% count is descriptive, not an optimization constraint.}
+\end{table}

@@ -1,0 +1,28 @@
+\begin{table}[htbp]
+\centering\small
+\caption[Experiment A sensitivity ranking on the Duffing oscillator with quadratic damping]{\revcaption{Experiment A sensitivity ranking on the Duffing oscillator with quadratic damping}}
+\label{tab:a-sensitivity}
+\begingroup\rowcolors{1}{revisionyellow}{revisionyellow}
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabularx}{\linewidth}{@{}Y l l r@{}}
+\toprule
+Factor & L / B / H & Median error (\%) L / B / H & Range (pp) \\
+\midrule
+Target cells $k$ & 1 / 3 / 7 & 99.583 / 3.474 / 0.915 & 98.668 \\
+$T_s$ & 0.025 / 0.05 / 0.1 & 98.350 / 3.474 / 0.868 & 97.482 \\
+\code{rep\_fix\_point} & 20 / 40 / 80 & 98.292 / 3.474 / 1.034 & 97.259 \\
+\code{discr} & 351 / 701 / 1051 & 1.828 / 3.474 / 98.901 & 97.073 \\
+\code{selected\_opt} & 2 / 3 / 5 & 98.216 / 3.474 / 1.924 & 96.293 \\
+\code{rep\_periodic} & 5 / 10 / 20 & 98.287 / 3.474 / 3.474 & 94.813 \\
+GA generations & 2 / 5 / 10 & 50.209 / 3.474 / 1.339 & 48.870 \\
+Newcomer fraction & 0.2 / 0.4 / 0.6 & 1.797 / 3.474 / 50.254 & 48.457 \\
+\code{divR} & 20 / 40 / 80 & 50.585 / 3.474 / 50.688 & 47.214 \\
+Near-clones & 0 / 2 / 4 & 50.005 / 3.474 / 50.277 & 46.803 \\
+Outer budget & 50 / 100 / 200 & 4.532 / 3.474 / 2.189 & 2.343 \\
+Population size & 10 / 20 / 40 & 1.750 / 3.474 / 1.612 & 1.862 \\
+ODE tolerances & See note & 3.474 / 3.474 / 3.474 & $\approx0$ \\
+\code{tfinal} & 1000 / 2000 / 4000 & 3.474 / 3.474 / 3.474 & $\approx0$ \\
+\bottomrule
+\end{tabularx}\endgroup
+\par\smallskip\footnotesize\revcaption{Each configuration uses 30 common seeds. ODE tolerances (RelTol / AbsTol): L = $10^{-6}/10^{-8}$, B = $10^{-8}/10^{-8}$, H = $10^{-10}/10^{-10}$. Rankings describe the tested ranges, not per-unit sensitivities.}
+\end{table}

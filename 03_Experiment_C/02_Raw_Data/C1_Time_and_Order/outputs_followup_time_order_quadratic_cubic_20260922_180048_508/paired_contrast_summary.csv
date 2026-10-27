@@ -1,0 +1,5 @@
+candidate,comparator,candidate_budget,comparator_budget,n_pairs,n_complete_pairs,n_pairs_requiring_timing_review,median_paired_error_change,n_lower_error,n_higher_error,n_equal_error,median_paired_wall_ratio,median_paired_cpu_ratio,max_absolute_prefix_R_difference
+double_period,period_only,100,100,10,10,0,-0.930431901319154,10,0,0,14.8493251603409,33.6169082125604,0.622741251744393
+decay_estimate,period_only,100,100,10,10,0,-0.930431901319154,10,0,0,14.9789317517995,33.8630434782609,0.622741251744393
+time_first,grid_first,100,100,10,10,1,0,0,2,8,0.371851122112559,0.344562302547489,0.00983187910165206
+time_first,decay_estimate,100,100,10,10,1,0,0,0,10,1.00105179706976,0.997422300595672,0

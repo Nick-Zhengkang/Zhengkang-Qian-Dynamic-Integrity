@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Median core algorithm time in seconds. The time ratio is the DynIn median divided by the Proposed median, not the median of paired ratios. The last column counts seeds for which Proposed was faster.}
+\label{tab:comparison-cost}
+\begin{tabularx}{\linewidth}{@{}Y r r r r@{}}
+\toprule
+Model & DynIn GA & Proposed & Time ratio & Faster pairs \\
+\midrule
+Quadratic-cubic & 6.635 & 1.804 & 3.68 & 30/30 \\
+Bistable Duffing & 3.115 & 1.242 & 2.51 & 30/30 \\
+Unforced Duffing & 2.658 & 1.431 & 1.86 & 30/30 \\
+Cosine potential & 2.638 & 2.583 & 1.02 & 18/30 \\
+Separable 4D & 35.155 & 18.061 & 1.95 & 30/30 \\
+Coupled 4D & 16.517 & 22.466 & 0.74 & 1/30 \\
+\bottomrule
+\end{tabularx}
+\end{table}

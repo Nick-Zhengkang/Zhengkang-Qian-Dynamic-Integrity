@@ -1,0 +1,2 @@
+alpha,baseline_median_absolute_error,candidate_median_absolute_error,reduction_percent,improvement_factor,baseline_p95_absolute_error,candidate_p95_absolute_error,baseline_median_wall_s,candidate_median_wall_s,baseline_median_cpu_s,candidate_median_cpu_s,complete,candidate_has_lower_median
+NaN,0.0282290981332808,0.00624813772773763,77.8663218419601,4.51800190126446,0.652119105363899,0.0311619525450852,4.74934645,13.3083084,6.2578125,15.015625,1,1

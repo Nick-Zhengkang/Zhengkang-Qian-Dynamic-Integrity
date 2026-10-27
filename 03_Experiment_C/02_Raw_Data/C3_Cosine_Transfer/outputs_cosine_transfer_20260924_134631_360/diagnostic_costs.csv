@@ -1,0 +1,9 @@
+stage,n_point_evaluations,wall_s
+calibration_oracle,136,0.391578
+holdout_oracle,152,0.3360563
+calibration_N1269_k39_T680_dt0p0502654824574_rep10.csv,136,65.4557048
+calibration_N635_k19_T1360_dt0p0502654824574_rep10.csv,136,194.8506873
+calibration_N635_k19_T680_dt0p0251327412287_rep10.csv,136,197.5353699
+calibration_N635_k19_T680_dt0p0502654824574_rep10.csv,136,67.4941775
+historical_holdout_N501_k11_T1200_dt0p05_rep10.csv,152,50.3316403
+physics_holdout_N635_k19_T680_dt0p0502654824574_rep10.csv,152,78.6436934

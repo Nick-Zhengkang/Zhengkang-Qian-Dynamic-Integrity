@@ -1,0 +1,25 @@
+{
+  "archive": "Thesis_Code_Data_20261027",
+  "date": "2026-10-27",
+  "annotated_matlab": 147,
+  "annotated_python": 12,
+  "all_annotation_edits_comment_only": true,
+  "original_files_verified_unchanged": 4478,
+  "raw_data_files_verified_unchanged": 4084,
+  "all_names_ascii": true,
+  "original_dynin_unchanged": true,
+  "original_zip_bytes_unchanged": true,
+  "experiments_rerun": false,
+  "matlab_runtime_tests_performed": false,
+  "frozen_library_checks": [
+    {
+      "manifest": "00_Shared_MATLAB/four_model_five_method_suite/functions/FREEZE_MANIFEST.json",
+      "mismatches": []
+    },
+    {
+      "manifest": "00_Shared_MATLAB/four_model_five_method_suite/frozen_cosine_neighbourhood11_20260914/functions/FREEZE_MANIFEST.json",
+      "mismatches": []
+    }
+  ],
+  "source_signature_note": "Working-code hashes change after comment insertion; use preserved snapshots for old batches."
+}

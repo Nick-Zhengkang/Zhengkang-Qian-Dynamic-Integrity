@@ -1,0 +1,4 @@
+case_index,alpha,case_directory,n_runs,n_completed,time_first_classifier_eligible,n_timing_review_flags
+1,0.2,C:\Users\-qian-\Documents\Codex\2026-06-28\github\experiment_C_physics_guided_tuning\outputs_duffing_transfer_20260923_003027_851\case_01,50,50,0,0
+2,0.7,C:\Users\-qian-\Documents\Codex\2026-06-28\github\experiment_C_physics_guided_tuning\outputs_duffing_transfer_20260923_003027_851\case_02,50,50,0,1
+3,1,C:\Users\-qian-\Documents\Codex\2026-06-28\github\experiment_C_physics_guided_tuning\outputs_duffing_transfer_20260923_003027_851\case_03,50,50,0,0

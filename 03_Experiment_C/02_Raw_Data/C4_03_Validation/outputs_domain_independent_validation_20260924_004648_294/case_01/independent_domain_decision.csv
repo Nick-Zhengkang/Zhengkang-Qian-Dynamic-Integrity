@@ -1,0 +1,2 @@
+alpha,fresh_coordinate_set,frozen_without_fresh_labels,n_original_domain_exit_false_unsafe,n_original_exit_errors_corrected,n_original_exit_errors_remaining,n_new_target_errors_after_expansion,independent_energy_domain_pass,ready_for_controlled_GA_test
+0.2,1,1,26,26,0,0,1,1

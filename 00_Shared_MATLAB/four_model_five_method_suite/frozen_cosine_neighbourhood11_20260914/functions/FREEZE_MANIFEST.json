@@ -1,0 +1,157 @@
+{
+  "version": "adaptive-angle-v1.0.0",
+  "date": "2026-09-12",
+  "profile": "common_direct_classifier",
+  "proposed_source_policy": "angular_improved",
+  "frozen_behavior": [
+    "radial stepping",
+    "bracket refinement",
+    "incumbent pruning",
+    "round-robin scheduling",
+    "angular gap scoring",
+    "plateau and coverage stopping"
+  ],
+  "interface_adaptations": [
+    "oracle callback",
+    "common outer timer",
+    "classifier trajectory output",
+    "full bookkeeping timing"
+  ],
+  "ga_definition": "10 versus 40 generations, not coarse/fine grid resolution",
+  "dynin_definition": "original type_x0=2 selection branches with common direct classifier and explicit unknown handling; not full original paper reproduction",
+  "production_reference_access": false,
+  "matlab_validation": "Static code analyzer: no syntax errors. Batch execution blocked by MATLAB startup File system inconsistency. MATLAB selftests pending.",
+  "offline_validation": "Normalized source equivalence and three archived-query replays passed: 635,1192,716 queries; all 44 directions.",
+  "package_files": [
+    {
+      "relative_path": "+limbench/accuracy_times.m",
+      "sha256": "12c988f97994ebd63bf142b6f664393c266294907a68e39ce8685c2ee12ed3d4"
+    },
+    {
+      "relative_path": "+limbench/classify.m",
+      "sha256": "8cc2c7158ca385e305d2c3f28a63fa9b2383228af7786fd5a2eb0b7fea358fa8"
+    },
+    {
+      "relative_path": "+limbench/defaults.m",
+      "sha256": "649676e79e82ef06e5c30c9983e83f91d8bf607e40a86943148045da2c5ca4a7"
+    },
+    {
+      "relative_path": "+limbench/model.m",
+      "sha256": "ba5d13fed7b634081c20a8a1d14cad0319775f8c134128cc7b2d267a28c4bd42"
+    },
+    {
+      "relative_path": "+limbench/private/angular_engine.m",
+      "sha256": "5c486b689558c922ede1e8228c648e2063cde1eb561abe91d505419e4d226450"
+    },
+    {
+      "relative_path": "+limbench/private/baseline_engine.m",
+      "sha256": "c3fd3defae7c40155abd904f9e095fa1f51c28f6dbcdff6771e7f119cd3c62a9"
+    },
+    {
+      "relative_path": "+limbench/private/bisection_next.m",
+      "sha256": "3e79436821fb846d7cfd14c4c8a6c4bbde047878421c99a3cc3b8a782ed0baae"
+    },
+    {
+      "relative_path": "+limbench/private/classify_bistable_duffing.m",
+      "sha256": "8d4de164a0338ddab066f5c63f22a0fa86ef26486aa39f8d894c020b0a807a39"
+    },
+    {
+      "relative_path": "+limbench/private/classify_quadratic_cubic.m",
+      "sha256": "2fb69e237f24eb74d4c940679aee278382f9034161ac64e7752c5a10e79c5049"
+    },
+    {
+      "relative_path": "+limbench/private/find_furthest_point_approximate.m",
+      "sha256": "b61bfa054b4c5249c8dfea595322b8a1de3cc0888c51a81fe2b29b03e92d738e"
+    },
+    {
+      "relative_path": "+limbench/private/fixtures/bistable_duffing_07_step_005_seed01.csv",
+      "sha256": "ba453dd6f884bf83a7fb1d68194ec61d6191265fc2819aa8c2797952d4417106"
+    },
+    {
+      "relative_path": "+limbench/private/fixtures/quadratic_cubic_04_step_0025_seed01.csv",
+      "sha256": "df89e5ec9a210cb7b94dee1f3028c9ab43d70af47e3f8f0107c51bf2eacdf5f8"
+    },
+    {
+      "relative_path": "+limbench/private/fixtures/quadratic_cubic_04_step_005_seed01.csv",
+      "sha256": "d6634709d2f5447de285902ab2131a95b52a6f161b916208e832d7d5d021d07f"
+    },
+    {
+      "relative_path": "+limbench/private/fixtures/README.txt",
+      "sha256": "4ee028bd5254defdd79ae05fb060e7be42a49d7e1afd0d28a9114542c05d3a26"
+    },
+    {
+      "relative_path": "+limbench/private/frozen_search_v1.m",
+      "sha256": "b909524f29d0dd09173b1dbcd2f64ed98f83e0e3d0ae4bfb9b94613d2d2cc4c1"
+    },
+    {
+      "relative_path": "+limbench/private/minimal_distances.m",
+      "sha256": "069441896923f2661ef0fc375d52a7433fe563d6f1616f958ec40daa7cdb4364"
+    },
+    {
+      "relative_path": "+limbench/private/normweight.m",
+      "sha256": "b3d4178cba971d0d39b3ccbb8e4f89c2a7d843e6c75b2f47f9f817f4e047356f"
+    },
+    {
+      "relative_path": "+limbench/private/randomIC_border.m",
+      "sha256": "190ca93e8a47327814d81051be4d97597ebb2973ce96b7fbb3a77cfff780d65b"
+    },
+    {
+      "relative_path": "+limbench/private/randomIC_radius.m",
+      "sha256": "cc1b4f7b1c60babeefe8cfe7ed874bcd7cf6e34ccf8c408535c75e78bec94e57"
+    },
+    {
+      "relative_path": "+limbench/private/reference_bistable_duffing.m",
+      "sha256": "f18283fec660b996a9dd54cd89bda2fb6440e02684ebb988cb73dfb897787657"
+    },
+    {
+      "relative_path": "+limbench/private/reference_quadratic_cubic.m",
+      "sha256": "12ad2e9e024d40300978da19d6b6da3c08aa70ed2bf13163efb7b86dceb92e50"
+    },
+    {
+      "relative_path": "+limbench/proposed.m",
+      "sha256": "599d6f0a091607734e9c5a5c0d79499ddb31681b1f34553a2753a0306855d2a0"
+    },
+    {
+      "relative_path": "+limbench/reference.m",
+      "sha256": "56ee6d4bdf5c7c63ecf070651430c8406b7f7b481e5dd12f3581fcaee2a5d732"
+    },
+    {
+      "relative_path": "+limbench/run.m",
+      "sha256": "ee6e8e9068326c4f48ed572ec3dc30407ac3bd65161f8b671abbf3cba739baea"
+    },
+    {
+      "relative_path": "+limbench/selftest.m",
+      "sha256": "8e9a8d2bc50c0a319d19bd6c861e675fb32d12b34743a63ff0830360ac9dde2e"
+    },
+    {
+      "relative_path": "+limbench/verify_freeze.m",
+      "sha256": "db379f950c34968e809400d2a1950ad03bd2886cfdc37684bbc8759dbe4725a3"
+    },
+    {
+      "relative_path": "DynIn_LICENSE.txt",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "relative_path": "README_limbench.md",
+      "sha256": "2a6b6ff869ee64cadc6b824eb0cce8e62d1f9fc391a1786999e3302feb5c25e2"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "C:\\Users\\-qian-\\Documents\\Codex\\2026-06-28\\github\\genda_quadratic_cubic_angular_efficiency.m",
+      "sha256": "4938466f2b6b377da3ecebfdbe9a1eb555627841e3e0ba837139b314a3479eb6"
+    },
+    {
+      "path": "C:\\Users\\-qian-\\Documents\\Codex\\2026-06-28\\github\\genda_duffing_angular_efficiency.m",
+      "sha256": "fd3adf70bed76ce794979155ba008487eb6230c3813aacc4fa281b0b5aa51b2f"
+    },
+    {
+      "path": "C:\\Users\\-qian-\\Documents\\Codex\\2026-06-28\\github\\work\\DynIn\\DynIn_v1.1.0\\functions\\compute_LIM_FP.m",
+      "sha256": "fe60d7de58e22721e72e1f87e79a999321f8067cb1ab9110f68c68fd53359ef2"
+    },
+    {
+      "path": "C:\\Users\\-qian-\\Desktop\\ITM\\genda_five_method_four_benchmark.m",
+      "sha256": "d31fe7bc999674d38633695b0a28824a71169985338b263ba6cf6edb338cc0fa"
+    }
+  ]
+}

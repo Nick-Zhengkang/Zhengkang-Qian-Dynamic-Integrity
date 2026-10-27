@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering\small
+\caption{Median query and ODE solver-call counts over 30 seeds. A DynIn trajectory can require many segmented ODE calls. Half-integer medians arise from the even sample size.}
+\label{tab:comparison-calls}
+\begin{tabularx}{\linewidth}{@{}Y r r r r@{}}
+\toprule
+& \multicolumn{2}{c}{Queries} & \multicolumn{2}{c}{ODE calls} \\ Model & DynIn GA & Proposed & DynIn GA & Proposed \\
+\midrule
+Quadratic-cubic & 100 & 627 & 15583 & 627 \\
+Bistable Duffing & 100 & 851.5 & 7550 & 851.5 \\
+Unforced Duffing & 100 & 870.5 & 9055 & 870.5 \\
+Cosine potential & 100 & 2393.5 & 10535.5 & 2393.5 \\
+Separable 4D & 100 & 315.5 & 93954.5 & 315.5 \\
+Coupled 4D & 40 & 261.5 & 83787 & 261.5 \\
+\bottomrule
+\end{tabularx}
+\end{table}

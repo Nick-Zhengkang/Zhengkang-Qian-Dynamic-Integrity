@@ -1,0 +1,2 @@
+model,alpha,target_1,target_2,domain_1,domain_2,domain_3,domain_4,weight_1,weight_2,Lx,Lv,barrier,omega,period,curvature,targetAmplitude,initialAmplitude,decayCoefficient,decayEstimate,timeFromDecay,timeFromPeriod,requestedGrid
+bistable_duffing,0.7,-1,0,-1.89705627484771,-0.989949493661167,1.48284271247462,0.989949493661167,1,1,1,0.707106781186548,0.25,1.4142135623731,4.44288293815837,2,0.025,0.5,0.42014761420665,90.4444026696524,140,90,676

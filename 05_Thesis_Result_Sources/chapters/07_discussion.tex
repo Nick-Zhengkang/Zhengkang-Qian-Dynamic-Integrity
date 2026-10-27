@@ -1,0 +1,28 @@
+\chapter{Discussion}
+\label{chap:discussion}
+
+\begin{greenrevision}
+This chapter discusses the limits of the evidence and its practical implications. Detailed numerical comparisons remain in Chapters~4 and~6; the purpose here is to distinguish the conclusions supported by those results from questions that remain unresolved.
+\end{greenrevision}
+
+\section{Limitations and Failure Cases}
+\label{sec:discussion-limitations}
+
+\begin{greenrevision}
+The sensitivity ranking in Experiment~A is specific to the tested bistable Duffing model at $\alpha=0.7$, the transferred baseline configuration and the selected parameter levels. Because one factor was varied at a time, the experiment characterizes marginal sensitivity around that configuration. It does not establish a model-independent ranking, show that the ranking is unchanged at other damping values, or identify interactions between hyperparameters. The ranking should therefore guide attention within the tested setting rather than be read as a universal order of importance.
+
+Experiment~B broadens the tuning evidence by using multiple damping values and testing the frozen configuration at unused values and on a second potential. Nevertheless, its low-damping failures define an important boundary. Both models show severe underestimation at $\alpha=0.05$, which lies below the BO training interval, and the Duffing pilot contains one additional failure at $\alpha=0.10$. The pooled-median objective gives limited influence to a small group of difficult cases, so a favourable overall score does not guarantee reliable estimates at every damping value. The records do not identify the numerical cause of these failures. Integration time, recurrence settings, target-cell size, the domain-exit rule and learned-label reuse are possible contributors, but separating their effects requires trajectory-level diagnostic tests. The cross-model evidence is also limited to one additional model with ten seeds per damping value.
+
+The method comparison has a related evidential boundary. The adaptive angular--radial strategy changes where initial states are queried, but both methods still depend on forward-trajectory classification. An incorrect target or non-target label can therefore affect the estimated radius regardless of how directions are selected. Where an independent reference LIM is available, this effect can be assessed through error. For the coupled four-dimensional model, no such reference is assigned; differences in estimated radius cannot by themselves be interpreted as differences in accuracy. The reported evidence for that model is consequently limited to the estimates, repeatability and computational cost.
+\end{greenrevision}
+
+\section{Practical Implications}
+\label{sec:discussion-practical}
+
+\begin{greenrevision}
+The experiments suggest that parameter selection and initial-condition search should be treated as connected but distinct tasks. When a trustworthy reference LIM is available, reference-assisted optimization can identify a configuration with lower typical error than direct transfer of settings from another model. Its benefit should be checked on damping values and, where relevant, models that were not used for selection. The increased CPU and wall-clock times of the frozen BO candidate must also be considered when deciding whether the accuracy gain justifies its use.
+
+When no reference LIM is available, physical scales and diagnostic trajectories provide a more defensible starting point than direct parameter transfer alone. Domain size, grid spacing, target neighbourhood and classification horizon should be checked before increasing the search budget, because additional candidate points do not correct systematically wrong trajectory labels. Once classification is sufficiently stable for the intended conditions, the adaptive angular--radial method can concentrate radial queries near promising directions while using global gap probes to retain directional coverage.
+
+The immediate priority for further work is therefore to audit the low-damping trajectories independently and determine whether their underestimation arises from unresolved integration, spatial settings or label reuse. If reliable performance at every damping value is required, additional low-damping training points and a worst-case or tail-aware objective could then be tested. Such an objective would address a different requirement from minimizing pooled median error and should be evaluated separately rather than inferred from the present study.
+\end{greenrevision}

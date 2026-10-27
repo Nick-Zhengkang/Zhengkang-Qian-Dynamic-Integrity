@@ -1,0 +1,7 @@
+model_id,passed,probe_count,forced_horizon_cases,learned_cell_hits,short_test_horizon,scientific_validation,continuous_kind_differences,continuous_stop_differences,segmented_probe_time_s,continuous_probe_time_s
+quadratic_cubic,1,5,2,2,0.2,0,0,0,0.0218282,0.0120736
+bistable_duffing,1,5,2,2,0.2,0,0,0,0.0183138,0.009075
+habib_unforced_duffing,1,5,2,2,0.2,0,0,0,0.0198787,0.0095144
+genda_cosine_quadratic_drag,1,5,2,2,0.2,0,0,0,0.0201563,0.0097661
+habib_vdp_tmd_4d,1,5,2,2,0.2,0,0,0,0.0205202,0.0106994
+separable_qc_bd_4d,1,5,2,2,0.2,0,0,0,0.0209125,0.0104645

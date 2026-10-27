@@ -1,0 +1,416 @@
+{
+  "configuration": "Cosine alpha=.05, DynIn target neighbourhood11, all other methods unchanged",
+  "seed_list": [
+    1,
+    2,
+    3
+  ],
+  "files": [
+    {
+      "file": "test_one_model.m",
+      "sha256": "840a0f9bb887f2d74261dcb6d0aeb701cadfdb1329435b59a71844446f41e00c"
+    },
+    {
+      "file": "run_four_model_benchmark.m",
+      "sha256": "7d21333917598d36fb727f241c96024bfb813db0aebc33d6b4b8c74ab3b24f89"
+    },
+    {
+      "file": "functions/DynIn_LICENSE.txt",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "file": "functions/FREEZE_MANIFEST.json",
+      "sha256": "addb5538b222fa26871f1ddfda1d04c2b0a55445c177eb8eb90da39acdb4f3dd"
+    },
+    {
+      "file": "functions/README_limbench.md",
+      "sha256": "2a6b6ff869ee64cadc6b824eb0cce8e62d1f9fc391a1786999e3302feb5c25e2"
+    },
+    {
+      "file": "functions/+fourbench/annotate.m",
+      "sha256": "f563eb36aeb8f3e07408e92866b4b5152edc108a4d0616c386b50e1dced052db"
+    },
+    {
+      "file": "functions/+fourbench/classify_extension.m",
+      "sha256": "62e11f725a136c630ad58c8e18eacd9be2d8b15a653334a0b95187e62f3c94de"
+    },
+    {
+      "file": "functions/+fourbench/habib_check.m",
+      "sha256": "0bb35d40f4848ca885342065221e1fd9bf7254a0ee2628863f7ff4b6f8967033"
+    },
+    {
+      "file": "functions/+fourbench/model.m",
+      "sha256": "11ea7ce077f2f6a32823cc412458941944517acc015559b477ced8f1aa56566b"
+    },
+    {
+      "file": "functions/+fourbench/plot_results.m",
+      "sha256": "c82f3bdaf8125a13b4c25ad6b6b9b16a6c95993b74b9ffe174b0f0253124e4a9"
+    },
+    {
+      "file": "functions/+fourbench/reference.m",
+      "sha256": "a912e01affb24bc00764c88f52e29f923a79ec695a302f3aeae46cbb09851b44"
+    },
+    {
+      "file": "functions/+fourbench/summarize.m",
+      "sha256": "a6dce7cd747e139e930be6094a47e292cb4a57f09b220a43489ad29e5f95d67b"
+    },
+    {
+      "file": "functions/+limbench/accuracy_times.m",
+      "sha256": "12c988f97994ebd63bf142b6f664393c266294907a68e39ce8685c2ee12ed3d4"
+    },
+    {
+      "file": "functions/+limbench/classify.m",
+      "sha256": "8cc2c7158ca385e305d2c3f28a63fa9b2383228af7786fd5a2eb0b7fea358fa8"
+    },
+    {
+      "file": "functions/+limbench/defaults.m",
+      "sha256": "649676e79e82ef06e5c30c9983e83f91d8bf607e40a86943148045da2c5ca4a7"
+    },
+    {
+      "file": "functions/+limbench/model.m",
+      "sha256": "ba5d13fed7b634081c20a8a1d14cad0319775f8c134128cc7b2d267a28c4bd42"
+    },
+    {
+      "file": "functions/+limbench/proposed.m",
+      "sha256": "599d6f0a091607734e9c5a5c0d79499ddb31681b1f34553a2753a0306855d2a0"
+    },
+    {
+      "file": "functions/+limbench/proposed_four_models.m",
+      "sha256": "ef1d031e2917bf670b9e006be0f68704ecbede3ccfda41d1252740d46d5681c2"
+    },
+    {
+      "file": "functions/+limbench/reference.m",
+      "sha256": "56ee6d4bdf5c7c63ecf070651430c8406b7f7b481e5dd12f3581fcaee2a5d732"
+    },
+    {
+      "file": "functions/+limbench/run.m",
+      "sha256": "ee6e8e9068326c4f48ed572ec3dc30407ac3bd65161f8b671abbf3cba739baea"
+    },
+    {
+      "file": "functions/+limbench/selftest.m",
+      "sha256": "8e9a8d2bc50c0a319d19bd6c861e675fb32d12b34743a63ff0830360ac9dde2e"
+    },
+    {
+      "file": "functions/+limbench/verify_freeze.m",
+      "sha256": "db379f950c34968e809400d2a1950ad03bd2886cfdc37684bbc8759dbe4725a3"
+    },
+    {
+      "file": "functions/+limbench/private/angular_engine.m",
+      "sha256": "5c486b689558c922ede1e8228c648e2063cde1eb561abe91d505419e4d226450"
+    },
+    {
+      "file": "functions/+limbench/private/baseline_engine.m",
+      "sha256": "c3fd3defae7c40155abd904f9e095fa1f51c28f6dbcdff6771e7f119cd3c62a9"
+    },
+    {
+      "file": "functions/+limbench/private/bisection_next.m",
+      "sha256": "3e79436821fb846d7cfd14c4c8a6c4bbde047878421c99a3cc3b8a782ed0baae"
+    },
+    {
+      "file": "functions/+limbench/private/classify_bistable_duffing.m",
+      "sha256": "8d4de164a0338ddab066f5c63f22a0fa86ef26486aa39f8d894c020b0a807a39"
+    },
+    {
+      "file": "functions/+limbench/private/classify_quadratic_cubic.m",
+      "sha256": "2fb69e237f24eb74d4c940679aee278382f9034161ac64e7752c5a10e79c5049"
+    },
+    {
+      "file": "functions/+limbench/private/find_furthest_point_approximate.m",
+      "sha256": "b61bfa054b4c5249c8dfea595322b8a1de3cc0888c51a81fe2b29b03e92d738e"
+    },
+    {
+      "file": "functions/+limbench/private/frozen_search_v1.m",
+      "sha256": "b909524f29d0dd09173b1dbcd2f64ed98f83e0e3d0ae4bfb9b94613d2d2cc4c1"
+    },
+    {
+      "file": "functions/+limbench/private/minimal_distances.m",
+      "sha256": "069441896923f2661ef0fc375d52a7433fe563d6f1616f958ec40daa7cdb4364"
+    },
+    {
+      "file": "functions/+limbench/private/normweight.m",
+      "sha256": "b3d4178cba971d0d39b3ccbb8e4f89c2a7d843e6c75b2f47f9f817f4e047356f"
+    },
+    {
+      "file": "functions/+limbench/private/randomIC_border.m",
+      "sha256": "190ca93e8a47327814d81051be4d97597ebb2973ce96b7fbb3a77cfff780d65b"
+    },
+    {
+      "file": "functions/+limbench/private/randomIC_radius.m",
+      "sha256": "cc1b4f7b1c60babeefe8cfe7ed874bcd7cf6e34ccf8c408535c75e78bec94e57"
+    },
+    {
+      "file": "functions/+limbench/private/reference_bistable_duffing.m",
+      "sha256": "f18283fec660b996a9dd54cd89bda2fb6440e02684ebb988cb73dfb897787657"
+    },
+    {
+      "file": "functions/+limbench/private/reference_quadratic_cubic.m",
+      "sha256": "12ad2e9e024d40300978da19d6b6da3c08aa70ed2bf13163efb7b86dceb92e50"
+    },
+    {
+      "file": "functions/+limbench/private/fixtures/bistable_duffing_07_step_005_seed01.csv",
+      "sha256": "ba453dd6f884bf83a7fb1d68194ec61d6191265fc2819aa8c2797952d4417106"
+    },
+    {
+      "file": "functions/+limbench/private/fixtures/quadratic_cubic_04_step_0025_seed01.csv",
+      "sha256": "df89e5ec9a210cb7b94dee1f3028c9ab43d70af47e3f8f0107c51bf2eacdf5f8"
+    },
+    {
+      "file": "functions/+limbench/private/fixtures/quadratic_cubic_04_step_005_seed01.csv",
+      "sha256": "d6634709d2f5447de285902ab2131a95b52a6f161b916208e832d7d5d021d07f"
+    },
+    {
+      "file": "functions/+limbench/private/fixtures/README.txt",
+      "sha256": "4ee028bd5254defdd79ae05fb060e7be42a49d7e1afd0d28a9114542c05d3a26"
+    },
+    {
+      "file": "dynin_original/adaptive_boundary_bisection.m",
+      "sha256": "0c039fff9ee5567b472926569fc73c84288077bb4ddebf23d79d30be28a34810"
+    },
+    {
+      "file": "dynin_original/assaign_cells_HEPO.m",
+      "sha256": "2109c2f0ab002e335bf64d7657727c5a98e898380b07e4c23b10d041c6172461"
+    },
+    {
+      "file": "dynin_original/assaign_cells_LCO.m",
+      "sha256": "13884f69c4ed2f3591074354429eb4c4ecfb56e885889685e949579869ebbaab"
+    },
+    {
+      "file": "dynin_original/assaign_points_HEPO.m",
+      "sha256": "02d48d0b643c07918e369ec927ef6f1ffd39db25044cb28ca1b461b3a229d770"
+    },
+    {
+      "file": "dynin_original/assaign_points_LCO.m",
+      "sha256": "3d51df886045b8f9229e48f463f97c6c2200dc3e61a488ef1d2cd3d6b1ae5340"
+    },
+    {
+      "file": "dynin_original/BoundaryAdaptiveGrid.m",
+      "sha256": "22544a0cb5f2d09c10160c8054bb90577881440fede122cae6091e9696b5c057"
+    },
+    {
+      "file": "dynin_original/cal_R_HEPO.m",
+      "sha256": "f776777e756f7857d6dbd2aa89b996d10dabb9c15333da8b89ec86525786dbb7"
+    },
+    {
+      "file": "dynin_original/cal_R_LCO.m",
+      "sha256": "f6caab2a9660a635bce67bf6881095b8b135c3a7bf5cc8f50681a576c1d3861a"
+    },
+    {
+      "file": "dynin_original/CellInfo.m",
+      "sha256": "9d3b2e74f0799064a78b95b98e7336cd0df61a4a60c1d25b9dec23088abbae52"
+    },
+    {
+      "file": "dynin_original/checkoninput.m",
+      "sha256": "7837b6b04e305058daffe188ee3dddea4445932fb70ecb3539be765ae1a4a99c"
+    },
+    {
+      "file": "dynin_original/checkoninput_D_HIC.m",
+      "sha256": "a2254651ca289ddf44ddcf0ca229f9f41884877596e87c98b07ab72112593c04"
+    },
+    {
+      "file": "dynin_original/check_per_orbit.m",
+      "sha256": "158017944e31814824e1bf7b957e59c43524080fa393f010548fed0feb48479c"
+    },
+    {
+      "file": "dynin_original/check_per_orbit_D_LCO.m",
+      "sha256": "7b56ed102f2b7faf53b8a7dff3e6bd16097726f93f3caf39bc829a89b47ec009"
+    },
+    {
+      "file": "dynin_original/compute_LIM_D_FP.m",
+      "sha256": "e51c230cf51c2cbc23c9e1c4fd04516d91d83473455d78da9d9d56ae9ad0e7ea"
+    },
+    {
+      "file": "dynin_original/compute_LIM_D_FP_HIC.m",
+      "sha256": "9b192630e738bc4f0e701571972b4792095fe359d584df7f21094d47a3b7960c"
+    },
+    {
+      "file": "dynin_original/compute_LIM_D_LCO.m",
+      "sha256": "58872831c55188697e5f3914352b07156ec17e616f6583d9b74dadfe9c28ec19"
+    },
+    {
+      "file": "dynin_original/compute_LIM_FP.m",
+      "sha256": "a55b52d52994671a50bb0006a8b1444e40d5682ef1bf1ac8195d244f4f90035f"
+    },
+    {
+      "file": "dynin_original/compute_LIM_HEPO.m",
+      "sha256": "c07eec87d2bd3da584b1e8f61cb6f2a87ca8479a93de93ff5f83510b4d356ca7"
+    },
+    {
+      "file": "dynin_original/compute_LIM_LCO.m",
+      "sha256": "01fb76d166e0782b5d4a14a734c191147a5e1935682530cb3aa0f2190621b794"
+    },
+    {
+      "file": "dynin_original/ddemap.m",
+      "sha256": "c195346d056190931be159df6636cbf51c7b773b158d158bb9f051bfbe531230"
+    },
+    {
+      "file": "dynin_original/distance_from_xe.m",
+      "sha256": "9d30d13f1cadcff60e8c90e00a06d744f37396d19fcdcfad805035a75f5e8b6c"
+    },
+    {
+      "file": "dynin_original/final_plots_HEPO.m",
+      "sha256": "b605191d850ebf799c65851d90fe66545687da538ef5dc4f72a57e7ec33fcd9c"
+    },
+    {
+      "file": "dynin_original/final_plots_LCO.m",
+      "sha256": "712ab78901c28dbe018813026cdb06fc742ae11d2c3d2816095c19be246f9242"
+    },
+    {
+      "file": "dynin_original/findradius.m",
+      "sha256": "6408c7f47fcab8928466b796ee175d45bb0ca8ef2d41eb040b6ba43b4f881bfb"
+    },
+    {
+      "file": "dynin_original/findradius_bis.m",
+      "sha256": "30cf521da527167ca65243cdff68a7002463770d2b1fdfedde8c001f2a259699"
+    },
+    {
+      "file": "dynin_original/findradius_id.m",
+      "sha256": "bf7a322fcf88dc8703aa636134c2011a440f7f7240f6e53d1ecad8fcbeab18d8"
+    },
+    {
+      "file": "dynin_original/find_cells_around_a_cell.m",
+      "sha256": "460e9699f795883227dac8bdd5aa496acbb0cdbbb311a89769be3e021bb7ea5d"
+    },
+    {
+      "file": "dynin_original/find_furthest_point_approximate.m",
+      "sha256": "3f1a4f51cdf9d0da02988f984f75b5c42297bc1bcd97a0bc5b89f3afd59a6241"
+    },
+    {
+      "file": "dynin_original/find_index.m",
+      "sha256": "46e1233522a294c68edb0601c2c0eb5ffdb92d8d19975f2b1275381cbe997b11"
+    },
+    {
+      "file": "dynin_original/freevib_init.m",
+      "sha256": "b859a3cc5a26bf734c49278f99c4257dde60b2bc7b8e8b1105eb77961cdd7604"
+    },
+    {
+      "file": "dynin_original/initial_simulation.m",
+      "sha256": "03b26bd5e1abc7116f6763a79aed13e436c3c52a77d841096afd2b4a0e5a274e"
+    },
+    {
+      "file": "dynin_original/initial_simulation_multi_points.m",
+      "sha256": "dcc7106d887a2ced80dc1e232c4bbc010acf647f55ebc92e71bf59f6e98b5d9f"
+    },
+    {
+      "file": "dynin_original/initial_simulation_poincare.m",
+      "sha256": "c5e29c77b9766f826f95361fb14d1542597f7c4bb12b01ec2fb0ed1ac9c0e7b4"
+    },
+    {
+      "file": "dynin_original/lininit.m",
+      "sha256": "4bf06419c314fd9fb31393f4f8e3dc9ec4c5670d220f871a9074be06f5a5b544"
+    },
+    {
+      "file": "dynin_original/look_for_equilibrium.m",
+      "sha256": "7a4218a4fb72566582c871ab86f5475c3304a6e65af6484570ebbc71ecf74f6f"
+    },
+    {
+      "file": "dynin_original/maximal_distances.m",
+      "sha256": "02e48aacc163387c7a9c0091c81c6b75147b82e2aa7cc306aa85a111c082d480"
+    },
+    {
+      "file": "dynin_original/minimal_distances.m",
+      "sha256": "e4c606f4e5999ef2702a4057fc19c16127e88ffdf32fd05d4ce44c0d85d6bfef"
+    },
+    {
+      "file": "dynin_original/normweight.m",
+      "sha256": "5279800ee15c281562f2b1169e2699cd6240b95e7373726dc8b9bcc96634e471"
+    },
+    {
+      "file": "dynin_original/normweight_q.m",
+      "sha256": "b5a1085de4f6ccaa4e31a668faadfc9ea85b238263b93d731a214dfaaf80768d"
+    },
+    {
+      "file": "dynin_original/points_inside_HEPO.m",
+      "sha256": "4ef4449cda71ca6de093f2593cfd600f182e9efbb96f86e6c027828253863297"
+    },
+    {
+      "file": "dynin_original/points_inside_LCO.m",
+      "sha256": "74ae6660b67088355974f78952545e720be10964af3faf52e373e00770f9e1d9"
+    },
+    {
+      "file": "dynin_original/randomIC_border.m",
+      "sha256": "d0a6143a889d4143ad7bf0c18df3e06c528ee94eb2b140a74c733419e871502e"
+    },
+    {
+      "file": "dynin_original/randomIC_fullspace.m",
+      "sha256": "fa44f801c4c51ec6a7f6d971d146443a5ea8b0d3b42dbafc3ff8d4ff5eca1b8f"
+    },
+    {
+      "file": "dynin_original/randomIC_radius.m",
+      "sha256": "56fcdafe61c8f1d2ff77cc4a847819e53e27a59602e9c0b16d35d7161aadec7a"
+    },
+    {
+      "file": "dynin_original/randomIC_radius_unbalanced.m",
+      "sha256": "e973b28015cb23562818f20edc268fed50fda12d657b48c6d6e974b1b77cb97b"
+    },
+    {
+      "file": "dynin_original/reduce_vect_NOSELF.m",
+      "sha256": "2d595c306b7a3bdea61a0c98cfbc156e0521e61361794505b312b67d13835cba"
+    },
+    {
+      "file": "dynin_original/reduce_vect_self.m",
+      "sha256": "e77be10debbc885e2810b391b70cb487b2fe005fef4b60d90d6b0cf0b478a003"
+    },
+    {
+      "file": "dynin_original/sample_new_fine_cells_after_refinement.m",
+      "sha256": "4d9dc2dfe2a0cece3376e0c2adf9792898fad67b16dbb2a478134509122f98db"
+    },
+    {
+      "file": "dynin_original/semidiscmap.m",
+      "sha256": "de99f918673e38bad751480bab4bfbee4d278a225a804c346c5e73cb9cce9531"
+    },
+    {
+      "file": "dynin_original/semidiscmatr.m",
+      "sha256": "aadceeea3c2ed9f9c3ba76d8cdc77db60d9201ba1d47fe0440c4fdba841a1f60"
+    },
+    {
+      "file": "dynin_original/semidiscmatr_firstorder.m",
+      "sha256": "642ecd2ff8f0c5ee6559db8fcc3bf7b3e0efd100cc0a80ca7ea715455eee378e"
+    },
+    {
+      "file": "dynin_original/simulation_DI.m",
+      "sha256": "542b7835c69a7011f121db1b4e21b4e5689fe3e5f8af9f6b57da5040270a98cd"
+    },
+    {
+      "file": "dynin_original/simulation_DI_adaptive.m",
+      "sha256": "59421ded9a5ca3bd627db6719dc594ac5493be5f8e876d4212e62591d133499d"
+    },
+    {
+      "file": "dynin_original/simulation_DI_D_FP.m",
+      "sha256": "e9c628da5297400bf004bec5b1b48281c01a2baeaed15e8be7fd5af786313def"
+    },
+    {
+      "file": "dynin_original/simulation_DI_D_FP_HIC.m",
+      "sha256": "002bbc7fe71fc8217594e75343b6d0c83f6cf2b681d0152621e2720d1523ee9e"
+    },
+    {
+      "file": "dynin_original/simulation_DI_D_LCO.m",
+      "sha256": "7c1265e861ab84b6219885d21212cc084f3dd858263d668d4dac94719eec282b"
+    },
+    {
+      "file": "dynin_original/simulation_DI_HEPO.m",
+      "sha256": "3a89021068f86493187aa1024b6c47b1b3b8da9de523b2acbf4100ce123ca078"
+    },
+    {
+      "file": "dynin_original/simulation_DI_LCO.m",
+      "sha256": "55a91df2a58c50b4fe91fcaba53a15d2e08c6b75324655295e8ce12e23243c14"
+    },
+    {
+      "file": "dynin_original/sys_solver.m",
+      "sha256": "30df7468b6b3ed1ac3bdece16733971ccaa0b5900b91880443e0c4532f99fbf8"
+    },
+    {
+      "file": "dynin_original/sys_solver_D_LCO.m",
+      "sha256": "1550a555032d020b9cab97b46af4e6dd918299af0903fb75bf9224713bf41e4b"
+    },
+    {
+      "file": "dynin_original/sys_solver_HEPO.m",
+      "sha256": "5edc6f40b3bd139d219d05d0ee681f5a143287a5a8a4012ccee7bfd2215495bf"
+    }
+  ],
+  "result_sources": [
+    "C:\\Users\\-qian-\\Documents\\Codex\\2026-06-28\\github\\four_model_five_method_suite\\outputs_four_model_five_method_quadratic_cubic_20260914_012740_024\\raw_data_all_runs.csv",
+    "C:\\Users\\-qian-\\Documents\\Codex\\2026-06-28\\github\\four_model_five_method_suite\\outputs_four_model_five_method_bistable_duffing_20260914_014007_962\\raw_data_all_runs.csv",
+    "C:\\Users\\-qian-\\Documents\\Codex\\2026-06-28\\github\\four_model_five_method_suite\\outputs_four_model_five_method_paper_unforced_duffing_20260914_015342_088\\raw_data_all_runs.csv",
+    "C:\\Users\\-qian-\\Documents\\Codex\\2026-06-28\\github\\four_model_five_method_suite\\outputs_four_model_five_method_genda_cosine_quadratic_drag_20260914_024005_618\\raw_data_all_runs.csv"
+  ]
+}

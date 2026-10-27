@@ -1,0 +1,116 @@
+\chapter{Proposed Adaptive Angular Radial Method}
+\label{ch:proposed}
+
+\begin{revision}
+The previous chapter studies how the hyperparameters affect DynIn. This chapter addresses a different question: how should the next initial state be selected when the aim is to find the closest basin boundary? The proposed method first searches in different directions. It then adds more directions near the closest boundary found so far, while also checking less explored regions. This separates the search into a radial part and an angular part.
+\end{revision}
+
+The same idea is used in two and four dimensions. The radial part changes the disturbance size along a fixed direction. The angular part changes the combination of disturbed state components. The method does not need the reference LIM to select points or decide when to stop.
+
+\begin{greenrevision}
+Figure~\ref{fig:adaptive-workflow} gives the overall search flow. Local direction refinement and global gap exploration provide new rays for radial queries.
+\end{greenrevision}
+\section{Two Dimensional Method}
+\subsection{Initial States and Search Directions}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.80\linewidth]{figures/adaptive_angular_radial_workflow.pdf}
+\caption[Adaptive angular-radial workflow]{\greencaption{Adaptive angular-radial workflow. Radius updates use radial queries. The two direction-selection branches denote distinct operations, not parallel execution.}}
+\label{fig:adaptive-workflow}
+\end{figure}
+\begin{revision}
+First, the target equilibrium $z_e$ and the distance weights are defined. Let $W$ be a diagonal matrix with positive entries. Following the distance definition in Chapter~\ref{ch:background}, a disturbance of weighted size $r$ is written as
+\end{revision}
+\begin{equation}
+ z_0=z_e+rW^{-1/2}u,\qquad u^{\mathsf T}u=1.
+ \label{eq:initial-direction}
+\end{equation}
+Here, $u$ describes the disturbance direction in weighted coordinates. The matrix $W^{-1/2}$ converts it back to the state coordinates. Each component is divided by the square root of its weight, so the weighted distance from $z_0$ to $z_e$ is exactly $r$. A larger weight therefore allows a smaller change in that state component for the same disturbance size.
+
+In two dimensions, a direction can be described by one angle:
+\begin{equation}
+ u(\theta)=(\cos\theta,\sin\theta)^{\mathsf T},\qquad 0\leq\theta<2\pi.
+\end{equation}
+The implementation starts with 16 equally spaced directions and a random angular offset. This gives an initial view of the boundary without depending on one fixed orientation. Each direction stores its tested radii and their labels. The labels are obtained from the forward grid-cell classification procedure described in Chapter~\ref{ch:methodology}.
+
+\subsection{Radial Bracketing and Bisection}
+
+For a new direction, the search starts near the target and increases the radius until a non-target point is found or the search limit is reached. A target point at radius $r_L$ and a non-target point at radius $r_U$ form a radial bracket. The next radius is the midpoint:
+\begin{equation}
+ r_m=\frac{r_L+r_U}{2}.
+\end{equation}
+If this point is labelled target, the lower endpoint is moved to $r_m$. If it is labelled non-target, the upper endpoint is moved to $r_m$. The radial search is complete when
+\begin{equation}
+ r_U-r_L\leq\varepsilon_r.
+\end{equation}
+The radial tolerance is $\varepsilon_r=10^{-4}$. An unresolved query does not move either endpoint; instead, that direction is marked as blocked. As explained in Chapter~\ref{ch:methodology}, reaching the integration horizon is assigned a non-target label under the retained automatic classification rule, rather than counted as unresolved.
+
+The two-dimensional implementation reports the smallest non-target radius found so far. Once this value is available, new outward scans do not need to extend beyond it to look for an improvement. Active directions are processed in turn, so the first few directions do not use the whole query budget.
+
+This procedure is most useful when there is one relevant target-to-non-target transition along a ray. A finite scan can miss a narrow non-target interval, especially if the ray later re-enters the basin. Radial bisection therefore locates a sampled transition, not necessarily every crossing along that direction.
+
+\subsection{Adaptive Angular Refinement and Stopping}
+
+After the active radial searches are completed or set aside, the method adds new angles. First, it splits the angular gaps next to the direction with the smallest non-target radius. Next, it also splits large gaps elsewhere on the circle. The remaining choices favour intervals that are both wide and close to promising boundary radii. Up to four new directions are added in one batch.
+
+The stopping decision uses both changes in the estimated radius and angular coverage. At least three refinement rounds are required. The radius must show little change for two consecutive rounds, the largest gap over the circle must be no greater than $2\pi/32$, and the gaps beside the best direction must be no greater than $2\pi/256$. No direction may remain blocked for this stopping condition to pass.
+
+The calculation also has limits on time, queries and the number of directions. In the comparison, these limits are 3600 seconds, 4096 queries and 64 directions. The stop reason is recorded separately. These settings define when the numerical search ends; they do not establish that the closest basin boundary has been found.
+
+\clearpage
+\input{chapters/05_direction_bridge}
+
+\section{Four Dimensional Extension}
+\subsection{Directions on the Unit Sphere}
+
+\begin{revision}
+In four dimensions, one angle is not enough to describe a direction. Instead, each direction is represented by a four-component unit vector. The set of these directions is the unit sphere $S^3$ in four-dimensional space:
+\end{revision}
+\begin{equation}
+ S^3=\left\{u\in\mathbb{R}^4:u_1^2+u_2^2+u_3^2+u_4^2=1\right\}.
+\end{equation}
+The superscript 3 describes the dimension of the sphere itself. Although $u$ has four components, the unit-length condition removes one independent choice. For the Duffing-van der Pol-TMD model, the components describe a combination of two modal displacements and two modal velocities.
+
+The initial-state formula remains Equation~\eqref{eq:initial-direction}. Keeping $u$ fixed and changing $r$ is a radial search. Changing $u$ explores a different combination of disturbances. The method selects directions without sampling every cell of the full four-dimensional grid. Grid cells are still used to classify trajectories and store learned labels.
+
+\begin{revision}
+The search starts with 24 directions: eight positive and negative coordinate directions, together with the 16 normalized corner directions of a four-dimensional cube. A random orthogonal transformation is applied to the complete set once per run. This preserves their relative angles and gives each seed a different starting orientation. The matrix is not constrained to have determinant $+1$, so the transformation may include reflection.
+\end{revision}
+
+\subsection{Radial Search and Local Refinement}
+
+The radial search again uses target and non-target endpoints, with a radial tolerance of $10^{-4}$. The search is restricted by the computational domain. Once a finite best radius is available, the code first tests a point slightly inside it on a new ray. A non-target label allows further bisection; a target label sets that direction aside. This reduces queries, but it has the same limitation regarding multiple crossings along a ray as the two-dimensional search.
+
+Unlike the two-dimensional implementation, the four-dimensional code reports the smallest midpoint radius among the completed brackets. The inner and outer endpoints are also saved. The midpoint is a numerical boundary estimate, not an independently verified non-target point.
+
+Next, the method selects up to three promising directions as refinement centres. These have small boundary radii and are separated by at least $8^\circ$. Around a centre $u$, three mutually orthogonal unit vectors $e_1$, $e_2$ and $e_3$ are chosen perpendicular to $u$. Positive and negative offsets give six nearby directions:
+\begin{equation}
+ u_{\mathrm{new}}=\cos\delta\,u\pm\sin\delta\,e_j,
+ \qquad j=1,2,3.
+\end{equation}
+Because $u$ and $e_j$ are perpendicular unit vectors, the new vector also has unit length. For example, if $u=(1,0,0,0)^{\mathsf T}$ and $e_1=(0,1,0,0)^{\mathsf T}$, one nearby direction is
+\begin{equation}
+ u_{\mathrm{new}}=(\cos\delta,\sin\delta,0,0)^{\mathsf T}.
+\end{equation}
+This changes the disturbance from only the first component to a combination of the first and second components. The disturbance size is still controlled separately by $r$.
+
+The angular offset starts at $12^\circ$. If a round finds a meaningful reduction in the best radius, the offset is kept. Otherwise, it is halved, down to a minimum of $1^\circ$. These are numerical settings of the implementation, not theoretically optimal angles.
+
+\subsection{Global Exploration and Stopping}
+
+Local refinement alone could repeatedly search the same part of the sphere. Therefore, each refinement round also adds a direction in a less explored region. The code generates 1024 candidate unit vectors by normalizing four independent standard normal components. For each candidate, it finds the smallest angle to any tested direction, then selects the candidate with the largest of these angles. This helps fill angular gaps, but does not give an exact measure of coverage over the whole sphere.
+
+The stopping rule combines local refinement, additional global queries and radial resolution. The local offset must reach $1^\circ$, with at least two consecutive rounds without meaningful improvement. Additional batches of 16 globally selected directions are then tested. Two complete batches must pass without meaningful improvement, the required radial brackets must be resolved, and no unresolved query may remain. If a global batch finds a closer boundary, local search continues with an offset of at least $2^\circ$.
+
+A meaningful improvement is a reduction larger than the greater of $2\times10^{-5}$ and 0.2\% of the previous best radius. Both four-dimensional benchmarks use a limit of 200 directions and 700 queries. Time and refinement-round limits also apply. The stop reason distinguishes satisfying the internal rule from reaching a budget limit. No separate post-search audit is performed in the comparison reported here.
+
+\section{Scope of the Current Comparison}
+
+The baseline is Habib's released DynIn v1.1.0 with \code{type\_x0}=1, the original GA initial-condition selector \cite{ref12}. The proposed method uses adaptive angular-radial search with forward grid-label reuse.
+
+The two methods still use trajectory information differently. Original DynIn can update its radius from points along a non-target trajectory. Proposed reuses visited cell labels to stop later integrations, but does not use intermediate trajectory states to generate extra search directions or directly reduce its radius. Its initial states are selected by the radial and angular search.
+
+For each benchmark, the physical equations, target, distance definition and spatial and time classification settings are matched. Original DynIn retains segmented integration, while Proposed uses one \code{ode45} call per trajectory with classification checks every 0.05 time units. The comparison therefore evaluates the complete methods, not only their next-point selectors.
+
+Chapter~\ref{ch:comparison} presents the six-model results. Analytically based references are used where available, and the published Duffing value is treated as a numerical reference. The coupled four-dimensional model is assessed through estimated radii, repeatability and cost, without assigning a reference error. The separable four-dimensional model provides the complementary test with an analytically based reference.

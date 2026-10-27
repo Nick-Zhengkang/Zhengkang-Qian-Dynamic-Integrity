@@ -1,0 +1,2 @@
+alpha,target_x,target_v,weight_x,weight_v,saddle_left,saddle_right,barrier,Lx,Lv,local_period,initial_search_radius,search_energy_cap,velocity_bound,velocity_face,beta,eta,discr,k,Ts,initial_tfinal,target_energy_fraction,achieved_eta,global_position_envelope_available,outward_saddle_exit_certified
+0.05,0,0,1,1,-3.14159265358979,3.14159265358979,2,3.14159265358979,2,6.28318530717959,3.14159265358979,4.93480220054468,3.14159265358979,3.17300858012569,0.005,0.005,635,19,0.0502654824574367,680,0.00446081372790402,0.00499686390570975,0,1

@@ -1,0 +1,26 @@
+\chapter{Conclusions and Outlook}
+\label{chap:conclusions}
+
+\section{Conclusions}
+
+\begin{greenrevision}
+This thesis examined four questions concerning the numerical estimation of the local integrity measure. The conclusions for the four corresponding studies are stated separately below.
+
+\textbf{Experiment A: hyperparameter sensitivity.}
+DynIn GA was sensitive to several numerical and search settings. Under the tested conditions, the six largest median-error ranges were associated with the target neighbourhood, sampling interval, fixed-point recurrence, grid resolution, \code{selected\_opt} and periodic recurrence. A finer grid or a larger search budget did not necessarily reduce the error when trajectory classification remained unreliable. This ranking is specific to the bistable Duffing model at $\alpha=0.7$, the transferred baseline and the selected parameter levels. Because one factor was changed at a time, it describes marginal sensitivity in that setting rather than a model-independent ranking or interactions between hyperparameters.
+
+\textbf{Experiment B: reference-assisted Bayesian optimization.}
+Bayesian optimization produced one fixed configuration that improved typical accuracy beyond the Habib-based transferred settings. On unused damping values of the quadratic--cubic model, the pooled median absolute error decreased by 84.44\%, while median CPU time increased by a factor of 3.07. Without retuning, transfer to the bistable Duffing model reduced median absolute error by 77.87\%, with a 2.40-fold median CPU-time cost. The candidate therefore retained an accuracy benefit across the tested validation and transfer settings, but it did not provide reliable estimates at the lowest damping values.
+
+\textbf{Experiment C: physics-guided parameter selection.}
+For the tested class of two-dimensional unforced potential systems with positive quadratic drag, model characteristics and diagnostic trajectories provided a practical sequence for selecting settings without using a reference LIM during tuning. The sequence defines the target and characteristic scales, checks domain coverage, selects grid spacing and target size together, verifies integration and classification settings, and adjusts search effort only after classification is sufficiently stable. Its transfer to the cosine model reduced the median and P95 errors, although the improved accuracy required more computation. The procedure is therefore a model-dependent starting method rather than one fixed parameter set for all systems.
+
+\textbf{Comparison of initial-condition search methods.}
+The adaptive angular--radial method obtained lower median reference errors on three of the four two-dimensional benchmarks and on the separable four-dimensional benchmark. It was also faster on the quadratic--cubic, bistable Duffing, unforced Duffing and separable four-dimensional models. The improvement did not extend to the cosine model at the tested settings. For the coupled four-dimensional model, the method returned smaller and more closely grouped estimates at a higher computational cost, but the absence of an independent reference prevents an accuracy conclusion. The comparison therefore supports the method on several tested benchmarks without establishing a universal advantage over the original DynIn GA.
+\end{greenrevision}
+
+\section{Outlook}
+
+\begin{greenrevision}
+Further work should first audit the low-damping trajectories independently to identify whether their underestimation arises from integration time, spatial settings or learned-label reuse. Hyperparameter studies across additional models and damping values could then test interactions that are not captured by the one-factor analysis. Finally, high-dimensional evaluation would benefit from further benchmarks with independent LIM references, allowing the directional refinement and global coverage rules to be assessed against accuracy as well as repeatability and cost.
+\end{greenrevision}

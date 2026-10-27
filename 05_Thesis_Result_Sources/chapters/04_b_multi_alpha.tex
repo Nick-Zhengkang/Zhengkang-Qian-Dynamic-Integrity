@@ -1,0 +1,55 @@
+\section{Experiment B Multi-Alpha Optimization and Cross-Model Transfer}
+\label{sec:experiment-b}
+
+\subsection{Multi-Alpha Search and the Frozen Configuration}
+\begin{bluerevision}
+Experiment B selected one configuration across 20 damping values of the quadratic-cubic model, rather than tuning separately at each value. The two BO restarts evaluated 400 distinct configurations, with 200 alpha/seed runs per configuration, giving 80000 search runs. A further 200 runs evaluated the transferred comparator on the training set after candidate selection, and 4000 runs performed held-out-alpha validation. The completed multi-alpha dataset therefore contains 84200 solver runs, excluding warm-ups. The separate bistable Duffing transfer pilot adds 800 runs. All 4800 validation and transfer runs returned valid numerical outputs; this does not imply accurate LIM estimates.
+
+The lowest training objective was 0.00460621, obtained at evaluation 135 of the first restart. Table~\ref{tab:b-candidate} lists the frozen candidate and the Habib-based transferred configuration. The candidate changes grid resolution, target width, generations, newcomer count, outer budget and sampling interval; population size and \code{selected\_opt} remain unchanged. The same candidate is used at every validation and transfer alpha. The following conclusions use held-out results, rather than the minimum training score.
+\end{bluerevision}
+
+\input{tables/b_multi_candidate}
+
+\subsection{Validation at Unused Damping Values}
+\begin{bluerevision}
+On the quadratic-cubic validation set, the pooled median absolute error decreased from 0.0373794 to 0.00581706, a reduction of 84.44\%, or a factor of 6.43. Median relative error decreased from 5.015\% to 0.840\%. The candidate had a lower median absolute error at all 20 validation alpha values. Table~\ref{tab:b-multi-results} reports the complete pooled results, and Figure~\ref{fig:b-qc-validation} shows their dependence on damping.
+
+The candidate followed the analytical reference closely at the 19 validation values from $\alpha=0.15$ to 1.95, with per-alpha median relative errors between approximately 0.30\% and 1.26\%. The lower-end extrapolation point was different: all 100 candidate runs at $\alpha=0.05$ severely underestimated the LIM, with a median relative error of about 89.85\%. Improvement relative to the comparator at this alpha therefore did not amount to an accurate result.
+
+Across all validation runs, errors above 50\% decreased from 947/2000 to 100/2000, and runs within 2\% increased from 557/2000 to 1646/2000. The candidate's 100 severe errors are exactly 5\% of the sample. Consequently, its pooled P95 relative error of 46.64\% lies in the interpolated gap between the accurate and severe-error groups. Per-alpha results and failure counts are more informative than interpreting this percentile alone.
+\end{bluerevision}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/Fig_B_QC_Validation.pdf}
+\caption[Quadratic-cubic validation across unused damping values]{\greencaption{Quadratic-cubic validation at 20 unused damping values, with 100 new seeds per configuration and alpha. (a) Median LIM estimates and the analytically based reference. (b) Median relative errors on a logarithmic axis, with dotted lines showing P95 values. The dashed black reference joins evaluated reference values. The severe errors at $\alpha=0.05$ remain represented by both summary curves.}}
+\label{fig:b-qc-validation}
+\end{figure}
+\FloatBarrier
+
+\subsection{Transfer to the Bistable Duffing Model}
+\begin{bluerevision}
+Without further optimization, the frozen candidate also improved the pooled error on the bistable Duffing transfer pilot. Across 40 damping values and ten seeds per value, median absolute error decreased from 0.0282291 to 0.00624814, a reduction of 77.87\%, or a factor of 4.52. Median relative error decreased from 3.658\% to 0.921\%, and P95 relative error decreased from 98.161\% to 4.060\%. The number of runs within 2\% increased from 120/400 to 304/400.
+
+Figure~\ref{fig:b-duffing-transfer} compares the estimated LIM--alpha curve with the analytical envelope. The candidate had a lower median absolute error at 38 of the 40 alpha values. The exceptions were $\alpha=1.00$ and 1.65, where its median relative errors were 1.155\% and 2.058\%, compared with 0.955\% and 1.907\% for the transferred configuration. The improvement is therefore not uniform at every damping value.
+
+Severe errors decreased from 135/400 to 11/400. Ten candidate failures occurred at $\alpha=0.05$, where the median estimate was 0.04408 against a reference of 0.42795. One further failure occurred at $\alpha=0.10$, with a relative error of 91.78\%, although the median error at that alpha was only 0.698\%. No candidate error above 50\% was observed for $\alpha\geq0.15$. These cases remain visible in the curve and error plot. The pilot supports cross-model transfer over much of the tested interval, while identifying a persistent low-damping limitation.
+\end{bluerevision}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/Fig_B_Duffing_Transfer.pdf}
+\caption[Frozen-candidate transfer to bistable Duffing]{\greencaption{Transfer to the bistable Duffing model without retuning, at 40 damping values with ten new seeds per configuration and alpha. (a) Median LIM estimates and the reference envelope evaluated from the analytical expressions underlying Figure~9 of Genda et al.\ \cite{ref13}. (b) Median relative errors, with dotted lines showing P95 values. The severe underestimates at $\alpha=0.05$ and the isolated failure at $\alpha=0.10$ remain represented by the summary curves.}}
+\label{fig:b-duffing-transfer}
+\end{figure}
+\FloatBarrier
+
+\subsection{Computational Cost}
+\begin{bluerevision}
+The accuracy improvement required more computation per estimate. In quadratic-cubic validation, median process CPU time increased from 4.586 to 14.070~s, a factor of 3.07; median wall-clock time increased from 4.071 to 13.418~s, a factor of 3.30. In the Duffing pilot, the corresponding CPU times were 6.258 and 15.016~s, a factor of 2.40, while wall-clock times were 4.749 and 13.308~s, a factor of 2.80.
+
+Both measures cover the same solver call on the worker. CPU time describes process computation; wall-clock time also reflects waiting and execution conditions. These are measurements under the six-worker experiment, not isolated serial benchmarks. The 80000 training runs are a one-time tuning cost and are separate from the per-estimate times in Table~\ref{tab:b-multi-results}. The frozen configuration avoids repeating BO for every alpha and for the reported cross-model transfer.
+\end{bluerevision}
+
+\input{tables/b_multi_results}
+\FloatBarrier

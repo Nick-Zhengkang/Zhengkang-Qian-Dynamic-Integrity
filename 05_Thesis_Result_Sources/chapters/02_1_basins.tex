@@ -1,0 +1,26 @@
+\section{Basins of Attraction and Dynamical Integrity}
+\label{sec:basins}
+
+\begin{revision}
+A stable equilibrium describes a state to which a system can return after a small disturbance. However, local stability does not show how large the disturbance can be. In a nonlinear system, a larger disturbance may lead to another stable response or to escape. This distinction motivates consideration of the basin of attraction of the selected equilibrium \cite{ref2,ref3,ref12}.
+\end{revision}
+
+\begin{revision}
+The basin of attraction contains the initial states whose trajectories approach the target as time increases. Consider an autonomous system with state space $\mathbb{R}^n$, where $n$ is the number of state variables. Let $z_0\in\mathbb{R}^n$ be the initial state, $\phi_t(z_0)$ the state at time $t$, and $z_e\in\mathbb{R}^n$ the target equilibrium. Its basin is
+\begin{equation}
+  \mathcal{B}(z_e)=\{z_0\in\mathbb{R}^n:\lim_{t\to\infty}\phi_t(z_0)=z_e\}.
+  \label{eq:basin}
+\end{equation}
+\end{revision}
+Different initial states can belong to different basins even when the model parameters are unchanged. The basin boundary separates these different long-term outcomes. In this thesis, a safe initial state means one that returns to the selected target. It does not automatically mean that every intermediate displacement or velocity satisfies an engineering limit.
+
+\begin{revision}
+Dynamical integrity concerns the robustness of the desired response to finite disturbances. The local integrity measure (LIM) is defined here as the radius of the largest ball centred at the target and contained in its basin \cite{ref12}. If $d$ is the chosen distance measure, this can be written as
+\end{revision}
+\begin{equation}
+  R=\inf_{z\notin\mathcal{B}(z_e)} d(z,z_e).
+  \label{eq:true-lim}
+\end{equation}
+Therefore, every disturbance with distance strictly smaller than $R$ remains inside the target basin. A larger distance does not necessarily mean failure: some directions can tolerate larger disturbances than others. The LIM describes the closest loss of basin membership, not the full basin shape.
+
+The state variables and their distance weights must be specified before comparing LIM values. Displacements and velocities can have different scales. Changing their weights changes the meaning of the disturbance radius, even if the equations stay the same. The next section explains the distance measure and how the LIM is estimated numerically.

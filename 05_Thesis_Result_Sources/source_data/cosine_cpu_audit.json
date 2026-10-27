@@ -1,0 +1,28 @@
+{
+  "source_sha256": "d03362fa9132f79644e6d5126f8d6a9c3eec7d61d3fe8ce1ffe18c7cd1623ac9",
+  "timing_scope": "cputime delta around compute_LIM_FP, before diagnostics and saving",
+  "execution": "serial for loop in archived MATLAB source; process CPU includes its threads",
+  "all_60_records_retained": true,
+  "accuracy_data_unchanged": true,
+  "quantiles": "Hazen",
+  "summary": [
+    {
+      "profile": "Historical",
+      "n": 30,
+      "median_cpu_s": 6.171875,
+      "p95_cpu_s": 8.0625,
+      "min_cpu_s": 5.140625,
+      "max_cpu_s": 9.5
+    },
+    {
+      "profile": "Physics guided",
+      "n": 30,
+      "median_cpu_s": 23.1796875,
+      "p95_cpu_s": 28.390625,
+      "min_cpu_s": 20.640625,
+      "max_cpu_s": 30.46875
+    }
+  ],
+  "seed115_wall_s": 31462.0569308,
+  "seed115_cpu_s": 28.390625
+}

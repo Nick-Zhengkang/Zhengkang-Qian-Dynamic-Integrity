@@ -1,0 +1,250 @@
+\chapter{Theoretical Background}
+
+\label{ch:background}
+
+\input{chapters/02_1_basins}
+
+\section{Numerical Estimation of the LIM}
+
+For most nonlinear systems, the basin boundary cannot be expressed by a simple analytical formula. The LIM must therefore be estimated from numerical information. The basic task is to find a state that does not return to the target equilibrium and is as close to it as possible. This does not necessarily require a complete picture of the basin of attraction \cite{ref12}.
+
+\begin{revision}
+First, the target equilibrium and the distance measure must be defined. For a state vector $z\in\mathbb{R}^n$, a weighted Euclidean distance can be written as
+
+\begin{equation}
+  d(z, {z}_{e}) = \sqrt{\sum_{i = 1}^{n}{w}_{i}{({z}_{i} - {z}_{e,i})}^{2}}
+\end{equation}
+\end{revision}
+
+where ${z}_{e}$ is the target equilibrium and the positive weights ${w}_{i}$ control the contribution of each state component. Setting all weights to one gives the usual Euclidean distance. The distance definition must remain the same throughout the computation and when comparing the result with a reference value.
+
+\begin{revision}
+Next, selected initial states are integrated forward in time. Their trajectories are classified according to whether they return to the target equilibrium. A direct approach is to repeat this process on a regular grid and use the labels to approximate the basin. However, if there are $N$ sample positions in each of $n$ state dimensions, a complete grid contains $N^n$ points. This makes a full basin computation expensive as the dimension increases.
+\end{revision}
+
+Alternatively, an iterative search can concentrate on states that may reduce the current LIM estimate. Let ${P}_{\mathrm{out}}$ be a non-empty set of sampled states known to be outside the target basin. A sample-based estimate is
+
+\begin{equation}
+  \hat{R} = \min_{z \in  {P}_{\mathrm{out}}} d(z, {z}_{e})
+\end{equation}
+
+The hat distinguishes the numerical estimate from the true LIM. If every point in ${P}_{\mathrm{out}}$ is correctly classified, its distance cannot be smaller than the true LIM. However, the sample set may miss the closest part of the boundary, so the estimate can remain too high. A point wrongly classified as non-target can instead produce an estimate that is too low.
+
+\begin{revision}
+A numerical estimate can be compared with a reference LIM only when the source and the distance definition of that reference are clear. For the coupled four-dimensional model used in this thesis, no independently established LIM value is available. The assessment therefore considers the estimated radii, repeatability and computational cost. A smaller estimate alone does not show that a method is more accurate.
+\end{revision}
+
+Numerical estimation therefore involves two related tasks: classifying trajectories and deciding where to search next. Longer integration may help with slow trajectories, while better point selection may help find a closer boundary. These are different sources of error and should not be treated as the same problem. Habib's DynIn method combines both tasks in an iterative procedure, as described in the next section \cite{ref12}.
+
+\section{Original DynIn Method}
+
+\begin{revision}
+DynIn was proposed by Habib to estimate the dynamical integrity of stable equilibria without computing the complete basin of attraction \cite{ref12}. This study uses DynIn v1.1.0 released by Habib, with type\_x0 = 1, corresponding to the original genetic algorithm (GA) based initial condition selection branch. The following description focuses on this branch.
+\end{revision}
+
+First, the user provides the governing equations, the target equilibrium, the distance weights and the computational domain. The grid resolution and the numerical integration settings are also specified. The computational domain limits the region in which trajectories are followed. A trajectory leaving this domain is classified as non-target by the algorithm. The domain therefore needs to be large enough to include relevant trajectories that may return to the target.
+
+The initial radius is the shortest distance from the target equilibrium to the boundary of the computational domain D:
+
+\begin{equation}
+  {\hat{R}}_{0} = \min_{z \in  \partial D} d(z, {z}_{e})
+\end{equation}
+
+This radius provides an initial search limit; it is not an independently verified LIM. After the first trajectory, the algorithm repeatedly integrates a selected initial state, classifies the trajectory, updates the radius and selects the next initial state.
+
+For trajectory classification, DynIn divides the computational domain into grid cells. The cell containing the target equilibrium, together with a specified neighbourhood, is marked as target. When a trajectory reaches a target cell, it is classified as returning to the target. The cells visited along that trajectory are then assigned the same label. Similarly, a trajectory reaching an already labelled non-target cell is classified as non-target. This allows later trajectories to stop once they reach cells whose labels have already been learned \cite{ref12}.
+
+The algorithm also checks whether a trajectory remains in one cell for several consecutive samples or repeatedly returns to a cell. These checks are used to detect other fixed points or recurrent responses. They do not provide a strict mathematical proof of periodic motion. If no classification is obtained before the maximum integration time, the original implementation allows either a user decision or automatic non-target classification. In particular, automatic = 1 treats an unresolved trajectory as non-target.
+
+When a trajectory is classified as non-target, DynIn uses its sampled states to update the LIM estimate. If ${P}_{k}$ is the set of sampled states from this trajectory, the update is
+
+\begin{equation}
+  {\hat{R}}_{k+1} = \min\{{\hat{R}}_{k}, \min_{z \in  {P}_{k}} d(z, {z}_{e})\}
+\end{equation}
+
+Here, k is the outer iteration index. If the trajectory returns to the target, the radius remains unchanged. An important point is that the update uses points along the trajectory, not only its initial state. For an autonomous system, states on the same forward trajectory have the same long-term destination. Therefore, a non-target trajectory can provide several points that are useful for reducing the estimated radius.
+
+Next, the GA selects an initial state inside the current search ball. Its aim is to explore regions that are far from previously sampled points. Let ${S}_{k}$ be the retained set of trajectory points used by the selector. The fitness of a candidate state z is its distance to the nearest point in this set:
+
+\begin{equation}
+  {F}_{k}(z) = \min_{p \in  {S}_{k}} d(z, p)
+\end{equation}
+
+The GA approximately maximises this fitness within the current search ball. A higher fitness indicates a less explored location. The objective is therefore to fill gaps between existing samples, rather than directly minimise the distance to the basin boundary \cite{ref12}. To reduce the cost of this calculation, nearby stored points are merged before the selection process.
+
+The GA starts with a population of candidate initial states. Across a prescribed number of generations, it retains a high-fitness individual and generates new candidates from selected individuals, small variations near the best individual and random newcomers. These candidates are evaluated through distances to stored points; they are not all integrated as trajectories. The selector returns one initial state for the next outer iteration.
+
+In the fixed-budget runs used in this thesis, number\_of\_steps controls the number of outer trajectory iterations, whereas num\_gen controls the generations within each GA selection. A trajectory may stop before the maximum integration time if a classification condition is met. Therefore, increasing the GA generations is not the same as increasing the number of trajectory integrations.
+
+\begin{greenrevision}
+Figure~\ref{fig:dynin-workflow} summarizes the original DynIn GA search and its trajectory-based radius update.
+\end{greenrevision}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.96\linewidth]{figures/original_dynin_ga_workflow.pdf}
+\caption[Original DynIn GA workflow]{\greencaption{Original DynIn GA workflow. The GA selects initial states; non-target trajectory points update the radius.}}
+\label{fig:dynin-workflow}
+\end{figure}
+\FloatBarrier
+
+Overall, DynIn reduces computational work by reusing learned cell labels and by restricting new initial states to the current search region. Its result still depends on both trajectory classification and search coverage. Grid size, target neighbourhood and integration settings affect the classification, while the GA settings and the outer search budget affect the exploration. These two parts provide the basis for the hyperparameter study in the later chapters.
+
+\section{Benchmark Systems and Reference LIM Values}
+\label{sec:benchmarks}
+
+\begin{revision}
+Four two-dimensional models and two four-dimensional models are used to compare the original DynIn GA method with the proposed adaptive angular-radial method. A two-dimensional model has one displacement and one velocity. A four-dimensional model has two displacements and two velocities. The models have different basin shapes and damping mechanisms, so they provide different tests for the methods.
+\end{revision}
+
+\begin{bluerevision}
+The reference values do not all have the same status. For the quadratic-drag models, analytical basin-boundary expressions are evaluated numerically. Turning points and stationary distances are located by numerical root finding, and admissible candidate radii are compared. Thus, an analytically based reference is a numerical evaluation of analytical equations, not a claim that every reference radius has a simple closed-form expression. For the linearly damped unforced Duffing oscillator studied by Habib, a published numerical value is used. For the coupled four-dimensional model, no fixed reference LIM is used. The separable four-dimensional model provides an analytical relation to its two component systems. All values below refer to the stated target equilibrium and distance measure.
+\end{bluerevision}
+
+\subsection{Quadratic Cubic Potential}
+
+\begin{equation}
+  \ddot{x} + \alpha |\dot{x}|\dot{x} + x - {x}^{2} = 0
+\end{equation}
+
+\begin{revision}
+The damping coefficient is $\alpha =0.4$. The target is $(x,\dot{x})=(0,0)$, and the saddle point is at $(1,0)$. The Euclidean distance is used in the displacement-velocity plane. The basin boundary separates states that return to the target from states that escape.
+\end{revision}
+
+Genda et al. derive analytical boundary expressions for this potential \cite[Sections 3.5--3.6]{ref13}. The reference is obtained by finding the smallest distance from the target to these branches. The equations are evaluated numerically, giving
+
+\begin{equation}
+  {R}_{\mathrm{ref}} \approx  0.6474801597
+\end{equation}
+
+This is an analytically based reference, rather than a value estimated by DynIn or by the proposed method.
+
+\subsection{Bistable Duffing Potential with Quadratic Drag}
+
+\begin{equation}
+  \ddot{x} + \alpha |\dot{x}|\dot{x} - x + {x}^{3} = 0
+\end{equation}
+
+\begin{revision}
+Here, $\alpha =0.7$. The stable equilibria are at $x=-1$ and $x=1$, and the saddle is at $x=0$. The target is ${z}_{e}=(-1,0)$, and the distance is Euclidean. A trajectory converging to the other equilibrium is classified as non-target.
+\end{revision}
+
+The reference follows from the analytical separatrix expressions in Genda et al. \cite[Section 4.5]{ref13}. Numerical evaluation of the nearest boundary distance gives
+
+\begin{equation}
+  {R}_{\mathrm{ref}} \approx  0.7289278592
+\end{equation}
+
+\begin{bluerevision}
+\begin{greenrevision}
+This model tests the distinction between two stable equilibria, whereas the quadratic-cubic model tests return versus escape. Experiment A uses this model at $\alpha=0.7$. Experiment B instead trains and validates on multiple damping values of the quadratic-cubic model, then transfers the frozen configuration to this bistable Duffing model over $0.05\leq\alpha\leq2$. Each error uses the analytical-equation reference for its own model and damping value.
+\end{greenrevision}
+\end{bluerevision}
+
+\subsection{Unforced Duffing Oscillator with Linear Damping}
+
+\begin{equation}
+  \ddot{x} + 2\zeta \dot{x} - ax + {x}^{3} = 0
+\end{equation}
+
+\begin{revision}
+This is the unforced Duffing oscillator used by Habib \cite[Section 4.1]{ref12}. The parameters are $a=1$ and $\zeta =0.05$, with target ${z}_{e}=(-1,0)$. Unlike the previous Duffing model, this system has linear damping. The squared weighted distance to the target is
+\end{revision}
+
+\begin{equation}
+  d^{2} = 4(x+1)^{2} + \dot{x}^{2}
+\end{equation}
+
+The reference value is ${R}_{\mathrm{ref}}\approx 0.7683$, reported numerically by Habib \cite[Figure 1]{ref12}. It is not an analytical solution. Differences from this value are therefore differences from the published numerical reference, rather than a known exact error. The same distance weights must be used in both methods.
+
+\subsection{Cosine Potential with Quadratic Drag}
+
+\begin{equation}
+  \ddot{x} + \alpha |\dot{x}|\dot{x} + \sin(x) = 0
+\end{equation}
+
+\begin{revision}
+The damping coefficient is $\alpha =0.05$, and the target is ${z}_{e}=(0,0)$. The neighbouring saddles are at $x=\pm \pi $. The Euclidean distance is used, and the angle is kept unwrapped. Therefore, settling in a neighbouring potential well is not treated as returning to the selected target.
+\end{revision}
+
+Genda et al. give analytical separatrix branches and a tangency condition for the nearest boundary point \cite[Equations 26, 29, 34 and 37]{ref14}. Solving this condition numerically gives
+
+\begin{equation}
+  {R}_{\mathrm{ref}} \approx  2.0871592653
+\end{equation}
+
+As for the two polynomial potentials, this reference comes from analytical boundary expressions evaluated numerically. It is not obtained from either method being compared.
+
+\subsection{Duffing van der Pol Oscillator with a Tuned Mass Damper}
+
+The coupled four-dimensional model consists of a Duffing-van der Pol primary oscillator and a linear tuned mass damper (TMD). Habib uses this model in Section 4.2 of the DynIn paper \cite{ref12}. The corresponding system is also studied by Habib and Kerschen \cite{ref15}; the linear-absorber case in their Figure 11(a) has the same parameter values. In physical displacement coordinates, the equations used in the implementation are
+
+\begin{align}
+\ddot{x}_1 + 2\mu_1(x_1^2-1)\dot{x}_1 + x_1 + \alpha_3 x_1^3
+&+2r\gamma\mu_2(\dot{x}_1-\dot{x}_2) \notag\\
+&+r\gamma^2(x_1-x_2)=0,\\
+\ddot{x}_2+2\gamma\mu_2(\dot{x}_2-\dot{x}_1)
+&+\gamma^2(x_2-x_1)=0.
+\end{align}
+
+Here, ${x}_{1}$ is the primary displacement and ${x}_{2}$ is the TMD displacement. The parameters are $r=0.05$, $\gamma =0.97$, ${\mu }_{2}=0.12$, ${\alpha }_{3}=0.3$ and ${\mu }_{1}=0.075$. The absorber has no cubic stiffness. At these settings, the stable target equilibrium coexists with a stable periodic response and an unstable periodic solution \cite{ref12,ref15}.
+
+\begin{revision}
+Following Habib, the system is transformed to mass-normalised modal coordinates. The state is $z=({q}_{1},{\dot{q}}_{1},{q}_{2},{\dot{q}}_{2})$, and the target is the origin. The distance is defined by
+\end{revision}
+
+\begin{equation}
+  {d}^{2} = {\omega }_{1}^{2}{q}_{1}^{2} + {\dot{q}}_{1}^{2} + {\omega }_{2}^{2}{q}_{2}^{2} + {\dot{q}}_{2}^{2}
+\end{equation}
+
+The undamped natural frequencies are approximately ${\omega }_{1}=0.8815$ and ${\omega }_{2}=1.1004$ \cite{ref12}. These weights are kept the same for both methods.
+
+The source study \cite{ref15} provides analytical local bifurcation results and numerical periodic-solution branches, but not an analytical LIM. Habib \cite[Figures 7--8]{ref12} reports numerical LIM estimates obtained with DynIn. These estimates provide context, but they are not an independent exact reference.
+
+\begin{revision}
+This model is therefore used to test four-dimensional applicability, repeatability and computational cost. The comparison in Chapter~\ref{ch:comparison} reports the distribution of estimated radii without treating either method as the ground truth. No independent boundary validation is included in that dataset. No relative error or accuracy-threshold success rate is assigned to this model.
+\end{revision}
+
+\subsection{Separable Four Dimensional System}
+
+\begin{revision}
+To include a four-dimensional model with an analytically based reference, the quadratic-cubic and bistable Duffing systems are combined without coupling:
+\end{revision}
+
+\begin{equation}
+  {\ddot{x}}_{1} + 0.4|{\dot{x}}_{1}|{\dot{x}}_{1} + {x}_{1} - {x}_{1}^{2} = 0
+\end{equation}
+
+\begin{equation}
+  {\ddot{x}}_{2} + 0.7|{\dot{x}}_{2}|{\dot{x}}_{2} - {x}_{2} + {x}_{2}^{3} = 0
+\end{equation}
+
+The state is $z=({x}_{1},{\dot{x}}_{1},{x}_{2},{\dot{x}}_{2})$, with target ${z}_{e}=(0,0,-1,0)$. All four distance weights are one. Both component systems must return to their selected equilibria for the full state to return to the target.
+
+Because the systems are independent, the target basin is the Cartesian product of the two component basins. The closest boundary can be reached by moving one component to its boundary while keeping the other at its target. With the Euclidean distance, this gives
+
+\begin{equation}
+  {R}_{\mathrm{4D}} = \min({R}_{\mathrm{QC}},{R}_{\mathrm{BD}}) \approx  0.6474801597
+\end{equation}
+
+The product relation is exact; the displayed decimal is obtained by numerical evaluation of the analytical component references \cite{ref13}. This system is constructed for the present study and is not presented as a coupled model from the literature. It tests four-dimensional accuracy, while the Duffing-van der Pol-TMD model tests the method on coupled dynamics.
+
+\subsection{Use of the Reference Values}
+
+The three quadratic-drag models and the separable four-dimensional model allow comparison with analytically based references. The linearly damped Duffing oscillator allows comparison with a published numerical value. The coupled four-dimensional model is assessed without treating either method as the ground truth. These different roles are kept separate when presenting the results.
+
+In Experiment B, the reference error is used to choose hyperparameters. This is reference-assisted tuning. In Experiment C, the reference LIM is used only afterwards to evaluate the selected settings. In the two-method comparison, neither main solver uses the reference LIM to choose initial states or decide when to stop. Selecting hyperparameters and selecting initial states are therefore different tasks.
+
+\section{Hyperparameter Optimization}
+\label{sec:optimization-background}
+
+A hyperparameter configuration contains the numerical settings supplied to DynIn. Each configuration needs repeated runs with different seeds, so testing every combination can become expensive.
+
+\begin{bluerevision}
+Bayesian optimization builds a statistical model from the configurations already tested. An acquisition function balances predicted improvement and uncertainty when choosing the next configuration. The implementation uses MATLAB's \code{bayesopt} with the expected improvement plus acquisition function \cite{ref16,ref17}.
+
+In Experiment B, the objective pools absolute errors across 20 damping values and ten common seeds per value for the quadratic-cubic potential. Each error is measured against the analytical-equation reference at the corresponding damping value. Parameter bounds and population rules constrain the search, but there is no accuracy constraint or time gate. P95 error, process CPU time and wall-clock time are reported separately. A single candidate is frozen before validation at unused damping values and transfer to the bistable Duffing model.
+
+An integer neighbourhood search could examine nearby discrete settings, but it was not performed. The eight-variable search also includes a continuous sampling interval, which would require its own refinement rule. No local or global optimality claim is based on the completed study.
+\end{bluerevision}
+
+This outer optimization selects hyperparameters. The original GA inside DynIn still selects initial states for trajectory integration; it is not replaced.

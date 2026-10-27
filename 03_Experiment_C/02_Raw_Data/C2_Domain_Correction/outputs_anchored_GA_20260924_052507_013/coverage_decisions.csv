@@ -1,0 +1,4 @@
+alpha,geometry_pass,initial_radius_preserved,target_belt_preserved,within_grid_limit,trajectory_checks_run,ready_for_next_controlled_GA,classification_accuracy_validated
+0.2,1,1,1,1,1,1,0
+0.7,1,1,1,1,1,1,0
+1,1,1,1,1,1,1,0

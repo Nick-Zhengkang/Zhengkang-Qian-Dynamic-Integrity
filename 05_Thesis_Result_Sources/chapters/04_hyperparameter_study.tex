@@ -1,0 +1,209 @@
+\chapter{DynIn Hyperparameter Study}
+\label{ch:hyperparameters}
+
+\begin{bluerevision}
+This chapter presents Experiments A, B and C. Experiment A tests how individual settings affect DynIn on the Duffing oscillator with quadratic damping. Experiment B optimizes eight hyperparameters across damping values of the quadratic-cubic potential, validates the frozen candidate at unused values, and transfers it to bistable Duffing. Each stage compares with a Habib-based transferred configuration using the model-specific analytical reference. Experiment C uses model features and diagnostic tests to guide parameter selection without a reference LIM during tuning. All three experiments retain the original DynIn GA branch, with \code{type\_x0}=1.
+\end{bluerevision}
+
+\section{Baseline and Scope of the Results}
+\label{sec:study-baseline}
+
+\begin{bluerevision}
+Experiment A uses the bistable Duffing oscillator with quadratic damping at $\alpha=0.7$, target $(-1,0)$ and Euclidean distance. Its reference is $R_{\mathrm{ref}}\approx0.728927859156115$, evaluated from the analytical boundary equations \cite{ref13}. Experiment B uses the quadratic-cubic model for multi-alpha training and validation, followed by a bistable Duffing transfer pilot. Each B run has its own model- and alpha-specific reference, obtained by numerical evaluation and root finding from the analytical equations.
+
+The baseline is a direct transfer of Habib-based numerical settings, listed in Table~\ref{tab:baseline}. The grid resolution, sampling interval, solver tolerances, GA generations and population size follow the reported settings \cite[Table~1]{ref12}; additional implementation controls are stated explicitly. The domain is $x\in[-3,3]$, $\dot{x}\in[-2,4]$. This is termed the Habib-based transferred configuration. It is not a claim that Habib prescribed these settings for the quadratic-damping model studied here or that this experiment reproduces his original benchmark. The comparator in Experiment B is this configuration, not the separately configured Original DynIn runs from Chapter~\ref{ch:comparison}.
+\end{bluerevision}
+
+\input{tables/ab_transferred_settings}
+
+\begin{bluerevision}
+Relative errors are percentages. The reported measures are the median, P95 and the numbers of runs within 1\% and 2\%. The median of individual errors is not the error of the median LIM estimate. These quantities can differ greatly when runs include both accurate estimates and severe underestimates. Program completion is also different from numerical accuracy.
+
+Experiment A records core wall-clock time only. The new Experiment B datasets record both worker process CPU time and wall-clock time over the same solver call, excluding separate diagnostics, plotting, saving and BO overhead. Both studies used six process workers and one computational thread per worker. Costs are compared within each paired study, not pooled across experiments. Experiment C retains its separately recorded timing results.
+\end{bluerevision}
+
+\section{Experiment A Hyperparameter Sensitivity}
+\label{sec:experiment-a}
+
+\subsection{Design and Sensitivity Measure}
+\begin{revision}
+Fourteen factors were tested at low, baseline and high settings using 30 common seeds, 99101--99130. The same baseline runs are reused in each factor comparison, giving 29 unique configurations and 870 runs. All 870 solver runs and their diagnostic evaluations completed successfully. Only one factor setting was changed at a time; population size and population composition required the coordinated adjustments described in Section~3.2.2.
+
+For each factor, sensitivity is measured as the largest minus the smallest median relative error over the three levels, in percentage points (pp). This ranks the observed response within the selected ranges. It is not a derivative, a sensitivity per unit change, or a universal ranking. A large range can reflect a switch between useful estimates and severe underestimation, rather than a smooth accuracy change.
+\end{revision}
+
+\input{tables/a_genda_ranking}
+
+\subsection{Error and Classification Results}
+\begin{revision}
+The transferred baseline had median relative error 3.474\% and P95 error 98.417\%. Fourteen of 30 runs returned radii between 0.01151 and 0.01338, far below the reference 0.72893. In each of these runs, all 63 independently labelled target diagnostic points were classified as non-target. The baseline median false-unsafe rate was only 1.587\%, despite these fourteen runs having a rate of 100\%. The individual runs and upper tail therefore reveal failures that the median alone does not adequately describe.
+
+The six largest median-error ranges belonged, in order, to the target neighbourhood, $T_s$, \code{rep\_fix\_point}, grid resolution, \code{selected\_opt} and \code{rep\_periodic}. With $k=1$, median error was 99.583\%; with $k=7$, it was 0.915\%, and 27 of 30 runs were within 2\%. Reducing $T_s$ to 0.025 gave median error 98.350\%. Increasing it to 0.1 gave median error 0.868\%, P95 2.417\% and 27 of 30 runs within 2\%. Among the tested single-factor changes, $T_s=0.1$ gave the lowest median error, although three runs remained above 2\%.
+
+Increasing grid resolution did not improve accuracy in this experiment. At \code{discr}=351, median error was 1.828\% and P95 was 4.080\%. At 1051, all 30 runs severely underestimated the LIM, with median error 98.901\%. Their median false-unsafe rate on the diagnostic set was 100\%. With a fixed cell count $k$, refining the grid also reduces the physical target-block size. Thus, this comparison does not isolate spatial approximation error while keeping the target region physically unchanged.
+
+Reducing \code{rep\_fix\_point} to 20 or \code{rep\_periodic} to 5 produced errors above 50\% in all 30 runs. Increasing \code{rep\_fix\_point} to 80 avoided these severe underestimates and gave median error 1.034\%, with 25 of 30 runs within 2\%. Increasing \code{rep\_periodic} to 20 left the baseline LIM estimates unchanged, including the fourteen severely underestimated cases.
+
+With \code{selected\_opt}=2, 16 of 30 runs had errors above 50\%, compared with fourteen for the baseline value of 3. Its median error consequently rose to 98.216\%, whereas \code{selected\_opt}=5 gave 1.924\% but still had fourteen severely underestimated runs. A small change in the frequency of severe errors can therefore produce a large median-error range when that frequency crosses one half. The near-clone count ranked tenth rather than among the six highest factors. Both zero and four near-clones produced fifteen severely underestimated runs, with median errors of 50.005\% and 50.277\%, respectively.
+
+The diagnostic results associate the poor estimates with false non-target classifications. However, they do not identify the first incorrect label or prove which recurrence or reuse event caused each result. The GA also changes which trajectories are visited and which labels are learned. These effects should therefore not be interpreted as independent defects in the integration solver or as a general rule that a coarser grid is better.
+\end{revision}
+
+\revisedfigure{Fig_A_Distributions.pdf}{Experiment A error distributions}{Relative error for the six highest-ranked factors on the Duffing oscillator with quadratic damping, $\alpha=0.7$. Each configuration uses 30 common seeds. B denotes the transferred baseline. The logarithmic axes retain both small errors and severe underestimates. All 30 runs are shown, with horizontal offsets to reduce overlap; vertical values are unchanged. Boxes, whiskers and separate P95 diamonds follow Section~3.1.}{fig:a-distributions}
+
+\revisedfigure{Fig_01_A_Sensitivity.pdf}{Experiment A sensitivity ranking}{Experiment A sensitivity over fourteen factors, with 30 common seeds per configuration. Left: range of median relative error in percentage points, with a linear scale near zero and logarithmic scale above 0.1 pp. Right: largest divided by smallest median core wall-clock time across the three levels. Large error ranges often reflect severe underestimation, not smooth responses.}{fig:a-sensitivity}
+
+\FloatBarrier
+\subsection{Cost and Main Conclusion}
+\begin{revision}
+Changing $T_s$ from 0.05 to 0.1 reduced median error from 3.474\% to 0.868\% in this batch. Median core wall-clock time decreased from 3.942 to 3.542~s. Increasing $k$ to 7 reduced median and P95 errors, with median time 4.466~s. These are observed single-factor comparisons on 30 seeds, not independently confirmed optima.
+
+Some inaccurate settings also ran quickly. For example, the 1051-cell grid took a median 1.449~s but had median error 98.901\%. This is not a useful accuracy--cost improvement. The largest runtime ratio across levels was 4.65 for \code{rep\_fix\_point}, followed by 4.04 for \code{rep\_periodic}. Increasing the outer budget from 100 to 200 increased median time from 3.942 to 7.865~s. Median error fell from 3.474\% to 2.189\%, but the same fourteen severely underestimated seeds remained.
+
+Changing \code{tfinal} from 1000 to 4000 left the returned LIM estimates unchanged. The tested ODE tolerances changed median relative error by only about $7.6\times10^{-10}$ percentage points, although some individual errors and threshold counts changed. Thus, a near-zero median-error range does not imply that every run is unaffected. The strong effects of $T_s$ and recurrence settings also show that weak horizon sensitivity does not make all time settings unimportant.
+
+Experiment A therefore shows that parameter transfer can affect classification reliability as well as typical error. Grid resolution, target size and sampled classification rules must be considered together before increasing search effort. The ranking applies to this model, the tested levels and 30 seeds. For mixed error distributions, it must be read alongside P95 and severe-error counts. It does not measure interactions directly or establish that combining the individually favourable settings will give the best configuration.
+\end{revision}
+
+\input{chapters/04_b_multi_alpha}
+
+\section{Experiment C Physics Guided Parameter Transfer}
+\label{sec:experiment-c}
+
+\subsection{A Reusable Tuning Procedure}
+
+\begin{revision}
+Experiment C studies parameter selection without using a reference LIM during tuning. It asks how suitable initial settings can be obtained when the model changes. The tested class consists of unforced potential systems with positive quadratic drag and a stable target equilibrium. The tests used the quadratic-cubic, bistable Duffing and cosine models. The purpose was to test a sequence of parameter choices and diagnostic adjustments, not to find one shared numerical configuration.
+\end{revision}
+
+The resulting procedure is the following:
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Define the target and state scales.} Identify the equilibrium to be protected, nearby saddles, characteristic position and velocity scales, and the distance weights. These define the meaning of the disturbance radius.
+\item \textbf{Set the search region and check the computational domain.} Estimate initial position and velocity ranges from the potential well and energy scales. The computational domain must also contain the relevant trajectories starting in the allowed GA search region. When returning trajectories leave it temporarily, enlarge the domain. Keep the initial search radius fixed during a domain-only correction, so that the correction does not also enlarge the search task.
+\item \textbf{Choose grid resolution and target size together.} Request normalised cell widths no larger than $\eta=0.005$, then select the largest valid odd target block with $k\geq3$ satisfying the energy-size criterion in Section~\ref{sec:c-method}. A small cell count can make target recognition difficult, while an excessively large target block can label states too early. Increase the grid-cell count when enlarging the domain to avoid making the physical cells coarser.
+\item \textbf{Check classification settings using diagnostic trajectories.} Use the local oscillation period and a decay estimate as starting information. Reuse the same calibration points when separately checking $T$ against $2T$, the sampling interval, and grid refinement. Recheck earlier blocks after an adopted change, then assess the fixed settings on held-out points. A point unresolved at both time horizons still has an unknown outcome; matching labels do not make it a successful check.
+\item \textbf{Adjust search effort after classification is stable.} Keep the spatial and classification settings fixed when comparing outer trajectory budgets or GA settings. If continued searching finds closer non-target states, additional search effort may be useful. Finally, test the procedure on another model and independent seeds.
+\end{enumerate}
+
+The reference LIM was used afterwards to assess the result, not to generate the diagnostic points in this transfer procedure. The tested starting choices included a normalised cell width of about 0.005, target-block energy above the well minimum no greater than 0.005 of the barrier height, and about 125 samples per local period. These are empirical starting choices. The tests below support the diagnostic adjustments more directly than they establish these constants as optimal.
+
+\par\noindent\begin{minipage}{\linewidth}
+\vspace*{1.5ex}
+\subsection{Isolated Check of Integration Time}
+
+The time test used the quadratic-cubic model with $\alpha=0.4$. The grid resolution was 561, $k=15$, the sampling interval was approximately 0.05027, and the outer budget was 100. Only the integration horizon was changed between the three profiles. Each profile used ten seeds.
+
+\begin{center}
+\centering\small
+\captionof{table}[Isolated integration-time test]{Isolated integration-time test. Unresolved probes describe the auxiliary diagnostic trajectories; LIM errors describe the subsequent DynIn runs.}
+\label{tab:c-time}
+\begin{tabularx}{\linewidth}{@{}c Y r c r@{}}
+\toprule
+\code{tfinal} & Unresolved probes & Median error (\%) & Within 2\% & Time (s) \\
+\midrule
+130 & 57.35\% & 93.614 & 0/10 & 0.70 \\
+260 & 0.00\% & 0.574 & 9/10 & 10.37 \\
+300 & 0.00\% & 0.574 & 9/10 & 10.44 \\
+\bottomrule
+\end{tabularx}
+\end{center}
+\end{minipage}\par\medskip
+
+At $T=130$, 57.35\% of the diagnostic points remained unresolved, and the median LIM error was 93.614\% (Table~\ref{tab:c-time}). The short runtime therefore did not indicate a useful speed improvement. At $T=260$, no probes remained unresolved, median error fell to 0.574\%, and nine of ten runs were within 2\%.
+
+\studyfigure{Fig_C_Time_Boxplots.pdf}{Integration-time test on the quadratic-cubic model, with ten seeds per setting. Left: relative error on a logarithmic axis. Right: main-run elapsed time. Dots show individual runs. Extending the horizon from 130 to 260 removes the large errors; extending it further to 300 gives no improvement in the reported median.}{fig:c-time}
+
+Increasing the horizon further to 300 did not improve the reported accuracy. The result supports extending time when the diagnostics indicate insufficient classification, rather than using a larger horizon for every model. It also explains why the weak time sensitivity in Experiment A cannot be transferred directly to another system.
+
+\subsection{Coverage of the Allowed Search Trajectories}
+
+The domain test used the bistable Duffing potential with quadratic drag at $\alpha=0.2$, 0.7 and 1.0. A domain can contain the initial states chosen by the GA but still fail to contain their later trajectories. If a trajectory temporarily leaves that domain before returning to the target, the original domain-exit rule can give a false-unsafe classification.
+
+The corrected domain was based on the energy envelope of the allowed GA search region. For these damped potential systems, energy does not increase, so the initial energy provides information about possible later positions and velocities. The coverage check therefore considered the states that the GA could actually select, not only a small set of low-energy diagnostic points. The original domain-exit classification rule was retained.
+
+The two domains were compared with 30 paired seeds at each damping value, giving 180 runs. The initial search radius, physical cell widths, target neighbourhood and outer budget of 100 were kept fixed. This separated domain coverage from an increase in the allowed initial search radius.
+
+\begin{table}[tbp]
+\centering\small
+\caption[Controlled domain correction]{Controlled domain correction in the bistable Duffing model. Errors are medians of absolute relative error. Arrows show original to corrected settings.}
+\label{tab:c-domain}
+\begin{tabularx}{\linewidth}{@{}c r r Y l@{}}
+\toprule
+$\alpha$ & Original error (\%) & Corrected error (\%) & Within 2\% & Time (s) \\
+\midrule
+0.2 & 0.738 & 0.540 & $30/30\to29/30$ & $8.92\to9.01$ \\
+0.7 & 9.048 & 1.046 & $0/30\to27/30$ & $7.17\to7.53$ \\
+1.0 & 4.916 & 1.283 & $0/30\to20/30$ & $6.12\to6.34$ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\studyfigure{Fig_C_Domain_Boxplots.pdf}{Signed relative error before and after domain correction, with 30 paired seeds per damping value. Negative values indicate LIM underestimation. Dots show individual runs and all three panels use the same vertical limits. Domain correction removes most of the large underestimation at $\alpha=0.7$ and $1.0$.}{fig:c-domain}
+
+The strongest improvement occurred at $\alpha=0.7$, where the median error decreased from 9.048\% to 1.046\%. At $\alpha=1.0$, it decreased from 4.916\% to 1.283\%. Across the three damping values, the number of runs within 2\% increased from 30/90 to 76/90; within 5\%, it increased from 46/90 to 90/90. The median times increased only slightly in this comparison.
+
+The change did not improve every run. At $\alpha=0.2$, the median error decreased, but the number within 2\% changed from 30/30 to 29/30. The supported conclusion is therefore that search-domain coverage removed a major source of underestimation in the difficult cases, not that a larger domain always gives a better estimate.
+
+\subsection{Transfer to the Cosine Potential}
+
+The cosine potential with $\alpha=0.05$ provided a further two-dimensional transfer test. The reference was $R_{\mathrm{ref}}\approx2.0871592653$, obtained by numerical evaluation of the analytical boundary conditions described in Section~2.4.4. A historical configuration was compared with a physics-guided configuration using 30 seeds per profile.
+
+For this transfer, diagnostic sampling covered the full allowed GA disk of radius $\pi$, including its high-velocity part. Thus, both coordinate scales used for point generation were $\pi$; the physical velocity scale used for grid selection remained $L_v=2$. Calibration used 16 directions with radius factors $0.05,0.35,0.65,0.90,0.999$. The held-out set used 16 shifted directions and factors $0.025,0.25,0.55,0.80,0.98,0.9999$. Both sets allowed up to four midpoint tests near each observed transition. The time, sampling and grid checks shared the calibration set; the held-out set was used only after the settings were fixed.
+
+\begin{table}[tbp]
+\centering\small
+\caption[Settings for the cosine-model transfer]{Settings for the cosine-model transfer. Several controls change together because this tests the complete transfer procedure.}
+\label{tab:c-cosine-settings}
+\begin{tabularx}{\linewidth}{@{}Y c c@{}}
+\toprule
+Setting & Historical & Physics guided \\
+\midrule
+Position domain & $[-\pi,\pi]$ & $[-\pi,\pi]$ \\
+Velocity domain & $[-8,8]$ & $[-3.17301,3.17301]$ \\
+\code{discr} / $k$ & 501 / 11 & 635 / 19 \\
+\code{tfinal} / \code{Ts} & 1200 / 0.05 & 680 / 0.05027 \\
+RelTol / AbsTol & $10^{-8}/10^{-9}$ & $10^{-8}/10^{-8}$ \\
+Outer budget / generations / population & 100 / 5 / 20 & 100 / 5 / 20 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The model-based settings were generated for the cosine potential rather than copied from the linearly damped Duffing baseline (Table~\ref{tab:c-cosine-settings}). Independent diagnostics used 152 points per profile, including 86 target and 66 non-target points. Neither profile produced an observed false-safe, false-unsafe or unresolved label in this diagnostic set.
+
+\begin{table}[tbp]
+\centering\small
+\caption[Cosine-model transfer results]{\revcaption{Cosine-model transfer results over 30 seeds per profile. Time denotes median main-run wall-clock time, retained from the original summary.}}
+\label{tab:c-cosine-results}
+\begin{tabularx}{\linewidth}{@{}Y r r c r@{}}
+\toprule
+Profile & Median error (\%) & P95 error (\%) & Within 2\% & Time (s) \\
+\midrule
+Historical & 0.777 & 1.542 & 30/30 & 2.79 \\
+Physics guided & 0.330 & 1.182 & 30/30 & 7.16 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\revisedfigure{Fig_C_Cosine_Boxplots.pdf}{Transfer to the cosine model: accuracy and CPU time}{Transfer to the cosine model, with 30 seeds per profile. Left: relative reference error, unchanged. Right: recorded main-run process CPU time on a logarithmic axis. All 30 runs per profile are retained. Dots show individual runs and diamonds mark P95 separately from the whiskers. The physics-guided settings lower the median and P95 error but increase median CPU time. Both profiles achieve 30/30 runs within 2\%.}{fig:c-cosine}
+\FloatBarrier
+
+\begin{revision}
+Figure~\ref{fig:c-cosine}(b) uses the saved process CPU times. They were measured by the change in MATLAB \code{cputime} around the main DynIn call, before separate diagnostics and file writing. These runs were executed sequentially; process CPU time can include work across computational threads. Its median is 6.172~s for the historical settings and 23.180~s for the physics-guided settings. The physics-guided seed 115 has a recorded wall-clock time of about 8.7 hours but a CPU time of 28.391~s. It remains in the plot with this CPU value. The record does not establish the cause of the long elapsed time. Table~\ref{tab:c-cosine-results} retains the original median wall-clock times, rather than replacing them with CPU values.
+\end{revision}
+
+\begin{revision}
+The physics-guided configuration reduced the median error from 0.777\% to 0.330\% and the P95 error from 1.542\% to 1.182\%. However, its median wall-clock time increased from 2.79 to 7.16~s. Both configurations already achieved 30/30 runs within 2\%, so the benefit was a lower error distribution rather than an improved threshold count. Because multiple settings changed, this result evaluates the complete configuration and does not isolate the contribution of one parameter.
+\end{revision}
+
+\section{Summary of the Hyperparameter Study}
+\label{sec:hyperparameter-summary}
+
+\begin{bluerevision}
+On the Duffing oscillator with quadratic damping, Experiment A used 30 common seeds per configuration. The six highest-ranked factors were the target neighbourhood, sampling interval, fixed-point recurrence, grid resolution, \code{selected\_opt} and periodic recurrence. Several settings produced severe underestimation and false non-target diagnostic labels. Classification reliability is therefore a necessary part of parameter selection. A finer grid or larger search budget did not automatically improve the result.
+
+Experiment B trained one fixed configuration across damping values of the quadratic-cubic model. On unused alpha values and new seeds, pooled median absolute error decreased by 84.44\%, while median CPU time increased by a factor of 3.07. Without retuning, transfer to bistable Duffing reduced median absolute error by 77.87\%, with a 2.40-fold median CPU cost. The candidate improved per-alpha median error at 20/20 same-model validation values and 38/40 transfer values. Severe low-damping underestimation remained, especially at $\alpha=0.05$, and is retained in both the reported results and the applicability discussion.
+\end{bluerevision}
+
+Experiment C supports a sequence of model-based choices and diagnostic corrections: define the target and scales, check domain coverage, choose grid and target size together, verify time settings, then adjust search effort. The time and domain tests support correcting classification before increasing the budget. The cosine transfer produced useful settings, but not a speed-up.
+
+Experiments B and C address different information settings: B uses a reference error during tuning, whereas C uses physics and diagnostics. Neither establishes a global optimum or a general high-dimensional tuning rule. Their evidence concerns the tested two-dimensional models. The next chapter introduces the proposed initial-condition search method.

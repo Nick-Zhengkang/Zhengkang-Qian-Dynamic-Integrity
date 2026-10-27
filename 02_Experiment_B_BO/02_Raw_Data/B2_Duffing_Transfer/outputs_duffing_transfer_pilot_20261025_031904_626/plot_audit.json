@@ -1,0 +1,10 @@
+{
+  "raw_rows": 800,
+  "alpha_count": 40,
+  "failed_runs": 0,
+  "quantiles": "Hazen; middle 50% of seeds, not a confidence interval",
+  "reference": "V2 bistable Duffing Fig.9 analytical lower envelope",
+  "retuned": false,
+  "summary_crosscheck": "MATLAB/Python passed",
+  "coincident_curve_rows_merged": 10
+}

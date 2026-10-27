@@ -1,0 +1,2 @@
+tfinal,Ts,weight_1,weight_2,type_x0,reltol,abstol,number_of_steps,num_of_cell_around_equilibrium,num_fig,plot_results,plot_results_final,spaceboundary_1,spaceboundary_2,spaceboundary_3,spaceboundary_4,discr,automatic,var1,var2,rep_fix_point,rep_periodic,min_periodic_radius,check_min_periodic,check_equilibrium,max_check_step,divR,num_gen,num_crossover,selected_opt,newcomers,num_almost_clones,bis_iter_max
+2000,0.0920905251923764,1,1,1,1e-08,1e-08,171,11,1001,0,0,-3,-2,3,4,1012,1,1,2,40,10,0.005,0,1,10000,40,7,5,3,12,2,5

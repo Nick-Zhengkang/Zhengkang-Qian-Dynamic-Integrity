@@ -1,0 +1,17 @@
+parameter,value,evidence,status,note
+"model parameters r; gamma; mu2; alpha; mu1","0.05; 0.97; 0.12; 0.3; case-specific mu1",Section 4.2,paper_reported,
+initial-condition selector,GA (type_x0=1 in software),Section 3.3.3,paper_reported,
+cells per direction,701,Table 1,paper_reported,
+phase-space boundaries,[-3;3]^4,Table 1,paper_reported,
+sampling interval Ts,0.05,Table 1,paper_reported,
+RelTol and AbsTol,1e-8 / 1e-8,Table 1,paper_reported,
+GA generations,5,Table 1,paper_reported,
+individuals per generation,20,Table 1,paper_reported,
+outer iterations,40,Figure 7,paper_reported,Figure 7 shows the reported computation through iteration 40.
+modal distance weights,"[omega1^2; omega2^2; 1; 1]",Equations (3)-(4) and Section 4.2,paper_reported,
+fixed-point repeats,40,Section 3.3.1 default,paper_reported,
+periodic-cell repeats,5,Section 3.3.1 default,paper_reported,
+target-neighbourhood cells,1,Section 3.3.1,paper_literal_minimum,Only the cell containing the target equilibrium is pre-labelled; no numeric surrounding belt is reported.
+maximum integration horizon tfinal,Jacobian lower bound then pilot-tested,Not numerically reported,implementation_control,Not imported from Starter and not claimed as a paper parameter.
+GA population composition,1 elite + 9 crossover + 8 newcomers + 2 near-clones,Not numerically reported,implementation_control,The total is the reported population size 20; the split is a software control.
+near-point merge divisor divR,40,Not numerically reported,implementation_control,Software control used to merge nearby tracked points.

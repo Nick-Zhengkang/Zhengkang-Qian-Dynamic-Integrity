@@ -1,0 +1,32 @@
+\begin{table}[htbp]
+\centering\small
+\caption[Held-out-alpha validation and frozen cross-model transfer]{\bluecaption{Held-out-alpha validation and frozen cross-model transfer. Statistics pool equally many runs at each alpha; all low-alpha runs are retained. CPU and wall-clock times cover the same solver call.}}\label{tab:b-multi-results}
+\begingroup\rowcolors{1}{revisionblue}{revisionblue}
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\linewidth}{@{}Y r r@{}}
+\toprule
+Measure & Habib-based transfer & BO candidate \\
+\midrule
+\multicolumn{3}{l}{\textbf{Quadratic-cubic validation}} \\
+Runs per profile & 2000 & 2000 \\
+Median absolute error & 0.037379 & 0.005817 \\
+Median relative error (\%) & 5.015 & 0.840 \\
+P95 relative error (\%) & 98.252 & 46.643 \\
+Runs within 1\% & 271 & 1137 \\
+Runs within 2\% & 557 & 1646 \\
+Runs above 50\% error & 947 & 100 \\
+Median CPU time (s) & 4.586 & 14.070 \\
+Median wall-clock time (s) & 4.071 & 13.418 \\
+\multicolumn{3}{l}{\textbf{Duffing transfer pilot}} \\
+Runs per profile & 400 & 400 \\
+Median absolute error & 0.028229 & 0.006248 \\
+Median relative error (\%) & 3.658 & 0.921 \\
+P95 relative error (\%) & 98.161 & 4.060 \\
+Runs within 1\% & 59 & 216 \\
+Runs within 2\% & 120 & 304 \\
+Runs above 50\% error & 135 & 11 \\
+Median CPU time (s) & 6.258 & 15.016 \\
+Median wall-clock time (s) & 4.749 & 13.308 \\
+\bottomrule
+\end{tabularx}\endgroup
+\end{table}

@@ -1,0 +1,2 @@
+n_points,n_inside,n_domain_excluded,n_truth_unresolved,n_true_target,n_true_non_target,n_near_boundary_known,n_false_safe,n_false_unsafe,n_unresolved,n_exceptions,n_domain_exit_false_unsafe,n_new_attractor_false_unsafe,false_safe_rate,false_unsafe_rate,unresolved_rate,truth_unresolved_rate,classifier_wall_s,diagnostic_pass,cache_key
+152,152,0,0,86,66,56,0,0,0,0,0,0,0,0,0,0,78.6436934,1,physics_holdout_N635_k19_T680_dt0p0502654824574_rep10

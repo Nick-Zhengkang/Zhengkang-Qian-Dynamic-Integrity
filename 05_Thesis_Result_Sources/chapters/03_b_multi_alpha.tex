@@ -1,0 +1,81 @@
+\subsection{Experiment B Multi-Alpha Bayesian Optimization and Transfer}
+\label{sec:b-method}
+
+\begin{bluerevision}
+Experiment B tests whether one fixed DynIn hyperparameter configuration can improve accuracy across damping values and remain useful after a change of model. It has three stages: Bayesian optimization on the quadratic-cubic potential, validation at unused damping values in that model, and direct transfer of the frozen candidate to the bistable Duffing potential. Both systems have quadratic drag and use Euclidean distance. Their targets are $(0,0)$ and $(-1,0)$, respectively. All comparisons use the original DynIn GA with \code{type\_x0}=1. The comparator is the Habib-based transferred configuration in Table~\ref{tab:baseline}, not the separately configured Original DynIn runs in Chapter~\ref{ch:comparison}.
+
+\paragraph{Training objective.}
+Let $\boldsymbol\theta$ denote a hyperparameter configuration, $\hat R(\boldsymbol\theta;\alpha,s)$ its estimate at damping coefficient $\alpha$ and seed $s$, and $R_{\mathrm{ref}}(\alpha)$ the reference for that model and damping value. The training set is
+\[
+ A_{\mathrm{train}}=\{0.1,0.2,\ldots,2.0\},\qquad
+ S_{\mathrm{train}}=\{107101,\ldots,107110\}.
+\]
+Each configuration requires $20\times10=200$ DynIn runs. The objective pools their absolute errors:
+\begin{equation}
+ J(\boldsymbol\theta)=\operatorname{median}_{\substack{\alpha\in A_{\mathrm{train}}\\s\in S_{\mathrm{train}}}}
+ \left|\hat R(\boldsymbol\theta;\alpha,s)-R_{\mathrm{ref}}(\alpha)\right|,
+ \qquad \min_{\boldsymbol\theta\in\Theta}J(\boldsymbol\theta).
+ \label{eq:b-objective}
+\end{equation}
+Every damping value contributes equally many runs. This is the median over all 200 errors, not the mean of 20 per-alpha medians or a worst-alpha objective. Absolute and relative errors need not give the same ranking when pooled across different reference values. There is no time gate or accuracy constraint; tail errors and computational cost are evaluated separately.
+
+\paragraph{Analytically based references.}
+For each $\alpha$, analytical separatrix expressions from Genda et al. are evaluated numerically \cite{ref13}. Writing a boundary branch as $v^2=p_\sigma(x;\alpha)$, its squared Euclidean distance to the target is $(x-x_e)^2+p_\sigma(x;\alpha)$. Numerical root finding locates admissible interior stationary points and turning points; their radii are compared with the relevant endpoints. The smallest admissible candidate defines $R_{\mathrm{ref}}(\alpha)$. For the bistable Duffing model, this is the lower envelope illustrated in Figure~9 of the source paper, not any one candidate branch. The Duffing transfer evaluator returns turning roots from the physically admissible side of a tight bracket. Both evaluators save residual, scan-refinement and independent integral checks. The reference is obtained from analytical equations, not from plotted pixels or a DynIn estimate. Only training references enter BO selection; validation and transfer references are used for subsequent evaluation.
+\end{bluerevision}
+
+\begin{table}[htbp]
+\centering\small
+\caption[Eight-variable search space for Experiment B]{\bluecaption{Eight-variable search space for Experiment B. Bounds are fixed before search.}}
+\label{tab:b-search-space}
+\begingroup\rowcolors{1}{revisionblue}{revisionblue}
+\begin{tabularx}{\linewidth}{@{}Y l@{}}
+\toprule Parameter & Allowed values \\
+\midrule
+Target cells $k=2q_k+1$ & $q_k=0,\ldots,5$; $k=1,3,5,7,9,11$ \\
+Grid resolution \code{discr} & Integers 351--1051 \\
+GA generations & Integers 2--10 \\
+Population size $p$ & Integers 10--20 \\
+Newcomer count $n_{\mathrm{new}}$ & Integers 2--12 \\
+\code{selected\_opt} & Integers 2--5 \\
+Outer budget \code{number\_of\_steps} & Integers 50--200 \\
+Sampling interval $T_s$ & Real values in $[0.025,0.10]$ \\
+\bottomrule
+\end{tabularx}\endgroup
+\end{table}
+
+\begin{bluerevision}
+\paragraph{Search variables and fixed controls.}
+There are seven integer coordinates and one real-valued sampling interval, $T_s$. Grid resolution can take every integer in its interval, not only odd values. Target width is encoded as $k=2q_k+1$. Population validity requires $0.2\leq n_{\mathrm{new}}/p\leq0.6$, two near-clones, one retained best individual, and at least one crossover individual. The crossover count is $p-n_{\mathrm{new}}-3$.
+
+The common computational domain is $x\in[-3,3]$, $v\in[-2,4]$. Fixed controls include \code{tfinal}=2000, RelTol=AbsTol=$10^{-8}$, fixed-point and periodic recurrence counts of 40 and 10, \code{divR}=40 and \code{automatic}=1. In particular, an unclassified trajectory at the time limit is treated as non-target by the retained native rule. The search space is predefined, rather than chosen as the eight highest-ranked factors from Experiment A. Recurrence counts and the near-clone count remain fixed.
+
+\paragraph{Bayesian search and parallel execution.}
+MATLAB's \code{bayesopt} uses expected improvement plus \cite{ref16,ref17}. Each of two restarts begins with 16 random valid configurations. A Gaussian process is fitted to evaluated configurations and objective scores, and the acquisition function selects subsequent configurations using predicted improvement and uncertainty. Each restart contains 200 evaluations, including the 16 initial evaluations; no configurations from Experiment A are supplied as starting points. The objective is declared deterministic because the fixed alpha/seed set and numerical controls define a reproducible sampled objective.
+
+Configuration evaluations are sequential. Within an evaluation, the 200 alpha/seed runs use \code{parfor} with six process workers and one computational thread per worker. Workers are warmed up before timing. The actual random-number generator seed is the reported seed ID plus 100000. Wall-clock time and process CPU time are measured on the worker around the same DynIn solver call. They include search, integration and learned-grid handling, but exclude warm-up, separate diagnostics, plotting, saving and BO overhead. Worker CPU measurements therefore include the worker's algorithm work, rather than only client-side scheduling.
+
+\paragraph{Validation at unused damping values.}
+The configuration with the lowest observed training objective across both restarts is selected and frozen. It is compared with the transferred configuration on
+\[
+ A_{\mathrm{val}}=\{0.05,0.15,\ldots,1.95\},\qquad
+ S_{\mathrm{val}}=\{108101,\ldots,108200\}.
+\]
+This gives 2000 alpha/seed pairs and 4000 solver runs. The value $0.05$ is below the training range and tests lower-end extrapolation; the other 19 values lie inside that range. Both configurations run consecutively on the same worker for each pair, with randomized execution order. Other pairs may run concurrently. Validation does not trigger reselection or further tuning.
+
+\paragraph{Frozen transfer to bistable Duffing.}
+The same candidate and transferred settings are then applied to the bistable Duffing model, changing the governing equation and target but not retuning the hyperparameters. The transfer pilot uses $\alpha=0.05,0.10,\ldots,2.00$ and ten new seed IDs, 110101--110110, for each of the two configurations: $40\times10\times2=800$ runs. Pair members again run consecutively on one worker in randomized order. This experiment tests transfer across models; its ten seeds per alpha provide less replication than the same-model validation.
+
+\paragraph{Reporting.}
+Per-alpha LIM distributions and errors are reported alongside pooled median absolute error, relative error, P95, threshold counts and median CPU and wall-clock times. Errors above 50\% are counted to describe severe failures, not as a search constraint. All low-alpha cases remain in the pooled results. Training cost is reported separately from the cost of one subsequent estimate. No integer neighbourhood refinement or post-validation optimization is performed.
+\end{bluerevision}
+
+\begin{greenrevision}
+Figure~\ref{fig:bo-workflow} separates training and candidate selection from the subsequent validation and model transfer.
+\end{greenrevision}
+\begin{figure}[p]
+\centering
+\includegraphics[width=\linewidth,height=0.87\textheight,keepaspectratio]{figures/experiment_b_bayesian_workflow.pdf}
+\caption[Multi-alpha Bayesian optimization workflow]{\greencaption{Experiment B workflow. The selected candidate is frozen before same-model validation and cross-model transfer.}}
+\label{fig:bo-workflow}
+\end{figure}
+\FloatBarrier

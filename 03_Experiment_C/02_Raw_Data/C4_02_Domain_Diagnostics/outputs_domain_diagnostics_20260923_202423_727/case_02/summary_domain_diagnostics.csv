@@ -1,0 +1,7 @@
+alpha,profile,split,status,discr,k,tfinal,Ts,n_true_target,n_true_non_target,false_safe_rate,false_unsafe_rate,unresolved_rate,domain_exit_false_unsafe,corrected_original_exit_errors,original_exit_errors_still_non_target,original_exit_errors_now_unresolved,n_points_above_calibration_energy,classifier_wall_s,diagnostic_and_exit_check_pass
+0.7,original_domain,calibration,evaluated,677,11,360,0.0355430635052669,56,14,0,0.0714285714285714,0,4,0,4,0,0,21.6334053,0
+0.7,original_domain,holdout,evaluated,677,11,360,0.0355430635052669,49,21,0,0.163265306122449,0,8,0,8,0,2,20.1568193,0
+0.7,energy_envelope,calibration,evaluated,1263,11,360,0.0355430635052669,56,14,0,0,0,0,4,0,0,0,30.8774947,1
+0.7,energy_envelope,holdout,evaluated,1263,11,360,0.0355430635052669,49,21,0,0,0,0,8,0,0,2,35.5796902,1
+0.7,trajectory_envelope,calibration,evaluated,959,11,360,0.0355430635052669,56,14,0,0,0,0,4,0,0,0,28.2611518,1
+0.7,trajectory_envelope,holdout,evaluated,959,11,360,0.0355430635052669,49,21,0,0,0,0,8,0,0,2,32.0765648,1

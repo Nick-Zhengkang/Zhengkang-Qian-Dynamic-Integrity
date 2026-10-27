@@ -1,0 +1,194 @@
+\chapter{Experimental Methodology}
+
+\label{ch:methodology}
+
+\begin{revision}
+The experiments in this thesis have two parts. The first part examines how hyperparameters affect DynIn GA results and how they can be adjusted when the model changes. The second part compares the original DynIn GA with the proposed adaptive angular-radial method on two- and four-dimensional benchmarks. This chapter explains the common evaluation measures and the design of both parts. The detailed parameter settings and results are presented in the following chapters.
+\end{revision}
+
+\section{Common Evaluation Measures}
+
+For each benchmark, the target equilibrium and the weighted distance W are fixed before the experiment. The weights W define how the state variables contribute to the distance. They do not change the model equations. All runs on the same benchmark use the same distance definition. The reference LIM comes either from an analytical expression or from a published numerical result. A published numerical value is used for comparison, but it is not treated as an exact solution. For the coupled four-dimensional model, no independent reference LIM is available, so the error measures below are not applied to it.
+
+\begin{revision}
+The LIM estimate is evaluated using the relative error and the signed relative error. Here, $\hat{R}$ is the estimated LIM and ${R}_{\mathrm{ref}}$ is the reference value:
+\end{revision}
+
+\begin{equation}
+  {e}_{\mathrm{rel}} = \frac{|\hat{R} - {R}_{\mathrm{ref}}|}{{R}_{\mathrm{ref}}}
+\end{equation}
+
+\begin{equation}
+  {e}_{\mathrm{signed}} = \frac{\hat{R} - {R}_{\mathrm{ref}}}{{R}_{\mathrm{ref}}}
+\end{equation}
+
+\begin{bluerevision}
+\begin{greenrevision}
+The relative error shows the size of the difference. The signed error shows whether the estimate is higher or lower than the reference. To describe repeated runs, the reported measures include the median error, the 95th percentile or maximum error, and the fractions of runs within the selected error thresholds of 1\%, 2\% and 5\%. Computational cost is evaluated within the core algorithm. Experiment B records both process CPU time and wall-clock time over the same solver call on each worker. Separate diagnostics, plotting, saving and optimization overhead are excluded.
+\end{greenrevision}
+\end{bluerevision}
+
+Experiment B uses the absolute reference error
+\begin{equation}
+e_{\mathrm{abs}}=|\hat R-R_{\mathrm{ref}}|.
+\end{equation}
+\begin{bluerevision}
+For a fixed reference value, absolute and relative errors give the same ordering of configurations. This equivalence does not hold for pooled errors across different alpha values. Experiment B optimizes pooled absolute error and additionally reports relative errors as percentages, both pooled and separately by alpha.
+\end{bluerevision}
+
+Box plots show the variation across seeds. The box extends from the first to the third quartile, and the line inside it shows the median. Whiskers reach the most extreme observations within 1.5 times the interquartile range from the box. Individual runs are also shown. Where P95 is reported, a separate diamond marks the 95th percentile; the upper whisker is not P95. Quantiles are calculated using linear interpolation at the sample positions $(i-0.5)/n$, with the end values retained outside this range. This matches the percentile convention used for the saved MATLAB summaries.
+
+For classification diagnostics, a trajectory is labelled as target, non-target or unresolved. A non-target trajectory may reach another attractor; it does not have to diverge. The false-safe rate is the fraction of reference non-target points classified as target. The false-unsafe rate is the fraction of reference target points classified as non-target. Unresolved cases are recorded separately.
+
+\subsection{Trajectory Classification}
+
+The classification rules below describe the implementations used in the six-model comparison in Chapter~\ref{ch:comparison}. The proposed method uses the same sampled grid-cell classification logic in two and four dimensions. Both methods reuse labels learned along forward trajectories.
+
+\paragraph{Original DynIn.}
+DynIn integrates a trajectory in short intervals of length \code{Ts} and checks the visited grid cells after each interval. Reaching a known target cell gives a target label. Reaching a known non-target cell, leaving the computational domain, or repeated visits indicating another fixed point or recurrent motion can give a non-target label. These original rules are retained.
+
+\paragraph{Proposed method in two and four dimensions.}
+The proposed method calls \code{ode45} once for each integrated trajectory. During this call, it checks the sampled states at intervals of \code{Ts}=0.05 using the same grid-label, domain and recurrence rules. Integration stops when a classification is obtained. The sampling interval is not the adaptive solver step size; the maximum solver step is 0.005 in these runs.
+
+Once a trajectory has been classified, its visited cells are added to the corresponding learned cell set, following the native rule that excludes the final sampled cell from this update. Later trajectories can stop when they reach a labelled cell. The learned sets are reset for each run and are not shared between the two methods. No separate label-conflict check is performed.
+
+Both methods use \code{automatic}=1. A trajectory that has not been classified by the integration time limit is therefore assigned a non-target label. There is no extended-horizon retry in this comparison. This internal convention is different from keeping unresolved cases separate in the diagnostic tests of the hyperparameter study. A failed or otherwise unresolved query is not used as a radial bracket endpoint.
+
+Within each model, the computational domain, grid resolution, target neighbourhood, integration horizon, sampling interval, solver tolerances and recurrence settings are matched. However, DynIn restarts the solver after each short interval, whereas Proposed keeps one solver call active. They also visit different states and learn different cell labels during search. Matching the rules and settings does not therefore require identical trajectory labels in every query.
+
+These are numerical classification rules, not exact proofs of basin membership. A grid cell near a basin boundary may contain states with different outcomes. Leaving the computational domain also does not by itself prove that a trajectory can never return. The comparison evaluates the complete implementations, including their integration and grid-label reuse, rather than isolating the search strategy alone.
+
+\section{DynIn Hyperparameter Study}
+
+\subsection{Baseline and Parameter Groups}
+
+\begin{bluerevision}
+This study uses DynIn v1.1.0 released by Habib, with \code{type\_x0}=1, the original GA branch. Experiment A uses the bistable Duffing oscillator with quadratic damping at $\alpha=0.7$ and target $(-1,0)$. Experiment B trains on the quadratic-cubic model with target $(0,0)$ across multiple alpha values, validates on unused values, and transfers the frozen configuration to bistable Duffing. Both models use Euclidean distance. The Habib-based transferred configuration is the comparator, not an error reference. Every error uses the analytical-equation LIM for the corresponding model and alpha.
+\end{bluerevision}
+
+Experiment A identifies the parameters that need most attention. Experiment B then uses a reference value to guide numerical optimization, while Experiment C uses model information and diagnostic signals without using a reference LIM during tuning.
+
+The parameters are divided into three groups. Spatial parameters: the computational domain, grid resolution discr and target neighborhood. Time and classification parameters : tfinal, Ts, the solver tolerances, rep\_fix\_point and rep\_periodic. Search parameters : number\_of\_steps, num\_gen, divR and the GA population size and composition. This division helps identify whether a change affects trajectory classification, the search process or both.
+
+\subsection{Experiment A Single Parameter Sensitivity}
+
+\begin{revision}
+Experiment A changes one factor setting at a time around the transferred configuration. Fourteen factors have low, baseline and high settings. The same 30 seed IDs, 99101--99130, are used for each configuration. All fourteen factors share one baseline configuration, and each factor contributes two non-baseline settings. This gives $1+14\times2=29$ unique configurations and $29\times30=870$ runs. The sensitivity measure is the range of median relative error across the three levels, in percentage points. Additional reported measures include P95, individual errors, threshold counts, classification diagnostics and core wall-clock time.
+
+Population settings are derived controls rather than completely independent coordinates. When population size changes to 10 or 40, crossover, newcomer and near-clone counts change together to keep a valid population. When newcomers or near-clones change at fixed population size, the crossover count compensates. The fixed reference is used for error evaluation and diagnostic-point placement, not by the DynIn initial-condition selector.
+
+The eight-variable BO space in Experiment B is a separate, predefined design. It is not the eight highest-ranked factors from this new sensitivity analysis. In particular, the recurrence settings and near-clone count remain fixed in B. A high rank in A motivates attention to a parameter but does not establish an independent mechanism or an interaction effect.
+\end{revision}
+
+\input{chapters/03_b_multi_alpha}
+
+\subsection{Experiment C Physics Guided Parameter Transfer}
+\label{sec:c-method}
+
+Experiment C studies the second approach to parameter selection: using physical information and diagnostic signals without a reference LIM during tuning. It aims to find a reusable tuning method for a new two-dimensional model. It does not aim to find one fixed parameter set for all models. The procedure is developed and checked using the quadratic-cubic, bistable Duffing and cosine models. Initial settings are estimated from the model equations, and further adjustments are based on diagnostic signals.
+
+\begin{revision}
+\paragraph{Physical scales and computational domain.}
+For these potential systems, equilibria are found by solving $V'(x)=0$ with $v=0$. The chosen potential minimum defines the target, and nearby maxima identify the saddle positions. The distance to a neighbouring saddle defines the position scale $L_x$. The velocity scale is $L_v=\sqrt{2\Delta V}$, where $\Delta V$ is the potential barrier above the target minimum. These scales describe characteristic disturbances; they are not the LIM. Distance weights are specified separately and remain fixed for each model.
+\end{revision}
+
+\begin{revision}
+An initial computational domain is estimated from these model features. A separate domain check considers trajectories starting in the allowed GA search region. If returning trajectories temporarily leave the domain, the domain is enlarged while keeping the initial GA search radius fixed. The grid-cell count is also increased as needed to retain approximately the original physical cell widths. This tests the effect of domain enlargement without also making the grid coarser.
+\end{revision}
+
+\paragraph{Grid spacing and target neighbourhood.}
+Let $D_x$ and $D_v$ denote the position and velocity spans of the computational domain. With $N=\mathrm{discr}$ cells per coordinate, their physical widths are $h_x=D_x/N$ and $h_v=D_v/N$. The initial rule requests
+\[
+ N_{\mathrm{req}}=\left\lceil\frac{\max(D_x/L_x,D_v/L_v)}{\eta}\right\rceil,
+ \qquad \eta=0.005.
+\]
+The implementation uses an odd grid count within its allowed limits and records the achieved normalised spacing. Thus, the requested widths are at most about 0.5\% of the corresponding state scales, unless the grid limit prevents this.
+
+\begin{revision}
+Around the cell containing the target, odd neighbourhood sizes $k=3,5,7,\ldots$ are tested. The selected block is the largest valid one that stays inside the target well and computational domain and satisfies
+\end{revision}
+\[
+ \max_{(x,v)\ \text{in the target block}}
+ \left[\tfrac12 v^2+V(x)-V(x_e)\right]\leq\beta\Delta V,
+ \qquad \beta=0.005.
+\]
+If even $k=3$ fails, the spatial settings need revision. The target-cell count is therefore selected together with its physical size, not independently of the grid. Both $\eta$ and $\beta$ are empirical starting choices for these models, not universal or optimal constants.
+
+\begin{revision}
+\paragraph{Diagnostic points and reference labels.}
+Initial states around the target are generated using
+\[
+ x_0=x_e+\rho L_x\cos\theta,\qquad
+ v_0=v_e+\rho L_v\sin\theta.
+\]
+\end{revision}
+Here, $\rho$ is a radius in normalised coordinates, and $\theta$ specifies a direction in those coordinates. Multiplication by $L_x$ and $L_v$ converts the disturbance to the physical state coordinates. The quadratic-cubic and bistable Duffing tests start with 12 directions and five radius factors, $0.10,0.40,0.70,1.00,1.30$. The angles are $(j+0.173)2\pi/12$, with $j=0,\ldots,11$.
+
+Energy conditions and separate forward integration provide reference labels, without using the DynIn grid labels being tested. Along each direction, the first adjacent target-to-non-target transition is refined by up to three midpoint tests. An unresolved midpoint stops that refinement. This adds points near an observed boundary without using an analytical boundary or reference LIM. The auxiliary points do not replace the original GA initial-condition selector.
+
+\paragraph{Time settings and sequential checks.}
+The initial integration horizon combines an oscillation-period estimate with an approximate decay time. For example, the quadratic-cubic model with $\alpha=0.4$ has local period $2\pi$. Twenty periods give about 126 time units, while the amplitude-decay estimate is about 194. Applying a factor of 1.5 to the decay estimate and rounding the larger requirement upwards to a multiple of ten gives $T=300$. This estimate is a starting point, not a guarantee for every initial state. The initial sampling interval is the local period divided by 125.
+
+The calibration checks use the same points and reference labels while changing one parameter block at a time. They compare $T$ with $2T$, the sampling interval with half its value, and the current grid with a finer grid. When the grid changes, the target block is recalculated using the same physical criterion. Both grid-first and time-first orders are examined. An adopted change can require earlier checks to be repeated, because the settings interact. These checks concern label changes, misclassification and unresolved trajectories. A point unresolved at both horizons still has an unknown outcome, so matching unresolved labels do not establish sufficient integration time. Domain enlargement is assessed separately, rather than within this grid-and-time refinement loop.
+
+After calibration, a held-out set uses 12 shifted directions and radius factors of 0.15, 0.50, 0.85 and 1.15. Up to four midpoint tests are added per transition. Its angles are $(j+0.673)2\pi/12$. It checks the fixed settings without further tuning on those points. The cosine transfer follows the same calibration-and-holdout principle, with model-specific sampling settings described in Chapter~\ref{ch:hyperparameters}.
+
+\begin{revision}
+Finally, after the spatial and classification settings are fixed, different GA search budgets are compared. The resulting procedure is tested on another model to check whether it remains useful. The reference LIM is used afterwards to evaluate the result, not to select the parameters in this diagnostic tuning step.
+\end{revision}
+
+\begin{greenrevision}
+Figure~\ref{fig:physics-guided-workflow} summarizes the characteristic-based initialization, diagnostic checks and subsequent budget comparison.
+\end{greenrevision}
+\begin{figure}[p]
+\centering
+\includegraphics[width=\linewidth,height=0.87\textheight,keepaspectratio]{figures/experiment_c_parameter_workflow.pdf}
+\caption[Physics-guided parameter-selection workflow]{\greencaption{Experiment C workflow. Calibration uses shared diagnostic points; held-out points assess the fixed settings. Domain enlargement is checked separately.}}
+\label{fig:physics-guided-workflow}
+\end{figure}
+\FloatBarrier
+
+\subsection{Diagnostic Points in Experiment A}
+\label{sec:a-diagnostics}
+
+\begin{revision}
+Experiment A uses the same 72 diagnostic points for every configuration: 24 equally spaced directions around $(-1,0)$ at each of the radii $0.85R_{\mathrm{ref}}$, $R_{\mathrm{ref}}$ and $1.15R_{\mathrm{ref}}$. Here, $R_{\mathrm{ref}}$ is the analytical-equation value for the quadratic-damping Duffing model at $\alpha=0.7$. The reference labels come from separate forward integration of this model, not from the stored DynIn labels or direct evaluation of an analytical basin-membership formula.
+
+The independent integration uses horizon 4000, RelTol $10^{-11}$ and AbsTol $10^{-12}$, stopping within Euclidean distance 0.002 of either stable equilibrium. Leaving the DynIn computational domain is not itself a reference non-target label. The saved diagnostic set contains 63 target points, nine points reaching the other equilibrium and no unresolved reference labels. This reference-assisted diagnostic construction belongs to A, not to the physics-guided point generation in C.
+\end{revision}
+
+After each DynIn run, the diagnostic first checks the stored label of the cell containing each point. If the label is unknown, forward integration continues until the trajectory reaches a known cell, leaves the domain or reaches the time limit. The resulting classification of the initial point is compared with its independent reference label. This is not a cell-by-cell comparison along the full reference trajectory. It checks the combined effect of the stored grid information and the subsequent integration, without changing the LIM already returned by DynIn.
+
+\section{Comparison of the Two Methods}
+
+\subsection{Methods and Benchmarks}
+
+\begin{revision}
+The second part compares two complete methods for estimating the LIM: Habib's original DynIn GA with \code{type\_x0}=1 and the proposed adaptive angular-radial method. Both reuse forward-trajectory grid labels. Proposed uses this reuse for classification only. It does not use points along a non-target trajectory to update its radius directly; the radius is obtained from the radial queries. Original DynIn retains its native trajectory-point radius update.
+\end{revision}
+
+The comparison uses the four two-dimensional and two four-dimensional benchmarks defined in Section~\ref{sec:benchmarks}. These include both analytically based references and a published numerical reference.
+
+\begin{revision}
+In four dimensions, directions lie on the unit three-sphere $S^3$ in weighted coordinates. The method refines the boundary along each direction. The separable model has an analytically based reference. For the coupled TMD model, the comparison considers estimated radii, repeatability and cost. No fixed reference LIM is used to calculate its error.
+\end{revision}
+
+\subsection{Repeated Runs and Cost Comparison}
+
+Each method is tested on each model with 30 paired seeds, giving $6\times2\times30=360$ runs. The execution order is randomized. Within one benchmark, the equations, target equilibrium, model parameters, state ordering, distance weights and classification controls are the same for both methods. Each method retains its own search budget and stopping settings. The reference LIM is not used by either main solver to select points or decide when to stop; where a reference is available, it is used to calculate the error after a run.
+
+\begin{revision}
+The comparison considers accuracy, consistency across seeds and computational cost. For models with a reference LIM, the comparison considers median error, large errors and the fractions of runs within the selected error thresholds. The recorded core algorithm time includes search, trajectory integration and learned-grid handling. It excludes the surrounding experiment setup and result-file writing. Query counts and ODE solver-call counts are reported separately because one DynIn trajectory can require many solver calls.
+\end{revision}
+
+At similar accuracy, a shorter median runtime indicates lower overall cost. If one method is more accurate but slower, both differences are reported.
+
+\subsection{Scope of the Comparison}
+
+The 360-run dataset does not include a separate post-search audit or independent boundary validation. Its results show the estimates and costs obtained with the stated numerical rules. A smaller radius without a reference is not evidence of a smaller error. Likewise, a successful program run does not establish that all learned grid labels are correct. These distinctions are retained when interpreting the results.
+
+\section{Reproducibility}
+
+\begin{bluerevision}
+The scripts save configurations, alpha values, seeds, execution order, estimates, times and run status. Experiment B records both optimizer restarts, the frozen candidate, reference checks and paired validation/transfer schedules. Training, validation and model transfer use separate seed IDs. Experiment A retains its recorded wall-clock times; the new multi-alpha and transfer datasets record both worker process CPU time and wall-clock time. Summaries and figures are recomputed from saved runs, and severe errors remain in the results.
+\end{bluerevision}
