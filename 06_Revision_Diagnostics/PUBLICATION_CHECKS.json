@@ -21,6 +21,9 @@
   "portable_changes": "Four START drivers: repository-relative input paths. Python analysis: repository-relative inputs, separate output folder and input-only integrity scope; statistical formulas unchanged.",
   "matlab_preflight_execution": "blocked at startup by MathWorks license-service error 5201",
   "matlab_numerical_experiments_rerun_during_publication": false,
-  "fresh_remote_download_verification": "pending publication",
+  "fresh_remote_download_verification": "PASS: independent GitHub clone, all four Release ZIPs downloaded again, SHA-256 and ZIP integrity checked, all records extracted and 2300 checks passed",
+  "fresh_clone_per_alpha_reproduction": "PASS: 60 alpha rows, both configurations, summary JSON and formatted report byte-identical to recorded outputs",
+  "anonymous_release_checksum_download_http_status": 200,
+  "verified_code_commit": "60761ac",
   "limitation": "Path and statistical reproduction checks do not establish classification correctness. The recorded 90-case ablation has 89/90 independently supported final non-target points."
 }
