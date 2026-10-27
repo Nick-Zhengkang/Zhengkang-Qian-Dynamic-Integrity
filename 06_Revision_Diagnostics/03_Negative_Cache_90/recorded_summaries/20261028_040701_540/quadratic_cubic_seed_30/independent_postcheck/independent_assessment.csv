@@ -1,0 +1,2 @@
+query,role,conclusion,original_query_label_contradicted,parent_query
+567,initial_state,both_solvers_support_target,1,0

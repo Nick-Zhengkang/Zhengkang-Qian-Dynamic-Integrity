@@ -1,0 +1,5 @@
+query,role,conclusion,original_query_label_contradicted,parent_query
+212,initial_state,both_solvers_support_target,1,0
+212,cache_hit_state,both_solvers_support_target,0,193
+212,first_writer_state,both_solvers_support_non_target,0,193
+193,initial_state,both_solvers_support_non_target,0,0

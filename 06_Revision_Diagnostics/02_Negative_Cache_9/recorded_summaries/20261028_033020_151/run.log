@@ -1,0 +1,86 @@
+Original data (read only): C:\Users\-qian-\Documents\Codex\2026-06-28\github\six_model_sampled_forward_comparison\outputs_sampled_forward_full_20261018_204956_915
+Output: C:\Users\-qian-\Desktop\LIM_NoNegativeCache_Retest\results\20261028_033020_151
+Source audit PASS: 17 copies, only the two intended cache-read statements removed.
+
+CASE 1/9: quadratic_cubic seed 19
+  Step tests PASS: baseline; target/domain/recurrence rules preserved.
+  START baseline | original seed 801019 | budget 4096 | wall guard 3600s
+  DONE baseline | R=0.639764432927 | queries=791 | RHS=1091429 | 2.20s | heuristic_plateau_with_coverage
+  Step tests PASS: no_negative_reuse; target/domain/recurrence rules preserved.
+  START no_negative_reuse | original seed 801019 | budget 4096 | wall guard 3600s
+  DONE no_negative_reuse | R=0.648254585266 | queries=676 | RHS=1087432 | 1.89s | heuristic_plateau_with_coverage
+  independent point 1/1, query 572, initial_state
+
+CASE 2/9: quadratic_cubic seed 12
+  Step tests PASS: baseline; target/domain/recurrence rules preserved.
+  START baseline | original seed 801012 | budget 4096 | wall guard 3600s
+  DONE baseline | R=0.644150713875 | queries=712 | RHS=1068226 | 1.94s | heuristic_plateau_with_coverage
+  Step tests PASS: no_negative_reuse; target/domain/recurrence rules preserved.
+  START no_negative_reuse | original seed 801012 | budget 4096 | wall guard 3600s
+  DONE no_negative_reuse | R=0.64833984375 | queries=622 | RHS=1093216 | 1.94s | heuristic_plateau_with_coverage
+  independent point 1/1, query 448, initial_state
+
+CASE 3/9: quadratic_cubic seed 7
+  Step tests PASS: baseline; target/domain/recurrence rules preserved.
+  START baseline | original seed 801007 | budget 4096 | wall guard 3600s
+  DONE baseline | R=0.646875 | queries=581 | RHS=1003589 | 1.69s | heuristic_plateau_with_coverage
+  Step tests PASS: no_negative_reuse; target/domain/recurrence rules preserved.
+  START no_negative_reuse | original seed 801007 | budget 4096 | wall guard 3600s
+  DONE no_negative_reuse | R=0.6494140625 | queries=615 | RHS=1038057 | 1.74s | heuristic_plateau_with_coverage
+  independent point 1/1, query 440, initial_state
+
+CASE 4/9: bistable_duffing seed 30
+  Step tests PASS: baseline; target/domain/recurrence rules preserved.
+  START baseline | original seed 802030 | budget 4096 | wall guard 3600s
+  DONE baseline | R=0.717995546069 | queries=980 | RHS=613484 | 1.36s | heuristic_plateau_with_coverage
+  Step tests PASS: no_negative_reuse; target/domain/recurrence rules preserved.
+  START no_negative_reuse | original seed 802030 | budget 4096 | wall guard 3600s
+  DONE no_negative_reuse | R=0.7328125 | queries=698 | RHS=593198 | 1.20s | heuristic_plateau_with_coverage
+  independent point 1/1, query 489, initial_state
+
+CASE 5/9: bistable_duffing seed 1
+  Step tests PASS: baseline; target/domain/recurrence rules preserved.
+  START baseline | original seed 802001 | budget 4096 | wall guard 3600s
+  DONE baseline | R=0.72488568984 | queries=702 | RHS=544224 | 1.12s | heuristic_plateau_with_coverage
+  Step tests PASS: no_negative_reuse; target/domain/recurrence rules preserved.
+  START no_negative_reuse | original seed 802001 | budget 4096 | wall guard 3600s
+  DONE no_negative_reuse | R=0.73427734375 | queries=695 | RHS=599573 | 1.26s | heuristic_plateau_with_coverage
+  independent point 1/1, query 319, initial_state
+
+CASE 6/9: bistable_duffing seed 17
+  Step tests PASS: baseline; target/domain/recurrence rules preserved.
+  START baseline | original seed 802017 | budget 4096 | wall guard 3600s
+  DONE baseline | R=0.72890625 | queries=671 | RHS=541913 | 1.15s | heuristic_plateau_with_coverage
+  Step tests PASS: no_negative_reuse; target/domain/recurrence rules preserved.
+  START no_negative_reuse | original seed 802017 | budget 4096 | wall guard 3600s
+  DONE no_negative_reuse | R=0.7375 | queries=698 | RHS=572930 | 1.20s | heuristic_plateau_with_coverage
+  independent point 1/1, query 243, initial_state
+
+CASE 7/9: genda_cosine_quadratic_drag seed 12
+  Step tests PASS: baseline; target/domain/recurrence rules preserved.
+  START baseline | original seed 804012 | budget 4096 | wall guard 3600s
+  DONE baseline | R=2.02887643874 | queries=2222 | RHS=1034426 | 2.61s | heuristic_plateau_with_coverage
+  Step tests PASS: no_negative_reuse; target/domain/recurrence rules preserved.
+  START no_negative_reuse | original seed 804012 | budget 4096 | wall guard 3600s
+  DONE no_negative_reuse | R=2.1 | queries=1893 | RHS=1032609 | 2.29s | heuristic_plateau_with_coverage
+  independent point 1/1, query 658, initial_state
+
+CASE 8/9: genda_cosine_quadratic_drag seed 26
+  Step tests PASS: baseline; target/domain/recurrence rules preserved.
+  START baseline | original seed 804026 | budget 4096 | wall guard 3600s
+  DONE baseline | R=2.05822469141 | queries=2246 | RHS=1011314 | 2.58s | heuristic_plateau_with_coverage
+  Step tests PASS: no_negative_reuse; target/domain/recurrence rules preserved.
+  START no_negative_reuse | original seed 804026 | budget 4096 | wall guard 3600s
+  DONE no_negative_reuse | R=2.1 | queries=1893 | RHS=1010883 | 2.34s | heuristic_plateau_with_coverage
+  independent point 1/1, query 660, initial_state
+
+CASE 9/9: genda_cosine_quadratic_drag seed 27
+  Step tests PASS: baseline; target/domain/recurrence rules preserved.
+  START baseline | original seed 804027 | budget 4096 | wall guard 3600s
+  DONE baseline | R=2.08312871009 | queries=1884 | RHS=1034886 | 2.45s | heuristic_plateau_with_coverage
+  Step tests PASS: no_negative_reuse; target/domain/recurrence rules preserved.
+  START no_negative_reuse | original seed 804027 | budget 4096 | wall guard 3600s
+  DONE no_negative_reuse | R=2.09375 | queries=1893 | RHS=1034649 | 2.28s | heuristic_plateau_with_coverage
+  independent point 1/1, query 677, initial_state
+
+Finished. Inspect case_status.csv, comparison.csv and integrity checks.

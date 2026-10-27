@@ -1,0 +1,7 @@
+  Step tests PASS: baseline; target/domain/recurrence rules preserved.
+  START baseline | original seed 801013 | budget 4096 | wall guard 3600s
+  DONE baseline | R=0.643938446045 | queries=704 | RHS=1142888 | 11.46s | heuristic_plateau_with_coverage
+  Step tests PASS: no_negative_reuse; target/domain/recurrence rules preserved.
+  START no_negative_reuse | original seed 801013 | budget 4096 | wall guard 3600s
+  DONE no_negative_reuse | R=0.6546875 | queries=640 | RHS=1138756 | 6.42s | heuristic_plateau_with_coverage
+  independent point 1/1, query 232, initial_state

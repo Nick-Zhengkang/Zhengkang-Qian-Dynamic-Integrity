@@ -1,0 +1,2 @@
+model,seed,status,phase,message
+bistable_duffing,12,complete,independent_postcheck,

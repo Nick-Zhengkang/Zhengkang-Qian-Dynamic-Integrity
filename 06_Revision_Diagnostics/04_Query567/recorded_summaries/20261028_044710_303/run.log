@@ -1,0 +1,11 @@
+Read-only source run: C:\Users\-qian-\Desktop\LIM_NoNegativeCache_All90_Parfor\results\20261028_040701_540
+Diagnostic output: C:\Users\-qian-\Desktop\LIM_QC_Seed30_Query567_Diagnostic\results\20261028_044710_303
+Replayed query 100/567; current match=1
+Replayed query 200/567; current match=1
+Replayed query 300/567; current match=1
+Replayed query 400/567; current match=1
+Replayed query 500/567; current match=1
+Replayed query 567/567; current match=1
+
+TRIGGER: rep_fix_point at t=7.75, sample 156, cell 160601
+Prior visits=42; adjacent gaps=41 (threshold 40); nonadjacent gaps=0 (threshold 10)

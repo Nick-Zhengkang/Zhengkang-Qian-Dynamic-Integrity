@@ -1,0 +1,4 @@
+model,expected_runs,complete_cases,incomplete_or_failed_cases,comparisons_available,finite_new_estimates,baselines_reproduced,original_under_reference,new_under_reference,new_within_one_percent,new_independently_non_target,new_independently_target,postcheck_not_verified,runs_with_unresolved_queries,runs_with_forced_non_target,runs_with_recurrence,time_guard_hits,non_target_cache_hits
+quadratic_cubic,30,30,0,30,30,30,29,0,21,29,1,1,0,0,1,0,0
+bistable_duffing,30,30,0,30,30,30,26,0,19,30,0,0,0,0,0,0,0
+genda_cosine_quadratic_drag,30,30,0,30,30,30,29,0,27,30,0,0,0,0,0,0,0

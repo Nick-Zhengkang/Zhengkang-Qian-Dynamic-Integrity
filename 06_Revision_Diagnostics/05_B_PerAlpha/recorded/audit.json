@@ -1,0 +1,30 @@
+{
+  "quadratic_cubic": {
+    "source": "C:\\Users\\-qian-\\Documents\\Codex\\2026-06-28\\github\\Thesis_v12\\source_data\\experiment_B_multi_alpha\\qc_validation_raw.csv",
+    "source_sha256": "339346ac177742b0894b24855d2914e03c890f38d8930ba38c69133437ae20db",
+    "input_rows": 4000,
+    "alpha_count": 20,
+    "runs_per_alpha_role": 100,
+    "duplicate_keys": 0,
+    "execution_failures": 0,
+    "nonfinite_estimates": 0,
+    "saved_error_values_reconciled": true,
+    "saved_per_alpha_absolute_medians_and_p95_reconciled": true
+  },
+  "bistable_duffing": {
+    "source": "C:\\Users\\-qian-\\Documents\\Codex\\2026-06-28\\github\\Thesis_v12\\source_data\\experiment_B_multi_alpha\\duffing_transfer_raw.csv",
+    "source_sha256": "0740bf44f0fd1d3406050f498ec83f4dfa5c101b2e70e03de17f9b3a26cba654",
+    "input_rows": 800,
+    "alpha_count": 40,
+    "runs_per_alpha_role": 10,
+    "duplicate_keys": 0,
+    "execution_failures": 0,
+    "nonfinite_estimates": 0,
+    "saved_error_values_reconciled": true,
+    "saved_per_alpha_absolute_medians_and_p95_reconciled": true
+  },
+  "thesis_and_source_files_byte_unchanged": true,
+  "checked_file_count": 181,
+  "failure_rule": "absolute relative error > 50 percent; strict inequality",
+  "p95_rule": "Hazen / h=n*p+0.5, matching saved MATLAB per-alpha summaries"
+}

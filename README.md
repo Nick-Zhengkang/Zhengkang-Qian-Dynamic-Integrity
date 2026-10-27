@@ -32,6 +32,7 @@ The adjacent `CSV_Quick_View` and `Runtime_Source_Snapshot` directories are avai
 | [03_Experiment_C](03_Experiment_C) | Integration-time tests, controlled domain correction, cosine transfer, and separately identified supporting diagnostics |
 | [04_Method_Comparison](04_Method_Comparison) | Original DynIn GA versus adaptive angular-radial search: six models and 360 runs |
 | [05_Thesis_Result_Sources](05_Thesis_Result_Sources) | Retained thesis chapters, tables and numerical exports used to map results to datasets |
+| [06_Revision_Diagnostics](06_Revision_Diagnostics) | 2D label diagnosis, 9- and 90-case cache ablations, query 567 replay, and per-alpha B statistics |
 
 [THESIS_RESULT_INDEX.csv](THESIS_RESULT_INDEX.csv) maps the reported analyses to entry points and records. [DATASET_MANIFEST.csv](DATASET_MANIFEST.csv) identifies all 11 preserved data batches. Experiment C's time batch includes diagnostic-order studies; the thesis horizon table uses three fixed-grid profiles from that batch. C4 folders contain supporting diagnostics, not additional primary comparison results.
 
@@ -47,6 +48,10 @@ English attribution comments were added to 147 working MATLAB files and 12 Pytho
 Original DynIn code, archived runtime source snapshots, frozen libraries and raw numerical data remain unchanged. Frozen/historical experimental code is documented externally to preserve its checksums. [SOURCE_MANIFEST_SHA256.csv](SOURCE_MANIFEST_SHA256.csv) records original/current hashes and archive-member provenance.
 
 ## Inspecting or rerunning the code
+
+**New v13 diagnostics:** see the [download and run instructions](06_Revision_Diagnostics/README.md), [complete diagnostic records](https://github.com/Nick-Zhengkang/Zhengkang-Qian-Dynamic-Integrity/releases/tag/diagnostics-2026-10-28), and [verification scope](06_Revision_Diagnostics/PUBLICATION_CHECKS.json). The new MATLAB records and original six-model comparison identify **MATLAB R2025b Update 5, version 25.2.0.3177638**, as the actual runtime. The 90-case retest requires Parallel Computing Toolbox and retains `parfor`. Python reproduction was checked with Python 3.12.14 / NumPy 2.3.5. This statement does not infer every historical batch's runtime.
+
+On Windows, clone to a short writable path with `git -c core.longpaths=true clone https://github.com/Nick-Zhengkang/Zhengkang-Qian-Dynamic-Integrity.git C:\lim` (adjust destination). Deep extraction paths can prevent files from being accessed. New diagnostic entry points resolve repository-relative paths; archived records retain historical paths. MATLAB numerical reruns were not performed during publication because startup reported license-service error 5201.
 
 The archive preserves the reviewed grouping rather than providing a tested one-click installation. Consult the README inside each experiment. Place the experiment's code directories and shared dependencies under one common repository root, preserving their internal relative layout. Check historical paths and dataset inputs before running. Do not add all model directories with `genpath`, because model functions share names.
 

@@ -1,0 +1,176 @@
+Read-only source: C:\Users\-qian-\Documents\Codex\2026-06-28\github\six_model_sampled_forward_comparison\outputs_sampled_forward_full_20261018_204956_915
+Diagnostic output: C:\Users\-qian-\Desktop\LIM_2D_Diagnostics\results\20261028_023202_960
+Inventory complete: 90 runs, 84 underestimated; 9 selected cases.
+
+CASE 1/9: quadratic_cubic seed 19
+  replay 250/791, saved labels and sample counts match
+  replay 500/791, saved labels and sample counts match
+  replay 750/791, saved labels and sample counts match
+  replay 791/791, saved labels and sample counts match
+  independent point 1/13, query 791, initial_state
+  independent point 2/13, query 791, cache_hit_state
+  independent point 3/13, query 791, first_writer_state
+  independent point 4/13, query 553, initial_state
+  independent point 5/13, query 553, cache_hit_state
+  independent point 6/13, query 553, first_writer_state
+  independent point 7/13, query 492, initial_state
+  independent point 8/13, query 492, cache_hit_state
+  independent point 9/13, query 492, first_writer_state
+  independent point 10/13, query 206, initial_state
+  independent point 11/13, query 277, initial_state
+  independent point 12/13, query 277, cache_hit_state
+  independent point 13/13, query 277, first_writer_state
+
+CASE 2/9: quadratic_cubic seed 12
+  replay 250/712, saved labels and sample counts match
+  replay 500/712, saved labels and sample counts match
+  replay 712/712, saved labels and sample counts match
+  independent point 1/7, query 712, initial_state
+  independent point 2/7, query 712, cache_hit_state
+  independent point 3/7, query 712, first_writer_state
+  independent point 4/7, query 212, initial_state
+  independent point 5/7, query 212, cache_hit_state
+  independent point 6/7, query 212, first_writer_state
+  independent point 7/7, query 205, initial_state
+
+CASE 3/9: quadratic_cubic seed 7
+  replay 250/581, saved labels and sample counts match
+  replay 500/581, saved labels and sample counts match
+  replay 581/581, saved labels and sample counts match
+  independent point 1/4, query 212, initial_state
+  independent point 2/4, query 212, cache_hit_state
+  independent point 3/4, query 212, first_writer_state
+  independent point 4/4, query 193, initial_state
+
+CASE 4/9: bistable_duffing seed 30
+  replay 250/980, saved labels and sample counts match
+  replay 500/980, saved labels and sample counts match
+  replay 750/980, saved labels and sample counts match
+  replay 980/980, saved labels and sample counts match
+  independent point 1/16, query 979, initial_state
+  independent point 2/16, query 979, cache_hit_state
+  independent point 3/16, query 979, first_writer_state
+  independent point 4/16, query 560, initial_state
+  independent point 5/16, query 560, cache_hit_state
+  independent point 6/16, query 560, first_writer_state
+  independent point 7/16, query 488, initial_state
+  independent point 8/16, query 488, cache_hit_state
+  independent point 9/16, query 488, first_writer_state
+  independent point 10/16, query 237, initial_state
+  independent point 11/16, query 237, cache_hit_state
+  independent point 12/16, query 237, first_writer_state
+  independent point 13/16, query 231, initial_state
+  independent point 14/16, query 496, initial_state
+  independent point 15/16, query 496, cache_hit_state
+  independent point 16/16, query 496, first_writer_state
+
+CASE 5/9: bistable_duffing seed 1
+  replay 250/702, saved labels and sample counts match
+  replay 500/702, saved labels and sample counts match
+  replay 702/702, saved labels and sample counts match
+  independent point 1/13, query 582, initial_state
+  independent point 2/13, query 582, cache_hit_state
+  independent point 3/13, query 582, first_writer_state
+  independent point 4/13, query 232, initial_state
+  independent point 5/13, query 232, cache_hit_state
+  independent point 6/13, query 232, first_writer_state
+  independent point 7/13, query 225, initial_state
+  independent point 8/13, query 327, initial_state
+  independent point 9/13, query 327, cache_hit_state
+  independent point 10/13, query 327, first_writer_state
+  independent point 11/13, query 326, initial_state
+  independent point 12/13, query 326, cache_hit_state
+  independent point 13/13, query 326, first_writer_state
+
+CASE 6/9: bistable_duffing seed 17
+  replay 250/671, saved labels and sample counts match
+  replay 500/671, saved labels and sample counts match
+  replay 671/671, saved labels and sample counts match
+  independent point 1/10, query 248, initial_state
+  independent point 2/10, query 248, cache_hit_state
+  independent point 3/10, query 248, first_writer_state
+  independent point 4/10, query 243, initial_state
+  independent point 5/10, query 243, cache_hit_state
+  independent point 6/10, query 243, first_writer_state
+  independent point 7/10, query 235, initial_state
+  independent point 8/10, query 235, cache_hit_state
+  independent point 9/10, query 235, first_writer_state
+  independent point 10/10, query 229, initial_state
+
+CASE 7/9: genda_cosine_quadratic_drag seed 12
+  replay 250/2222, saved labels and sample counts match
+  replay 500/2222, saved labels and sample counts match
+  replay 750/2222, saved labels and sample counts match
+  replay 1000/2222, saved labels and sample counts match
+  replay 1250/2222, saved labels and sample counts match
+  replay 1500/2222, saved labels and sample counts match
+  replay 1750/2222, saved labels and sample counts match
+  replay 2000/2222, saved labels and sample counts match
+  replay 2222/2222, saved labels and sample counts match
+  independent point 1/14, query 1892, initial_state
+  independent point 2/14, query 1892, cache_hit_state
+  independent point 3/14, query 1892, first_writer_state
+  independent point 4/14, query 1536, initial_state
+  independent point 5/14, query 1536, cache_hit_state
+  independent point 6/14, query 1536, first_writer_state
+  independent point 7/14, query 667, initial_state
+  independent point 8/14, query 667, cache_hit_state
+  independent point 9/14, query 667, first_writer_state
+  independent point 10/14, query 666, initial_state
+  independent point 11/14, query 683, initial_state
+  independent point 12/14, query 683, cache_hit_state
+  independent point 13/14, query 683, first_writer_state
+  independent point 14/14, query 658, initial_state
+
+CASE 8/9: genda_cosine_quadratic_drag seed 26
+  replay 250/2246, saved labels and sample counts match
+  replay 500/2246, saved labels and sample counts match
+  replay 750/2246, saved labels and sample counts match
+  replay 1000/2246, saved labels and sample counts match
+  replay 1250/2246, saved labels and sample counts match
+  replay 1500/2246, saved labels and sample counts match
+  replay 1750/2246, saved labels and sample counts match
+  replay 2000/2246, saved labels and sample counts match
+  replay 2246/2246, saved labels and sample counts match
+  independent point 1/20, query 1910, initial_state
+  independent point 2/20, query 1910, cache_hit_state
+  independent point 3/20, query 1910, first_writer_state
+  independent point 4/20, query 864, initial_state
+  independent point 5/20, query 864, cache_hit_state
+  independent point 6/20, query 864, first_writer_state
+  independent point 7/20, query 859, initial_state
+  independent point 8/20, query 859, cache_hit_state
+  independent point 9/20, query 859, first_writer_state
+  independent point 10/20, query 669, initial_state
+  independent point 11/20, query 669, cache_hit_state
+  independent point 12/20, query 669, first_writer_state
+  independent point 13/20, query 668, initial_state
+  independent point 14/20, query 687, initial_state
+  independent point 15/20, query 687, cache_hit_state
+  independent point 16/20, query 687, first_writer_state
+  independent point 17/20, query 661, initial_state
+  independent point 18/20, query 661, cache_hit_state
+  independent point 19/20, query 661, first_writer_state
+  independent point 20/20, query 660, initial_state
+
+CASE 9/9: genda_cosine_quadratic_drag seed 27
+  replay 250/1884, saved labels and sample counts match
+  replay 500/1884, saved labels and sample counts match
+  replay 750/1884, saved labels and sample counts match
+  replay 1000/1884, saved labels and sample counts match
+  replay 1250/1884, saved labels and sample counts match
+  replay 1500/1884, saved labels and sample counts match
+  replay 1750/1884, saved labels and sample counts match
+  replay 1884/1884, saved labels and sample counts match
+  independent point 1/10, query 1212, initial_state
+  independent point 2/10, query 1212, cache_hit_state
+  independent point 3/10, query 1212, first_writer_state
+  independent point 4/10, query 856, initial_state
+  independent point 5/10, query 856, cache_hit_state
+  independent point 6/10, query 856, first_writer_state
+  independent point 7/10, query 659, initial_state
+  independent point 8/10, query 861, initial_state
+  independent point 9/10, query 861, cache_hit_state
+  independent point 10/10, query 861, first_writer_state
+
+Finished diagnostics. Inspect case_status.csv before interpreting results.

@@ -1,0 +1,8 @@
+source,copy,identical
+C:\Users\-qian-\Desktop\LIM_NoNegativeCache_All90_Parfor\results\20261028_040701_540\source_snapshot\engines\no_negative_reuse\sampled_forward_classifier.m,C:\Users\-qian-\Desktop\LIM_QC_Seed30_Query567_Diagnostic\engine\sampled_forward_classifier.m,1
+C:\Users\-qian-\Desktop\LIM_NoNegativeCache_All90_Parfor\results\20261028_040701_540\source_snapshot\engines\no_negative_reuse\sampled_forward_geometry.m,C:\Users\-qian-\Desktop\LIM_QC_Seed30_Query567_Diagnostic\engine\sampled_forward_geometry.m,1
+C:\Users\-qian-\Desktop\LIM_NoNegativeCache_All90_Parfor\results\20261028_040701_540\source_snapshot\engines\no_negative_reuse\sampled_forward_integrate.m,C:\Users\-qian-\Desktop\LIM_QC_Seed30_Query567_Diagnostic\engine\sampled_forward_integrate.m,1
+C:\Users\-qian-\Desktop\LIM_NoNegativeCache_All90_Parfor\results\20261028_040701_540\source_snapshot\engines\no_negative_reuse\sampled_forward_step.m,C:\Users\-qian-\Desktop\LIM_QC_Seed30_Query567_Diagnostic\engine\sampled_forward_step.m,1
+C:\Users\-qian-\Desktop\LIM_NoNegativeCache_All90_Parfor\results\20261028_040701_540\source_snapshot\shared\native\find_index.m,C:\Users\-qian-\Desktop\LIM_QC_Seed30_Query567_Diagnostic\native\find_index.m,1
+C:\Users\-qian-\Desktop\LIM_NoNegativeCache_All90_Parfor\results\20261028_040701_540\source_snapshot\shared\native\find_cells_around_a_cell.m,C:\Users\-qian-\Desktop\LIM_QC_Seed30_Query567_Diagnostic\native\find_cells_around_a_cell.m,1
+C:\Users\-qian-\Desktop\LIM_NoNegativeCache_All90_Parfor\results\20261028_040701_540\source_snapshot\models\quadratic_cubic\sistema.m,C:\Users\-qian-\Desktop\LIM_QC_Seed30_Query567_Diagnostic\model\sistema.m,1

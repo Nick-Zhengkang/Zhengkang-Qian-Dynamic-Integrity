@@ -1,0 +1,120 @@
+回应 Genda 的二维 LIM 低估问题：当前证据与论文报告建议
+2026-10-28
+状态：基于已完成 9 例的草稿。全量 90 次复测待运行，论文尚未修改。
+
+一、需要回答的核心问题
+Genda 第 2 条指出：真实盆外点到目标平衡点的距离不可能小于真实 LIM。
+他核对了这三个二维模型的解析参考值，因此不能把系统性低估仅当作普通搜索误差。
+他要求给出导致低估的具体状态、独立积分轨迹、错误分类来源和修正后的验证。
+第 3 条还要求核查 unresolved 的处理、标签复用/传播，以及分类规则触发次数。
+
+二、目前可以报告的事实
+1. 原三模型各 30 次运行中，低于参考的次数为 29、26、29。
+2. 按偏小最多、中间、偏小最少选取每模型 3 个案例，共 9 个，不是随机样本。
+3. 按原查询顺序重放，这 9 例的分类、采样数、关键状态均复现历史记录。
+4. 追踪最终决定 LIM 的查询及首次造成低估的查询，定位到同格跨吸引域标签继承。
+   某个真正非目标轨迹的状态给网格赋标签，但另一个会回到目标的状态也位于此格。
+   后者错误继承非目标标签，随后其已访问网格也被标记，错误继续传播。
+5. 查询的独立积分使用 ode45 和 ode113、更严格容差，以及势阱/逃逸判据。
+   被误判的关键初始状态均得到目标结局的数值证据。
+6. 仅删除非目标/离域缓存读取，保留目标复用和其他数值设置后，这 9 例均不再低估。
+   新的最终关键点均由两个求解器支持为非目标。绝对误差不是逐例都改善：5 例改善、
+   4 例变差；修改后误差约 +0.120% 至 +1.176%。这不是全局精度保证。
+
+三、建议保留的一条具体证据链
+quadratic_cubic，seed 19，alpha=0.4：
+R_ref=0.647480159700333，原 R_hat=0.639764432926509。
+最终关键初始状态：(0.360714263460633, 0.528378415317877)。
+原分类在 t=0.05 因命中离域缓存终止，但独立积分支持回到目标。
+最终错误来源链：206 -> 492 -> 553 -> 791。
+在网格 126193 中：
+来自查询 206 的状态 (0.567084669756057, 0.391315144138613) 支持非目标；
+查询 492 命中状态 (0.568345827266469, 0.386568934411210) 支持目标。
+该格范围：x=[0.566084788029925,0.571072319201995]，
+v=[0.386533665835411,0.391521197007481]。
+最初查询 206 的非目标结局本身有独立支持，错误发生在对整个网格的结局泛化。
+这避免了把“来源标签一开始就错”和“正确点标签被错误推广到整格”混为一谈。
+
+四、论文修改位置与最小材料
+按当前保存的 v11 结构建议如下；这些是拟修改位置，不是已经做完的修改。
+
+Chapter 6 / Two Dimensional Results：
+替换段末“The finite grid and reused labels ... do not isolate the cause ...”
+这类只讨论可能原因的表述，改为一个紧凑小节：
+Diagnosis of Underestimation and Negative-Label Reuse Ablation。
+先承认原分类失效，再给状态/轨迹证据、标签来源链、单因素消融与验证范围。
+不把原错误结果称为可靠的边界估计或搜索优势。
+
+一张诊断图：放同格两个状态及其不同轨迹结局；再用简短链条标出错误标签传播。
+一张汇总表：三个模型、alpha、原低估次数/30、关闭复用后低估次数/30、
+新关键点独立支持非目标的次数/30、未完成/未判定次数，以及误差中位数/P95。
+表中新复测的 90 次数字必须等运行完成后填写，不使用 9 例比例代替全量。
+逐次状态、种子、标签链及完整验证记录放附录/代码仓库，正文不堆积 90 张轨迹图。
+
+Chapter 3 / Trajectory Classification 与 Chapter 6 / Experimental Design：
+区分原比较版本与本次修正版本，明确仅关闭 g.cell_d、g.cell_dout 的读取，
+仍保留目标缓存、域界、重复访问和原时域末端处理。
+描述独立验证不使用分类缓存，区分 target/non_target/unresolved。
+
+Chapter 7 / Limitations and Failure Cases：
+用已确认的机制替换对这 9 例原因尚不明确的笼统推测。
+保留正标签复用、未判定轨迹、未覆盖方向等尚未验证的风险。
+不要同时删除针对实验 A、B 或四维模型的未解决问题，因为它们未由本次验证覆盖。
+
+原结果作为诊断基线保留并清楚标记；修正版本结果单独标记。
+若以后重做主比较表，应说明具体版本，不能把仅修正 Proposed 的 90 次运行
+无说明地混入原 360 次比较，并宣称比较公平性已经解决。
+
+五、可供当前使用的英文结果段落（仅陈述已完成的 9 例）
+
+To investigate the underestimated LIM values, nine representative runs were
+examined, with three runs selected from each analytical-reference model.
+Replaying the saved queries reproduced the original classifications. Tracing
+the decisive queries revealed that a grid cell could contain states with
+different basin membership. A non-target label obtained from one trajectory
+was therefore incorrectly inherited by a returning trajectory entering the
+same cell. The misclassified trajectory then propagated the label to further
+visited cells. Independent reintegration with ode45 and ode113, stricter
+tolerances, and model-specific energy or escape criteria supported target
+membership for the original underestimated decisive states. In a controlled
+ablation, only reuse of non-target and domain-exit cell labels was disabled;
+target-label reuse, numerical settings, search rules and random seeds were
+retained. Underestimation disappeared in all nine selected runs, and the new
+decisive states were independently supported as non-target. These results
+identify cross-boundary cell-label reuse and subsequent propagation as the
+mechanism responsible for the inspected failures. They do not establish
+correctness of all cached labels or global accuracy of the returned LIM.
+
+六、当前可给 Genda 的英文进度回复（不是最终修回完成声明）
+
+Your concern about the underestimated LIM values is justified. I traced the
+decisive initial states and the provenance of their learned grid labels in
+nine representative two-dimensional runs. The failure occurred when a returning
+trajectory inherited a non-target label from a different state in the same
+grid cell. This incorrect classification was then propagated to additional
+cells. Independent reintegration supported target membership for the affected
+decisive states. Disabling only non-target and domain-exit label reuse removed
+underestimation in all nine inspected runs, and both independent solvers
+supported the new decisive states as non-target. I have prepared a paired
+evaluation of all 30 original seeds for each of the three models to assess
+the extent of this effect. That evaluation has not yet been completed. The
+separable four-dimensional case and the unresolved-trajectory policy remain
+separate checks; I do not consider those issues resolved by this result.
+
+七、不可过度陈述的事项
+- 原参考值不通过裁剪新结果被强行满足，不能写成事后将 LIM 修正到参考值。
+- 本次证据针对所用分类实现，不能泛称 Habib 的整个 DynIn 算法错误。
+- 原记录与 9 例溯源不支持把这里的直接原因归结为 automatic=1；也不能因此
+  证明这个规则在低阻尼、实验 A/B 或其他模型上安全。
+- 9 例代表案例有选择性，不能代替 90 次的总体失效率。
+- 独立积分的最大允许时域为 2400/12000，但满足物理判据时会提前结束。
+  必须报告实际积分长度/停止条件，不能声称所有轨迹积分到了 12000。
+- 新结果略高于参考不等于严格安全下界；真实非目标点的距离只给出 LIM 上界。
+- 本轮不以速度为论点。科学贡献和算法比较公平性是另外的问题。
+
+证据文件（只读）
+原轨迹诊断：
+C:/Users/-qian-/Desktop/LIM_2D_Diagnostics/results/20261028_023202_960
+9 例消融：
+C:/Users/-qian-/Desktop/LIM_NoNegativeCache_Retest/results/20261028_033020_151
+导师意见：Thesis_Required_Revisions_Qian.docx，第 2、3 条。

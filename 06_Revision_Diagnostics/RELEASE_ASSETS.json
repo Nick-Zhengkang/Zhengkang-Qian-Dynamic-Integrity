@@ -1,0 +1,22 @@
+[
+  {
+    "name": "01_Label_Provenance_Complete_Records.zip",
+    "bytes": 32442229,
+    "sha256": "974008a5d797c67f285e4e13f8f770c0c1e38f6f769178d45f1b9f9c51b542ba"
+  },
+  {
+    "name": "02_Negative_Cache_9_Complete_Records.zip",
+    "bytes": 18168928,
+    "sha256": "13b859586dbbd6c954f21df2b0fc01df2ab03bac305d103d06e9e5ee6f49b472"
+  },
+  {
+    "name": "03_Negative_Cache_90_Complete_Records.zip",
+    "bytes": 186425690,
+    "sha256": "9e248eae438c975126f5b3b3f4fa07517276f6543704b99aae23509ba07cdf5c"
+  },
+  {
+    "name": "04_Query567_Complete_Records.zip",
+    "bytes": 308052,
+    "sha256": "df4dda12f934a60b22cf264cc956aa315fea53ad161a6d4fb78a62e01ce6d955"
+  }
+]

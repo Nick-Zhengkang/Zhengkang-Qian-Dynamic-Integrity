@@ -1,0 +1,7 @@
+names,expected,passed
+fixed_threshold_equality,none,1
+fixed_strict_excess,rep_fix_point,1
+periodic_threshold_equality,none,1
+periodic_strict_excess,rep_periodic,1
+cumulative_pairs_not_current_streak,rep_fix_point,1
+fixed_precedes_periodic,rep_fix_point,1

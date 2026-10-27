@@ -34,3 +34,7 @@ My review and testing do not, by themselves, establish the mathematical correctn
 
 Author: Zhengkang Qian
 Declaration text approved by the author on 27 October 2026.
+
+## Repository revision supplement, 28 October 2026
+
+The newly published two-dimensional diagnosis, negative-cache ablations, query-567 replay and per-alpha statistical scripts were also implemented with AI assistance under the author's instructions. AI additionally prepared repository-relative entry points, preservation checks and publication documentation. The author ran the recorded MATLAB diagnostics. These additions preserve the original experimental data and do not constitute a validated classifier correction. Attribution for this supplement is summarized in `06_Revision_Diagnostics/README.md`; the earlier code register remains a historical record of the earlier upload.

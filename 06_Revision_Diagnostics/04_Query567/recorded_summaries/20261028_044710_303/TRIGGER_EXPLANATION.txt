@@ -1,0 +1,24 @@
+READ-ONLY DIAGNOSIS: quadratic-cubic, seed 30, query 567
+Queries 1:567 reproduce saved labels, sample counts and numerical checks.
+Executed branch: rep_fix_point
+Time: 7.75
+Sample: 156
+Cell: 160601
+Initial state: [0.3506821212122884, 0.5443043581133972]
+Terminal sampled state: [0.997014381965591, -0.002326196440109692]
+Initial radius: 0.6474914550781249
+Analytical reference: 0.647480159700333
+rep_fix_point expression: nnz(diff(prior)==1) > repFixPoint
+Numerical comparison: 41 > 40; condition=1
+rep_periodic outer expression: numel(prior)>repPeriodic+1 AND prior(end)~=count-1
+Prior visits: 42; count gate=1; not-immediately-previous gate=0
+rep_periodic inner expression: nnz(diff(prior)~=1) > repPeriodic
+Numerical comparison: 0 > 10; inner condition=0
+Periodic outer condition actually evaluated: 0
+Periodic inner condition actually evaluated: 0
+Current consecutive occupancy including this sample: 43 samples
+The current sample is excluded from prior and from both gap counts.
+Adjacent gaps are counted over ALL prior visits to this cell, not only the current occupancy episode.
+The fixed-point branch takes precedence over the periodic branch.
+No rule, threshold, ODE setting or original record was modified.
+The prior independent validation is copied for context; no new long-horizon validation is performed here.

@@ -1,0 +1,3 @@
+solver,requested_horizon,actual_end_time,rel_tol,abs_tol,max_step,outcome,reason,final_x,final_v,final_target_distance,final_energy,energy_barrier_margin,max_sampled_energy_increase,sampled_original_domain_exit,first_sampled_original_exit_time,energy_stop,safety_stop,runtime_s,query,role,parent_query,x0,v0
+ode45,2400,200,1e-10,1e-12,0.2,non_target,other_well_energy_trap,6.06466056320132,0.0274171341103901,6.06472253661223,0.0241575178038291,1.97584248219617,0,1,3.15,1,0,0.0632671,1373,initial_state,0,0.993658074784905,1.84915196529823
+ode113,12000,200,1e-12,1e-13,0.1,non_target,other_well_energy_trap,6.06466056221472,0.027417132215658,6.06472253561707,0.0241575179657668,1.97584248203423,0,1,3.15,1,0,0.1421651,1373,initial_state,0,0.993658074784905,1.84915196529823

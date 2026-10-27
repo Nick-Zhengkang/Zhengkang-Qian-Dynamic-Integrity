@@ -1,0 +1,17 @@
+query,role,conclusion,original_query_label_contradicted,parent_query
+979,initial_state,both_solvers_support_target,1,0
+979,cache_hit_state,both_solvers_support_target,0,560
+979,first_writer_state,both_solvers_support_target,0,560
+560,initial_state,both_solvers_support_target,1,0
+560,cache_hit_state,both_solvers_support_target,0,488
+560,first_writer_state,both_solvers_support_non_target,0,488
+488,initial_state,both_solvers_support_non_target,0,0
+488,cache_hit_state,both_solvers_support_non_target,0,237
+488,first_writer_state,both_solvers_support_non_target,0,237
+237,initial_state,both_solvers_support_non_target,0,0
+237,cache_hit_state,both_solvers_support_non_target,0,231
+237,first_writer_state,both_solvers_support_non_target,0,231
+231,initial_state,both_solvers_support_non_target,0,0
+496,initial_state,both_solvers_support_target,1,0
+496,cache_hit_state,both_solvers_support_target,0,488
+496,first_writer_state,both_solvers_support_non_target,0,488

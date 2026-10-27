@@ -1,0 +1,26 @@
+{
+  "publication_date": "2026-10-28",
+  "scope": "Add diagnostic evidence and portable entry points; do not replace original experiment data or algorithms",
+  "matlab_recorded_version": "25.2.0.3177638 (R2025b) Update 5",
+  "matlab_version_evidence": [
+    "01_Label_Provenance/results/20261028_023202_960/diagnostic_settings.mat",
+    "03_Negative_Cache_90/results/20261028_040701_540/environment.mat",
+    "04_Query567/results/20261028_044710_303/diagnostic_settings.mat",
+    "../04_Method_Comparison/02_Raw_Data/Six_Models_360_Runs/outputs_sampled_forward_full_20261018_204956_915/study_definition.mat"
+  ],
+  "python_verified_version": "3.12.14",
+  "numpy_verified_version": "2.3.5",
+  "local_path_and_preservation_checks_passed": 2300,
+  "release_records_checked": 2079,
+  "all_original_mat_csv_log_snapshot_bytes_preserved": true,
+  "per_alpha_rows_reproduced": 60,
+  "per_alpha_configurations_per_row": 2,
+  "per_alpha_raw_input_rows": 4800,
+  "per_alpha_csv_summary_and_report_byte_identical": true,
+  "numerical_engine_changes_for_publication": "none",
+  "portable_changes": "Four START drivers: repository-relative input paths. Python analysis: repository-relative inputs, separate output folder and input-only integrity scope; statistical formulas unchanged.",
+  "matlab_preflight_execution": "blocked at startup by MathWorks license-service error 5201",
+  "matlab_numerical_experiments_rerun_during_publication": false,
+  "fresh_remote_download_verification": "pending publication",
+  "limitation": "Path and statistical reproduction checks do not establish classification correctness. The recorded 90-case ablation has 89/90 independently supported final non-target points."
+}
