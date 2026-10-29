@@ -59,6 +59,13 @@ records. See [verification scope](06_Revision_Diagnostics/V17_PUBLICATION_CHECKS
 These publication checks are not a fresh MATLAB numerical rerun. AI declarations
 and registers, older experiments and previous Release assets are unchanged.
 
+The [remote verification report](06_Revision_Diagnostics/V17_REMOTE_CHECKS.json)
+records fresh downloads of all three runtime/input archives and comparison of
+all 15 GitHub archive SHA-256 digests. Complete record archives were independently
+extracted and checked locally; they were not all downloaded a second time.
+The [code audit](06_Revision_Diagnostics/V17_GITHUB_CODE_CHECKS.json) separately
+checks published Git blobs and unchanged AI documents.
+
 To reproduce the three-stage numbers in Table 6.5 without any ODE rerun, use
 `python 06_Revision_Diagnostics/summarize_v17.py`. It reads the unchanged browsing
 CSVs already in the repository; an optional `--output <new-directory>` writes
@@ -111,7 +118,7 @@ Original DynIn code, archived runtime source snapshots, frozen libraries and raw
 
 **Earlier v13 diagnostics:** see the [download and run instructions](06_Revision_Diagnostics/README.md), [complete diagnostic records](https://github.com/Nick-Zhengkang/Zhengkang-Qian-Dynamic-Integrity/releases/tag/diagnostics-2026-10-28), and [verification scope](06_Revision_Diagnostics/PUBLICATION_CHECKS.json). The recorded MATLAB diagnostics and original six-model comparison identify **MATLAB R2025b Update 5, version 25.2.0.3177638**, as the actual runtime. The 90-case retest requires Parallel Computing Toolbox and retains `parfor`. Python reproduction was checked with Python 3.12.14 / NumPy 2.3.5. This statement does not infer every historical batch's runtime. The separate v16 correction and its verification are linked above.
 
-On Windows, clone to a short writable path with `git -c core.longpaths=true clone https://github.com/Nick-Zhengkang/Zhengkang-Qian-Dynamic-Integrity.git C:\lim` (adjust destination). Deep extraction paths can prevent files from being accessed. New diagnostic entry points resolve repository-relative paths; archived records retain historical paths. MATLAB numerical reruns were not performed during publication because startup reported license-service error 5201.
+On Windows, clone to a short writable path with `git -c core.longpaths=true clone https://github.com/Nick-Zhengkang/Zhengkang-Qian-Dynamic-Integrity.git C:\lim` (adjust destination). Deep extraction paths can prevent files from being accessed. New diagnostic entry points resolve repository-relative paths; archived records retain historical paths. Earlier publication attempts encountered license-service error 5201. The v17 upload verifies the author's completed runs and downloaded files; it does not launch a new MATLAB numerical run.
 
 The archive preserves the reviewed grouping rather than providing a tested one-click installation. Consult the README inside each experiment. Place the experiment's code directories and shared dependencies under one common repository root, preserving their internal relative layout. Check historical paths and dataset inputs before running. Do not add all model directories with `genpath`, because model functions share names.
 
@@ -127,4 +134,4 @@ The included upstream checkout is DynIn v1.1.0, commit `d109020db87b98ee2b3bb8ae
 
 ## Provenance
 
-The original archive was prepared from locally retained thesis sources on 27 October 2026; the author's later manually edited submission was not used for that mapping. The v16 supplement adds explicit mappings for its new Section 6.3 and appendix evidence; the retained chapter files under `05_Thesis_Result_Sources` remain historical sources, not the complete v16 manuscript. Raw records retain historical machine paths where originally saved. No numerical data were redacted or regenerated for publication.
+The original archive was prepared from locally retained thesis sources on 27 October 2026; the author's later manually edited submission was not used for that mapping. The v16 supplement maps its Section 6.3 correction; the v17 supplement maps Section 6.4, Table 6.5 and the separable-4D appendix. Retained chapter files under `05_Thesis_Result_Sources` remain historical sources, not the complete current manuscript. Raw records retain historical machine paths where originally saved. No numerical data were redacted or regenerated for publication.
