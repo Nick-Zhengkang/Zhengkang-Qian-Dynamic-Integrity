@@ -1,0 +1,18 @@
+{
+  "publication_date": "2026-10-30",
+  "recorded_run": "20261029_064110_739",
+  "recorded_matlab": "25.2.0.3177638 (R2025b) Update 5",
+  "original_records_archived": 1585,
+  "archived_record_hashes_verified": true,
+  "recorded_source_files_unchanged": 31,
+  "relocated_driver_files": 3,
+  "browsable_records_verified": 371,
+  "control_checks_passed": 360,
+  "completed_cases": 90,
+  "under_reference": 0,
+  "validated_final_points": 90,
+  "independent_solver_outcomes": 180,
+  "matlab_numerical_rerun_during_publication": false,
+  "fresh_download_verification": "pending",
+  "scope": "Only targeted 2D correction and retest. Original experiments and AI documentation unchanged."
+}

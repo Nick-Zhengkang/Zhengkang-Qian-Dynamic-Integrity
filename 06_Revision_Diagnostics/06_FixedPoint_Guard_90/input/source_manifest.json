@@ -1,0 +1,1487 @@
+[
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_QC_Seed30_Query567_Diagnostic\\results\\20261028_044710_303\\query567_native_trajectory.mat",
+    "bytes": 98952,
+    "sha256": "1ae717ec7ef625789e305b5b2a93164352b5ceca34362c53c80d2b081d328ae8"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\ablation_step_selftest.m",
+    "bytes": 1389,
+    "sha256": "797c23b004ed4012ee45f0ef39e199bed3c6f240d1dec7fe7bf896a23e3a5ef4"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\collect_ablation_results.m",
+    "bytes": 3512,
+    "sha256": "8d89e6c0f84a5dbda09b40cc5b34af9662814ebde89151127e99be784f07d9f8"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\diagnostic_hashes.m",
+    "bytes": 907,
+    "sha256": "8f3e1923c0bf5292efdcbb8d112f9ab393b2bf5a3e7ebf76e97199a0b46248cb"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\diagnostic_validate.m",
+    "bytes": 8778,
+    "sha256": "e783cdc0043c93a0837e13f064ffed0f56334c391c33c394b1099d0a1e637271"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\engines\\baseline\\sampled_forward_classifier.m",
+    "bytes": 4174,
+    "sha256": "1bfc86472552150d6e10cf567294086be4309bda9fbd27bc42dc27540f2ad819"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\engines\\baseline\\sampled_forward_geometry.m",
+    "bytes": 563,
+    "sha256": "516f4472ee5c84aeb16f941fad4c984dcac14e3489ded943d7a8bd2065c5e04e"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\engines\\baseline\\sampled_forward_integrate.m",
+    "bytes": 2408,
+    "sha256": "65754dd7380b7a0ff4d9dcb8a9c5ce29e9d5dc45110142622b1a25dba75ac58c"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\engines\\baseline\\sampled_forward_proposed.m",
+    "bytes": 5122,
+    "sha256": "b98ecee27b668b56dc88b940a7c6b17c9e065eda66174e6a55fb013ce4d0925d"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\engines\\baseline\\sampled_forward_step.m",
+    "bytes": 1238,
+    "sha256": "332a95a10b730e8a7c2b8f61a87e9d94d89249c9026fe9d8b74a5036efbb3df2"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\engines\\no_negative_reuse\\sampled_forward_classifier.m",
+    "bytes": 4174,
+    "sha256": "1bfc86472552150d6e10cf567294086be4309bda9fbd27bc42dc27540f2ad819"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\engines\\no_negative_reuse\\sampled_forward_geometry.m",
+    "bytes": 563,
+    "sha256": "516f4472ee5c84aeb16f941fad4c984dcac14e3489ded943d7a8bd2065c5e04e"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\engines\\no_negative_reuse\\sampled_forward_integrate.m",
+    "bytes": 2408,
+    "sha256": "65754dd7380b7a0ff4d9dcb8a9c5ce29e9d5dc45110142622b1a25dba75ac58c"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\engines\\no_negative_reuse\\sampled_forward_proposed.m",
+    "bytes": 5122,
+    "sha256": "b98ecee27b668b56dc88b940a7c6b17c9e065eda66174e6a55fb013ce4d0925d"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\engines\\no_negative_reuse\\sampled_forward_step.m",
+    "bytes": 1316,
+    "sha256": "a2ffefaabb5ed3aa9ed2907cea3e07f7ee24afd95061a278d3dbd8c8f94e75fa"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\models\\bistable_duffing\\sistema.m",
+    "bytes": 113,
+    "sha256": "4d68e767c6a28fb9f0c0598ddcb458536a111dc9bc7cd1f83f93370339232891"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\models\\genda_cosine_quadratic_drag\\sistema.m",
+    "bytes": 111,
+    "sha256": "b15763df908fbf4da9d2c4a9d89ef79ea7f67424f7170d6115d536a0352d283f"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\models\\quadratic_cubic\\sistema.m",
+    "bytes": 113,
+    "sha256": "6e8f96577216a8b1a5d0935c5c3a0b45bb3ae57aab8e7b57b24138eaa021b095"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\REBUILD_SUMMARY.m",
+    "bytes": 676,
+    "sha256": "2cd762764f9843814c2134a336b9a9021a78b907b66b5e6be4b27314f96118c8"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\run_ablation_case.m",
+    "bytes": 11144,
+    "sha256": "341e40b8dabee519ad0e4bd6d602bafe0e7b2970597c7052cddbec8508efb4fc"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\run_all90_parfor.m",
+    "bytes": 3460,
+    "sha256": "3ed0505474594e67622d49c679d2fd36bad26f558f75d8c0d9dc1f10e845cf6c"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\shared\\+limbench\\angular_with_oracle.m",
+    "bytes": 295,
+    "sha256": "9b4c9cb9857f54a0bbb73464cde6f34abbf50a14c91039fefda6523d850d34cc"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\shared\\+limbench\\private\\angular_engine.m",
+    "bytes": 5616,
+    "sha256": "5c486b689558c922ede1e8228c648e2063cde1eb561abe91d505419e4d226450"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\shared\\native\\find_cells_around_a_cell.m",
+    "bytes": 1225,
+    "sha256": "460e9699f795883227dac8bdd5aa496acbb0cdbbb311a89769be3e021bb7ea5d"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\shared\\native\\find_index.m",
+    "bytes": 212,
+    "sha256": "46e1233522a294c68edb0601c2c0eb5ffdb92d8d19975f2b1275381cbe997b11"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\START_ALL90_PARFOR.m",
+    "bytes": 1234,
+    "sha256": "22f1d1b3065b900612cdafe2c05d96d3eb7be25596378f6961649c89918d1cbd"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\source_snapshot\\verify_ablation_sources.m",
+    "bytes": 3388,
+    "sha256": "e047a995defbd780215ff95bc166978fed6cee6a9d7c6f627fba3fb56d9d2e4c"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_1\\case_result.mat",
+    "bytes": 2066,
+    "sha256": "811934a80e7883346ec1d7d4faacceef0b18dd2a854fcc8f310d11edbde32810"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_1\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "992cbdcdcd6463361d1872763a34051437fc48f27ca686e18086dfa7aad163d1"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_1\\no_negative_reuse.mat",
+    "bytes": 7140600,
+    "sha256": "669ed9d1df495d5c4055c5717efe2221259d18ae653f1ea0c7cbcef24f152450"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_2\\case_result.mat",
+    "bytes": 2072,
+    "sha256": "5eb088691b7a295732568d5ee9ed0f6f32456177dddadef2a8551fceb5a260b9"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_2\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "992cbdcdcd6463361d1872763a34051437fc48f27ca686e18086dfa7aad163d1"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_2\\no_negative_reuse.mat",
+    "bytes": 6961460,
+    "sha256": "af6c34c2178c48a368ec5957ded0dd199d9a77f5885e46caa11e5f3b6e158563"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_3\\case_result.mat",
+    "bytes": 2052,
+    "sha256": "b03c2e607a3d8b34b8e3ac3ebadec0791a8fd3dda54046a597a2949560df1c01"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_3\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "992cbdcdcd6463361d1872763a34051437fc48f27ca686e18086dfa7aad163d1"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_3\\no_negative_reuse.mat",
+    "bytes": 7004554,
+    "sha256": "a87bc439be8c80d69070114ba920fa88776b916f38b1b6567cff4c72e86e3671"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_4\\case_result.mat",
+    "bytes": 2059,
+    "sha256": "3833865bc4fcde4b4a497462f2640aff6bfb39ffc8b2977bcb5e11e47e2b870d"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_4\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "992cbdcdcd6463361d1872763a34051437fc48f27ca686e18086dfa7aad163d1"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_4\\no_negative_reuse.mat",
+    "bytes": 6677936,
+    "sha256": "fa64c328a7cc3c777b24ae1ebc2572963eaa1cdf3d0bec27685ed5ebae307b84"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_5\\case_result.mat",
+    "bytes": 2055,
+    "sha256": "0d4cfa6f484ca69beafb0ea66144fa2e6e8f7b20c20e4b65475ee8bca252e942"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_5\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "992cbdcdcd6463361d1872763a34051437fc48f27ca686e18086dfa7aad163d1"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_5\\no_negative_reuse.mat",
+    "bytes": 7067679,
+    "sha256": "6364a3ba9a83efdebcfab8c6f9cd3e5f58cdba5d8745d0884ce230b56b8cbc3a"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_6\\case_result.mat",
+    "bytes": 2072,
+    "sha256": "7364408cd6cb0c8b60c5bb0c2d9e78aa90e81172631889509fe5519a7389167e"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_6\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "992cbdcdcd6463361d1872763a34051437fc48f27ca686e18086dfa7aad163d1"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_6\\no_negative_reuse.mat",
+    "bytes": 6971260,
+    "sha256": "40acc1fe8a1bf534c4bdd4f4befb78a120b84ac8e7de96f799a73a88a301364d"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_7\\case_result.mat",
+    "bytes": 2037,
+    "sha256": "2a02fe31e284498260a77614ea4d0a9e9bbb3c6438337d73f920d381a95cc95d"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_7\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "ec12e65ce4f444e70877571112270c923d29d294cbf02ecffa45f98d078eae54"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_7\\no_negative_reuse.mat",
+    "bytes": 6688556,
+    "sha256": "39ac06396b1398c21c3289ee8b7c4ee7d8efffac8973e3057e995568c7514f70"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_8\\case_result.mat",
+    "bytes": 2070,
+    "sha256": "8beca1205d2d362856a0710cee52223376885e2b79400d3256795d9ff4db1cf5"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_8\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "09d2b21a8ace57f48b200d3c65e389f4097e4d05411c022957540af850deb612"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_8\\no_negative_reuse.mat",
+    "bytes": 7024332,
+    "sha256": "de66ac583351f173a03ffb9ee68936974da4b09f98cfe121195f241b267658b8"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_9\\case_result.mat",
+    "bytes": 2066,
+    "sha256": "38a93c456627317f46e5ce745aad2c97d0ae84b225ed7fda37238da7b2046496"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_9\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "fb4a239bac4504680a9654a8f7bb22777ce23d9e14ea679d92f0d77627b42c4f"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_9\\no_negative_reuse.mat",
+    "bytes": 7034153,
+    "sha256": "188b9106154314ea0ffd8dea3bd3d97f1556cf05ff650585e7e453170ebcdd23"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_10\\case_result.mat",
+    "bytes": 2055,
+    "sha256": "ca8ed7ac8d7bc63c40b997bce3bc6551b69f433477995432a73d9ae7ea39eeb7"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_10\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "f703162268ee6fdfaa134d13f26cb4d0908768084d7c3a9e547220ff4c483a84"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_10\\no_negative_reuse.mat",
+    "bytes": 6869718,
+    "sha256": "90c85386f82b7df558537373125298d6cbcb6fe1bcfb3fa14b375b3436bfa684"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_11\\case_result.mat",
+    "bytes": 2053,
+    "sha256": "8fb59222868515cbf9345a7888d3b494ba54782c243764a1373d606f0cf1d989"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_11\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "a0b42675342f3a6fc2b5d7e499baf5ff18f9d5f0514623d64c7f17f900ce0b50"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_11\\no_negative_reuse.mat",
+    "bytes": 6410194,
+    "sha256": "8f76bcf881b02feebafa1996158dc6a28c1cca79d32cc2730132481cbbb032fb"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_12\\case_result.mat",
+    "bytes": 2061,
+    "sha256": "761bfd11abc1ef2d6be0783db1a7f8b87148c2d6d392cdcf306633af43404471"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_12\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "10d12c45930f9bcd1db3fe7b00f598a05331098970863fa7267431b5c1169a38"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_12\\no_negative_reuse.mat",
+    "bytes": 6764228,
+    "sha256": "d6f825f8a1f2ec06fa29f3cf1e3b483d254a6ea64d619090576d4f9713166162"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_13\\case_result.mat",
+    "bytes": 2067,
+    "sha256": "c82db6eff95e990f2981828b861c46a4fbe7432ef2670da508d7ee0549885afa"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_13\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "e4ea3baea56512c0a1b799e990252f3a6693504fb7c05aecfb0617a04fd21115"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_13\\no_negative_reuse.mat",
+    "bytes": 6951637,
+    "sha256": "0bc5a723e223a5df81c31b889d5f206950c6540fa4a9192b528aab7c5f1f42c9"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_14\\case_result.mat",
+    "bytes": 2068,
+    "sha256": "60335320f3922aa83e93a8df2b8cc67dae2406e5c6264d6093dad586c6e3beaa"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_14\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "752e8ab2cc931c91c2cae52675cd7be5ea9417374d05648937ae1a632c856a76"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_14\\no_negative_reuse.mat",
+    "bytes": 6655554,
+    "sha256": "9f550e620c6c2a2fb3139be103f436bdaac2e02d4455365ac8a6e4d776c9bd48"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_15\\case_result.mat",
+    "bytes": 2052,
+    "sha256": "58f4fd3c8b9fdb0cb1af2b82dcd343c741b3001a476182b3349a3fc63630d738"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_15\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "f68221a341a8f87da98434dbca102a74ecb9aa9be8c0f2a160c02570dbb5e33a"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_15\\no_negative_reuse.mat",
+    "bytes": 6932267,
+    "sha256": "9f57cb51ea70db93fe5a3ab0afcd3c3a60d8903a54256dc5241a6e2dc923951e"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_16\\case_result.mat",
+    "bytes": 2053,
+    "sha256": "1b4d5874662ec461dda03de6ac62cd2fe924b5eb01881aa15bf50763f7a1b062"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_16\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "08fe6d4174a551e6083082aad0c984a43dd5bbbc303d980ec0af4fe19fa45a8c"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_16\\no_negative_reuse.mat",
+    "bytes": 6908652,
+    "sha256": "4fd4e4fa7c7754853301238ce10b8792ed35decfc8aa20fcd451af6e5a6e52a8"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_17\\case_result.mat",
+    "bytes": 2049,
+    "sha256": "e0e1f0d0bf3b5365155672e3c990a548589af74c83f23b8077cec7c42f32b320"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_17\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "daefa215eb3baa71565bafa31321a0e92858236d8d24ae37694f036bed05ffe7"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_17\\no_negative_reuse.mat",
+    "bytes": 6317242,
+    "sha256": "633bc0c15854e53c0e43cd5593d29aa0b4e3cb3e44582b0404b705f18883b139"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_18\\case_result.mat",
+    "bytes": 2076,
+    "sha256": "9557d840f826b8c694d0716733a929108075f863662d744eea78db986419edf7"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_18\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "a0b42675342f3a6fc2b5d7e499baf5ff18f9d5f0514623d64c7f17f900ce0b50"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_18\\no_negative_reuse.mat",
+    "bytes": 9683593,
+    "sha256": "7359eb5d86e0666a9e3012a9425b8c5d727b10a8ecd90679f7e111cfa9527276"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_19\\case_result.mat",
+    "bytes": 2070,
+    "sha256": "e9979a6cb6436b4a680d733c4af2429ef76119fe09204970f04ed735728a0bd7"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_19\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "4caaf95d28e1c3afd006f919ad124e10b870671c82b0e6a6ac87d793b1288d75"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_19\\no_negative_reuse.mat",
+    "bytes": 7330313,
+    "sha256": "b4c75426e69da9bba7fc56d600334f4627c08a9fc26beefe48300bb93162e2e8"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_20\\case_result.mat",
+    "bytes": 2058,
+    "sha256": "e60c5f7a7cbc85163053930dbad6d09e2a91ed7331f936a4dddfc2000a506368"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_20\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "3024252f2bae4fb27679ef5fa27d54eb67b7b336e0aeb0d56629c1006993e33e"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_20\\no_negative_reuse.mat",
+    "bytes": 6774004,
+    "sha256": "58b3626f440aa39d78b56bad0265973dc6e13ad6232d6dbd6485ecbab303fbf5"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_21\\case_result.mat",
+    "bytes": 2065,
+    "sha256": "d4e2d6703537b833466aec88016711dd220881ffa6e5607f6dc74b4b9d06288f"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_21\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "9378a67ec51cd14488666ae50a17c9a39f5c7249eec1622a5d5723e19046493f"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_21\\no_negative_reuse.mat",
+    "bytes": 6559311,
+    "sha256": "146f5fb678d0734f6c6799341be6f38ae4abc2140fe97066a15fd7912fc82768"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_22\\case_result.mat",
+    "bytes": 2058,
+    "sha256": "40d3bbab803c605373aad9471d4740d41dfd4bf28a79045e6200ae1e83c79990"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_22\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "e89a36c6e971b5ac8d94354efe801cc2d02bb2de79b40b5a8915ad4cbe89f04d"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_22\\no_negative_reuse.mat",
+    "bytes": 6410198,
+    "sha256": "d2d753f4ff2ac5871b8416cb9ff3302a84eedc4307c2e8d60928a03c8f09aff7"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_23\\case_result.mat",
+    "bytes": 2052,
+    "sha256": "e272b0903faaa34c6db3522a4cffbbae6b97e2d7c3bfa2108825d17d23cd55be"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_23\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "fb4a239bac4504680a9654a8f7bb22777ce23d9e14ea679d92f0d77627b42c4f"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_23\\no_negative_reuse.mat",
+    "bytes": 6410197,
+    "sha256": "bd05bf8acfd9ec328489e8753e168b26e4570228a17c4d078c28af2aeaa61b48"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_24\\case_result.mat",
+    "bytes": 2055,
+    "sha256": "8a76cb33253028d64cb1487f7faa83bafedd293365e5bfdc4c1df11a230525f3"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_24\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "124c63eeaacf4541632c089416f636aa9767eb43d573509afff75a38b4d03f53"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_24\\no_negative_reuse.mat",
+    "bytes": 6317242,
+    "sha256": "88db6b11b19270bc034d003d2f3de6eb034810503a8c08cea859f26551ccaa5f"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_25\\case_result.mat",
+    "bytes": 2056,
+    "sha256": "3213d54e31d42664a337389ea93697a8358c411ce2f58ace39c5a99fc4ca7d8c"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_25\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "9664ff163d2ed184b08524c42335fca19c4dfc8cf64c425aa90fa6ae6092521b"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_25\\no_negative_reuse.mat",
+    "bytes": 7418669,
+    "sha256": "f8f7228cffdc0bd20bfd6e288fa00c96081177bb1f31a36203e5502894627119"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_26\\case_result.mat",
+    "bytes": 2068,
+    "sha256": "2f875d7e9198beb99f9847d742266cf8780edbe0e9ae4d8344194e30c231a4cd"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_26\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "81b8208aff6883d91551320420b0afb97b2d58095c4e379f67041c547614e7d6"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_26\\no_negative_reuse.mat",
+    "bytes": 7087217,
+    "sha256": "458e13350c92e4ede501428f6e5d131981ffcb5f6928b4c93263f7905242aaea"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_27\\case_result.mat",
+    "bytes": 2070,
+    "sha256": "b03c5e1d2c4f4d4607c7381fa2da0635434ff911f3e9e73943135568e167778f"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_27\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "effe29781be494569dfecd327956188bcc619721bc222738a48ea560add1d1a6"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_27\\no_negative_reuse.mat",
+    "bytes": 7369623,
+    "sha256": "a2e583538cbd7abb2fa82e5a85dd88e36b6e4cd6765504991c02f9627784a0e8"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_28\\case_result.mat",
+    "bytes": 2063,
+    "sha256": "21d11cee4c3b50b4af5909dbc77dce32e6016d9a604ece2ccafb4c51896f9e36"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_28\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "1ccb8dd1e33ea810793d951616742147300857530b6a46bc5aad7b7f5112b856"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_28\\no_negative_reuse.mat",
+    "bytes": 7204378,
+    "sha256": "34c629b8aa8b3a5a32da74edc5dc5e8d843f3c7fa314528c437eeff795bf9e41"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_29\\case_result.mat",
+    "bytes": 2057,
+    "sha256": "c131f99099415db9b912fb696824137e5cbdc1aa54629d43917a100c8d343811"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_29\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "a3588247bfee4a3b386c6b5114d94cf98aff00950879bcce3eaa4d1eb4182885"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_29\\no_negative_reuse.mat",
+    "bytes": 7223890,
+    "sha256": "153289ba746317e68f17d4f16e0b5ab63e57ad3624a8f89470be01b735515c63"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_30\\case_result.mat",
+    "bytes": 2058,
+    "sha256": "9ea055a3a082909371e4349774ce318f14c58859f067014a59033d889d04005d"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_30\\effective_settings.mat",
+    "bytes": 2745,
+    "sha256": "82aa66d78df7ed2d4f6afdb5316674ad8f9509c8f74a9eb5a50e44c097651dcd"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\quadratic_cubic_seed_30\\no_negative_reuse.mat",
+    "bytes": 7320559,
+    "sha256": "0d352dff4f8c7be5594e142fd9c3de749c20ddb5c6304874168c66ee40f87712"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_1\\case_result.mat",
+    "bytes": 2061,
+    "sha256": "8f5f760ecfe34c8617598978ee55739a0e06526df4ade94f7663a20d549606a6"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_1\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "22456ecd0ffb3000da83dfc77c4c298ac37a623b454dff4eed104a044728ea01"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_1\\no_negative_reuse.mat",
+    "bytes": 7569969,
+    "sha256": "ce4e6400d099a315ec9990cc815b5e5e7fd703e851044aa8094e7f96433877c4"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_2\\case_result.mat",
+    "bytes": 2071,
+    "sha256": "b11ea031e014cbc5c6a68c677acd063f43f553010fc1b379027e490fe0b6b08f"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_2\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "128b2ac2d60ddccf5be4d2671c9b69a3610bc30f5cecfa4eda7665e41cbef6c4"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_2\\no_negative_reuse.mat",
+    "bytes": 7599007,
+    "sha256": "12eb5f45eca09057bff0c50c55e75dc00224b4bd27c08489bfc6cba1a26b3175"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_3\\case_result.mat",
+    "bytes": 2069,
+    "sha256": "679518489c2486618574fbbf55feb265e135d97598a21cacab72d7ab9af1c945"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_3\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "cb8bd6fd453ca3b9e588329775b9e014b0e73a6e1a20b2bce8a89150563870ce"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_3\\no_negative_reuse.mat",
+    "bytes": 7277675,
+    "sha256": "bb846ca9fce26c1b5bacc74b5b22ac48770a6f23e76b45939c2e9a3b1cbbce16"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_4\\case_result.mat",
+    "bytes": 2069,
+    "sha256": "f04c32b77a3971afc9b0c8036f44872daf2e9413a8af128cbe26311d367a61a7"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_4\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "82ee2f7e431bc3fd776419c65c684e13ff9a5c98d204d4dfb6779f9c4d5387ce"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_4\\no_negative_reuse.mat",
+    "bytes": 7418874,
+    "sha256": "e0e214b1304112cd1f14cc7c72851d861237528a7e69e25f3c7fc49a3b7e1e45"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_5\\case_result.mat",
+    "bytes": 2055,
+    "sha256": "df3c4a150a47a7e88f59232b8f3827f1119eee0e3eb3f499de80a14540acdd57"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_5\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "91257965361063ff00d32c4d15e0e4eb6824a04576cc21ffb717108945233522"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_5\\no_negative_reuse.mat",
+    "bytes": 7277729,
+    "sha256": "9c43ed6dec8db2b4e912f8c3c0e92eb4a05bc07abec55030f07862442949db9a"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_6\\case_result.mat",
+    "bytes": 2067,
+    "sha256": "3e449cf48b40a315d7fac1fa3800f9c398a446c22449d28c0d76026f81f99c45"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_6\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "ee217508091b9ce532d900d51f190157c37e0488099c307366136315da985905"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_6\\no_negative_reuse.mat",
+    "bytes": 7480490,
+    "sha256": "60230cb1b29dc8cabc27fb07ac2a46244091a94bc69a568a7c29e43a3e02d8a6"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_7\\case_result.mat",
+    "bytes": 2062,
+    "sha256": "624f0e2b233b2aa38f23680385c46c50a29639f83c51b0594a6a68071fea4a54"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_7\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "eddeec8d25719aa56bcd576fef0c8500305b020dbe87b00f369931d46901bc56"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_7\\no_negative_reuse.mat",
+    "bytes": 7599094,
+    "sha256": "5999e4c28e3f11f7f38514ab170fe7ae268381b01f075cfc0c8de2474a0c8081"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_8\\case_result.mat",
+    "bytes": 2053,
+    "sha256": "e304952e31f0704f6380dfd38d48357e8497a0f0354764e271f4937030233398"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_8\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "5d8615d31626ac1fa10f38232fc9d86d2bcaccfdf1dc0db3ded8715023b58c03"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_8\\no_negative_reuse.mat",
+    "bytes": 7599028,
+    "sha256": "69d58d1b9d7b8d2a918d235a0dd455c070aa9ed3fcc321041fd560af6a2e9942"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_9\\case_result.mat",
+    "bytes": 2068,
+    "sha256": "8721d8f138209cdaa66b72fe91691a2b2899bcbaa4a390a6c087490f3f46f7e8"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_9\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "a6daba93e5db1f81301a7f8530166c30a609e894e0789e031271a408bb08542e"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_9\\no_negative_reuse.mat",
+    "bytes": 7501880,
+    "sha256": "12a14bb984d55f9b035bf60340a1e9a2c0ae22dfc9a6cc27b083270dd55a06ec"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_10\\case_result.mat",
+    "bytes": 2069,
+    "sha256": "f88a28ab405a546fac4df503848208aa39dbddafad3cd16138d269874fffde14"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_10\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "64271f15f702083f7819f59b77dd9dc99a6566e4fc73bca31cdf4399d2125c9f"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_10\\no_negative_reuse.mat",
+    "bytes": 7510281,
+    "sha256": "b267af528e966836423d1106ae41a193d9845fa368e70f61abb1effc012e0d7e"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_11\\case_result.mat",
+    "bytes": 2062,
+    "sha256": "1bd2f7715a918237a4086acf83303d4e53e347a77b7c123842c583845cf77745"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_11\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "1a0509d011ec2de22865590b32615faa412c6cd40c63ca760a914b5609bf99d5"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_11\\no_negative_reuse.mat",
+    "bytes": 7480552,
+    "sha256": "ad85a41894f81abbebb19932fb8ac0b5679699b33c1de046d396f0e440f8967d"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_12\\case_result.mat",
+    "bytes": 2069,
+    "sha256": "bd132c771427180a695b3ebb4b9efa62083582429ea050f4f6c3b0bbbf40ec9d"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_12\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "591f082bdb0c9291eda9f5527b9ccc2361654c64a41bdb7c1080b913e804cc8f"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_12\\no_negative_reuse.mat",
+    "bytes": 7608985,
+    "sha256": "8341b4e245712e1d235459bc2e38361aa688e30601c726336668692919b8fc42"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_13\\case_result.mat",
+    "bytes": 2054,
+    "sha256": "d1eff03226a31ce30b52af34056ac31a16128f61d161c2d6893d99c8dc7c8ed8"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_13\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "9f63d811d02af6edae4be8608c5d267e0023706acfaa523e696ebb490a03132c"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_13\\no_negative_reuse.mat",
+    "bytes": 7599136,
+    "sha256": "d196def8b4755aeb21f57a47f405a59052fc129953b292c0a388d654700b1af9"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_14\\case_result.mat",
+    "bytes": 2065,
+    "sha256": "c52d1da348c378de6cf71cbd59a285def2d6b5cc0066212e98ae942b3544dca8"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_14\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "431f93e1614ab115758b84c088c9375813ac50ef49cc1b653504367d1929e587"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_14\\no_negative_reuse.mat",
+    "bytes": 7510357,
+    "sha256": "8119e778aaae53f3d21d2af26d7e1323eb43c67a0459de3408fbd50389673661"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_15\\case_result.mat",
+    "bytes": 2071,
+    "sha256": "71fae7eef7fd89d37d2f31a2b6e02a424366f564135dd244ed8e6f0d9bb1bbe3"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_15\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "22456ecd0ffb3000da83dfc77c4c298ac37a623b454dff4eed104a044728ea01"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_15\\no_negative_reuse.mat",
+    "bytes": 7652008,
+    "sha256": "af6721893837cd61fdd2e48484f6c1ffd7ab44d5f1b7c2ed5816ccf211fcfa51"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_16\\case_result.mat",
+    "bytes": 2074,
+    "sha256": "d53bf71da0f3a8fea56135f64db3bc185692e704ec60b0df257a915298e32c64"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_16\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "d76df56ffc257606fb97634eaf20dd648d1cfc713e49d9a016d76e54752fd860"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_16\\no_negative_reuse.mat",
+    "bytes": 7787322,
+    "sha256": "b2245184f9c6072e701468448e683b3db17b7e82a55024a6ad534da335c35623"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_17\\case_result.mat",
+    "bytes": 2047,
+    "sha256": "d8c1ef4973dd811b8516848715ec3d117b3f5c0ba613c78cd521688bce634463"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_17\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "086c7f44d4b0d9a39b97d745f6b738929659c8c186a96fb684cf2e16332ce11e"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_17\\no_negative_reuse.mat",
+    "bytes": 7599097,
+    "sha256": "78ba27e3ad041aa4f52846456b499f1ea3005ee61852279b13cd706a8ae1660c"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_18\\case_result.mat",
+    "bytes": 2057,
+    "sha256": "e1d732cca7356e96f1dc69a3ca1d204dcac170e9e3ec4f0e7c1b97cab0cd1a95"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_18\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "82ee2f7e431bc3fd776419c65c684e13ff9a5c98d204d4dfb6779f9c4d5387ce"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_18\\no_negative_reuse.mat",
+    "bytes": 7695020,
+    "sha256": "ddb31b333688699e15fe9425e5d1f9d72e4a414c00f825916c78820614804202"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_19\\case_result.mat",
+    "bytes": 2060,
+    "sha256": "5918d0ae3db78c8be533d20cf5aaa480c8655bc438e460ebe229c2f17e027f24"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_19\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "2b4e2c9853bb881421f5f3da996c28f692d998ba744bbaef6e7aac88bdbc2746"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_19\\no_negative_reuse.mat",
+    "bytes": 7510229,
+    "sha256": "7b7b637b3c6d06b921973c7694d82bc8c06b6ce1e055fa08c7b70669109c6da1"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_20\\case_result.mat",
+    "bytes": 2064,
+    "sha256": "026c2fb0732ef011e5df5c920a7ec22f4e1c0b0c56c3f283199f7ae7d4f05381"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_20\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "67d40b80e74aa619eecc6143f88893865bb96cf1d94638a8c848d3e22a930992"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_20\\no_negative_reuse.mat",
+    "bytes": 7559264,
+    "sha256": "822b7284e626c003ced906134a121bca7ab21aabdbc7525be7339adcacfb431b"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_21\\case_result.mat",
+    "bytes": 2072,
+    "sha256": "88e78098cf433a27f8263ffcf7a3f948c0f742e3d917eda81ba4763d6a9bdfb0"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_21\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "c1d345def373b6a7ad52995bfaa77755a2e154b0b3ff95a7deed9d97bc853f43"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_21\\no_negative_reuse.mat",
+    "bytes": 7548068,
+    "sha256": "45587c94d6f26e8940c42e684b8ef0254e99284e74616e831b1d231aa247d3e3"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_22\\case_result.mat",
+    "bytes": 2066,
+    "sha256": "016383df321ac72467b79befdcc01ee5d8e29e004cdffcb56e30303ed26294d7"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_22\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "cce26be93420aaf8ee961f354d04e527460abc7c428143a98bcb734887402b20"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_22\\no_negative_reuse.mat",
+    "bytes": 7369707,
+    "sha256": "c9badcbe140560d0dcb3fc43844b1d79d43e169bca8a40165900c95a24ce9eac"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_23\\case_result.mat",
+    "bytes": 2063,
+    "sha256": "5fbbc0fc5bbcc29b05239422c29b61fb1dcdccbe45d13c867eaed49479cd2eea"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_23\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "40488012fd0fec17fe501ac6b8b99eae56477ea290a80af763f4e56dea39f330"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_23\\no_negative_reuse.mat",
+    "bytes": 7510219,
+    "sha256": "bf1704b2235c76d4ccc9f240ff5b78a512199756bfd7116795cafcb4a25bbf9e"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_24\\case_result.mat",
+    "bytes": 2074,
+    "sha256": "3489bc4fca45d0728cfe7ee047d083bd617e9efcd770a3343b13cd79f710d072"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_24\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "9ec579413a3efc1f8162ca44f94ab2b25fad4e40c89748d3d8b8971a311e51dc"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_24\\no_negative_reuse.mat",
+    "bytes": 7671496,
+    "sha256": "2139b549b793e23251bbccfceebe0e383f8c35143fda09b3efd0a177b8375dfd"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_25\\case_result.mat",
+    "bytes": 2075,
+    "sha256": "db50222a5ea69a3e7a9de78b7531c46e2856c52870280dd69cb7a85f611b8224"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_25\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "abb4fb7a2d26cc9c83a33bb5e4b01c93cd490242578a03dc9354a11b97e47f0e"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_25\\no_negative_reuse.mat",
+    "bytes": 7510285,
+    "sha256": "5e4ab92d299f34e1eeafb29141d5fc93d07bcc874db31ef8a26ad9b11360ea6c"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_26\\case_result.mat",
+    "bytes": 2060,
+    "sha256": "f730dc227ea7f94de6ffe464f43dd8c1b120ac2773e37c380e24e70c80d4b385"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_26\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "1d497a0180e5e193a0690c143514ec0281f38fd15f1c7bfbd324eac0a95d60db"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_26\\no_negative_reuse.mat",
+    "bytes": 7787308,
+    "sha256": "32427590de10fc7dad98b19a4017a23bae1421fc83aac9ea5c43ab2719cb3ee0"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_27\\case_result.mat",
+    "bytes": 2065,
+    "sha256": "735ca25ced4615ab37fa4c6bc667c044bef3307cc79f10b8fb6ba42e9124b534"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_27\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "ae72d21b18d2f1fb90d5388da686b142a1e06d667324e63915d4b5f6104d5da6"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_27\\no_negative_reuse.mat",
+    "bytes": 7694917,
+    "sha256": "00d061668afb2bc634948155949623089c129fda76e36ed7e8b9d669daef5029"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_28\\case_result.mat",
+    "bytes": 2069,
+    "sha256": "3197f9aaf925145c1992003ed862b6ad9ee854a333db3bd8f5c2518926033d2c"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_28\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "26e9c7896bf34955160a4e70678912fa3eed593c58be5ad054ffb7903a928193"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_28\\no_negative_reuse.mat",
+    "bytes": 7579553,
+    "sha256": "148f59d4cccb23cfdc9e9ae88bf0e48a89c9b8a45296c5cec5f3af79529c7a1d"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_29\\case_result.mat",
+    "bytes": 2062,
+    "sha256": "0975d65cf0f1a8ec9658336800146b4fcb0974d146b83b6b8115ff56c213eed5"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_29\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "8a89e917d20ccb057ba89b0d1395adc76fc41efed8641dd84488b69168470361"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_29\\no_negative_reuse.mat",
+    "bytes": 7277625,
+    "sha256": "23cfd7fa5a407ad57fd0baaf7b29c5de686c14dada57d0e0b2d7cc28ad489ca2"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_30\\case_result.mat",
+    "bytes": 2074,
+    "sha256": "bf35f25b5e4d48ffaf5f7fc48f32b26a2d06b1c10a540fc25817059bc64cae4b"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_30\\effective_settings.mat",
+    "bytes": 2786,
+    "sha256": "f32a0de17a7b5881eeb2e7ea537624735a9eaf84de467959d26d125fd866b9b3"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\bistable_duffing_seed_30\\no_negative_reuse.mat",
+    "bytes": 7599134,
+    "sha256": "3afdeb545545b17d00e441bbbdba6b42e8263a5304f01580c444e5691d1d8517"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_1\\case_result.mat",
+    "bytes": 2069,
+    "sha256": "1c0bc62a68e2fdb4d165ef3aa1bc731c68c8c7c95d792e33402722aa56b7c3da"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_1\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "0875a3e8ed17268864ec69d4af1f9a457b78c43251f4b454d7a72b5524d45f7b"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_1\\no_negative_reuse.mat",
+    "bytes": 20122779,
+    "sha256": "92d951eb7c7268910be2b1261f4b9d5dee252bfe31fe91f8ac95f68df7755a50"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_2\\case_result.mat",
+    "bytes": 2079,
+    "sha256": "cc8614ec4a33b75551036ea1c6f28f5dd645c78639bb62a3dfaed47d7e69686a"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_2\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "d96d968b8b7bbf543172111da997e44db91556778df6662212eb2170373f747b"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_2\\no_negative_reuse.mat",
+    "bytes": 20133460,
+    "sha256": "0c17b7479c3f4506c8ce14693d3ddef67cb092f183e76f12ea4e36a349cda573"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_3\\case_result.mat",
+    "bytes": 2070,
+    "sha256": "799d39fd5ab4cf0d13fbc6e5ff436c8534e6fd3ce6171461885af2cc1d057b7c"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_3\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "b8cf95b74e8922646cb992788cd3116161ab58b41038c35e13671036ee4e2798"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_3\\no_negative_reuse.mat",
+    "bytes": 20454040,
+    "sha256": "5b4917c05baeb96fa62b8e048bf768fd5abab5d1d7f861c12ff7e899db2618b9"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_4\\case_result.mat",
+    "bytes": 2066,
+    "sha256": "d2ccd3e2f828071e71f0dfee012a408d5ebd70364175d84d879b12dd2ffbe5e9"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_4\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "d1009014268a5a41fbe52f45bad8ee1f814c33e6d961df228522ddf1de19eb01"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_4\\no_negative_reuse.mat",
+    "bytes": 20506687,
+    "sha256": "aa948b3b11f0cc37c387f5fbc5ac57829fe07cf8aaa73d04890ca75491559dc7"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_5\\case_result.mat",
+    "bytes": 2074,
+    "sha256": "73d8e16938e8a7d3864b7373bfb77a1bcc644ed256d898133925dead755560c2"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_5\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "1c832cd3558be6d18b17876ca60c60f069cacdaf5ca8eef97d33880cbabdca00"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_5\\no_negative_reuse.mat",
+    "bytes": 20257452,
+    "sha256": "86ec99c73d009921bac54a0110ec0d3545bb14d442938a58ad9a3548a1efbd51"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_6\\case_result.mat",
+    "bytes": 2081,
+    "sha256": "d53a49dacf1b11d4052113cc0a9578287221dde6054715be0ffb84eb626e1196"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_6\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "3df6211b6b0d7e25fc52f6aa357f50e7db7d7dd43c313620afd14a97c531c48a"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_6\\no_negative_reuse.mat",
+    "bytes": 29522765,
+    "sha256": "f461b24c785d7b69297d014a67e0f2dca16c387da45778aee7af20031432e2f9"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_7\\case_result.mat",
+    "bytes": 2066,
+    "sha256": "4787dcd2ef5f422adbff6c72b43b8c24db3963c4e426997ff989cea1e2043801"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_7\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "77fdccb826193e20a35aa872af30f4087236b983bbb69c7557aed684a36df0a9"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_7\\no_negative_reuse.mat",
+    "bytes": 20285999,
+    "sha256": "50a1f875256e7d5ab12e371c8d641ade354f6e6594bf57753207de8f7d8c2188"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_8\\case_result.mat",
+    "bytes": 2070,
+    "sha256": "0caa07ccc8dad1a3c1041d61ff41cfedcea5405a5fe84475f5e419ea7c20375e"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_8\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "1540b33d14a4e8078a77e8cb950acb5c3eaaf144c82b658e08c487e6db6374a3"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_8\\no_negative_reuse.mat",
+    "bytes": 19800908,
+    "sha256": "4d8712b2b3e771cc4b743033124183ca4f352ca787faa80da8517575aa165eac"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_9\\case_result.mat",
+    "bytes": 2078,
+    "sha256": "9855fd8dd43dd9ae36efc607efcf6ea345522c8ef5ea840397deb676ac1c968a"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_9\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "abf67a044d331f6522a13a383f47db8cb5cf8ea8d39bdb0f10375da2885619b8"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_9\\no_negative_reuse.mat",
+    "bytes": 19898034,
+    "sha256": "061b67184c3ebf414fab249edeebdd4d8efb426128281a5ac45ba6566ee20191"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_10\\case_result.mat",
+    "bytes": 2073,
+    "sha256": "dc0cdcec16a257d58fa55dade49f384670e8c5d85d5c354f876ec492fd9d2af6"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_10\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "3df6211b6b0d7e25fc52f6aa357f50e7db7d7dd43c313620afd14a97c531c48a"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_10\\no_negative_reuse.mat",
+    "bytes": 20040518,
+    "sha256": "269a657aca4696fd381ec64c08a38d7cfaf4aeefa4b74105c5473c6030796a57"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_11\\case_result.mat",
+    "bytes": 2064,
+    "sha256": "539ee74c860bc1b2fc486141e41da099a4975991b84dc10ea58049a2558070a7"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_11\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "a431957eedecc2ff7c334eddd7c999eadb98b0ecbc29f25c8b4aa169f613a375"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_11\\no_negative_reuse.mat",
+    "bytes": 20630411,
+    "sha256": "de5faed21d24ebdc9525152950deb29bb150dc572d7c1b7b41e0241fd89fc28e"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_12\\case_result.mat",
+    "bytes": 2071,
+    "sha256": "95c2b1ad6c5b862c02e6e6ccd3bffc3b2150923d7b8858da4098d1e7fb085800"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_12\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "30d797336483120c98c3e5ae93daaf828e3626846259fe05aec0eec004322b1b"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_12\\no_negative_reuse.mat",
+    "bytes": 20084225,
+    "sha256": "b8b8e8dec5304f3a7adf5dd0dbd59f302d2e3887ed17a2d0581662b02d96d9df"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_13\\case_result.mat",
+    "bytes": 2068,
+    "sha256": "3ee53168aeb89337aa38401ba75f48c3615a6e5dcf82d0464cbead30f5a06899"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_13\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "51c9cba3eb556112e2a6e198e1404d1058e5e7b8beb00411cef6fed75b527006"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_13\\no_negative_reuse.mat",
+    "bytes": 20170637,
+    "sha256": "10802201229cb8316f721065776cf8a1c6d41236f85a4db32a909508dfc12020"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_14\\case_result.mat",
+    "bytes": 2077,
+    "sha256": "9eff4678fac01393019c53457f166daec05c75b565589724fd88d671011ebfc8"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_14\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "695050beed8424a2f1bfaa096e44f3cc49c19e75b292c3cd1ee0ab2ab67a107f"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_14\\no_negative_reuse.mat",
+    "bytes": 20192920,
+    "sha256": "0661cd4a1fa96b9e6e2adfd865c168c6aa12af7b0f31e136d5228e6a107756a7"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_15\\case_result.mat",
+    "bytes": 2070,
+    "sha256": "3761a5be894f8cae943178d1324491e817a635fc676fa717dfe29de0abc6f47a"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_15\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "e982dbe2876355d65061b44a0436cc842005d31df8f2849227cfd908e47259f5"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_15\\no_negative_reuse.mat",
+    "bytes": 20285596,
+    "sha256": "6f349163797847c80a1d743a4a70f42557b9e0bb9e699a75779fe9874daca936"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_16\\case_result.mat",
+    "bytes": 2072,
+    "sha256": "29167082fec7d2e84313bbc0b7748c2d27459ffd520598ac3f28eecc66e37d60"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_16\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "c7b77e58fa42b005de7dbaa5444bccbc56164159789337f7d8d50aa0c055fddc"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_16\\no_negative_reuse.mat",
+    "bytes": 20155451,
+    "sha256": "024f6eb5605a8588804ec67c49be0ca8f2ccbf6d6ecc8bc7248719963ad3cff2"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_17\\case_result.mat",
+    "bytes": 2072,
+    "sha256": "5eaff6395c8f6384d1fe132dd484b49010e99b26dca5e8ec7c482113f6edb82b"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_17\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "57cfa090871af9c0a250d312ba1aacbf98e01a77da09dcca75a867bd3c59c560"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_17\\no_negative_reuse.mat",
+    "bytes": 20192793,
+    "sha256": "7864ebd7c7d2a5254be9642667d4df2728a20dd884cb4fbc2fea19cd44fe3801"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_18\\case_result.mat",
+    "bytes": 2079,
+    "sha256": "0d1124821afef197d966e916c11dfd28d2dff8903491623fb52c1abe0ab081b7"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_18\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "0eb83342972fcc37ecd6949247f4f7188a9534b0d59ab5fd6b96776bb295c223"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_18\\no_negative_reuse.mat",
+    "bytes": 20380864,
+    "sha256": "7584e984884b55ab783cd8376bf10c9a60b363d59e4b3d2aa76d6851d7248c72"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_19\\case_result.mat",
+    "bytes": 2078,
+    "sha256": "07ec29af9da782663ca2f349be3ad97b33c14254a78c37f23d7b04adccf8caeb"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_19\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "c7b77e58fa42b005de7dbaa5444bccbc56164159789337f7d8d50aa0c055fddc"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_19\\no_negative_reuse.mat",
+    "bytes": 20318914,
+    "sha256": "60656270628665f79ad6f234ca89de3ad314adf100463d770f15fd31b023797f"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_20\\case_result.mat",
+    "bytes": 2077,
+    "sha256": "e29e2c837343cbe9a959d3ff8b5ed5f01583db9fccd89c3de32c9929f8434bda"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_20\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "36381f9851b15b1a13535d64e605d524d8e174640b808532caf3c65b1e5d06f7"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_20\\no_negative_reuse.mat",
+    "bytes": 20122805,
+    "sha256": "383d1f8c9207163a8c8f6afd862ff784fc4296312b823776116909fa96b68875"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_21\\case_result.mat",
+    "bytes": 2064,
+    "sha256": "4b1bb0449d096a1a8b50287d5d64c1f2f7dc000e5b84a6712e14f898f0c1e579"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_21\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "93203c995a2e754e4e6ac41f4d7788a90f1be577f3ef1c3f9fd8a7363827b4d8"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_21\\no_negative_reuse.mat",
+    "bytes": 20193236,
+    "sha256": "ccfa44bf1a17a0f0542cdedf608ca8d39405265edb611054be2e00aed131a3f8"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_22\\case_result.mat",
+    "bytes": 2075,
+    "sha256": "6476dba5508e86f69870e3782d578a90c3c38b7d147553ba93609f00c358c3da"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_22\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "c1f6b29254b749780165aa6b7f7111fa8fb5460f555e1a62fce66d24de998db1"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_22\\no_negative_reuse.mat",
+    "bytes": 20133375,
+    "sha256": "1463cc57fbf59e0692ac59b0871c75fb7b3d742577f7a473ac6bdf45c02edaec"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_23\\case_result.mat",
+    "bytes": 2069,
+    "sha256": "dd732b6c8d35603b1a4676f8f32647254444fb7292b3fe2212635affc109311e"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_23\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "f7a5c19f609963763d79193a57ebb983d14ae668b21dd8b469e4c327a18c29c0"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_23\\no_negative_reuse.mat",
+    "bytes": 20084907,
+    "sha256": "53ad18b0990272baba3a88055c20c06fe0f737629928d5118c8dd7b2158fe7dd"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_24\\case_result.mat",
+    "bytes": 2078,
+    "sha256": "2ce4a6ef135b8fece50a72671913b061ff31a25ad3a2b812bccce3ab84352af3"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_24\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "0a2763c0098422be5efb4ff23f550fdfe8f7aaa0d470dc2d94cdd3378cad9415"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_24\\no_negative_reuse.mat",
+    "bytes": 20170447,
+    "sha256": "e614850bd7462f9d4fa840c1a449409dcd4f52ddd4c03f028323d25f53207f91"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_25\\case_result.mat",
+    "bytes": 2077,
+    "sha256": "5cd409c839e5b8c06b176e5abd5a1b957b129e81966ebd192d8a65e6a614dfd5"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_25\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "e72b9ed21e889b5d19149f04c6a215c8c4e96526bc04de420438968c09d41d1d"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_25\\no_negative_reuse.mat",
+    "bytes": 20630873,
+    "sha256": "d5bd67b6caee28ae3479673f6b14c41e0c5848bbd0c1d1956d072612efbc15f0"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_26\\case_result.mat",
+    "bytes": 2082,
+    "sha256": "ed44a69ab55b6f25d0965e2ac95f48076e1de2cc75e989f6f1fcab3778db18c4"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_26\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "6777b8666dcd6524766c5320d07a377b00d072cfd3d42dfcce69db87acc7056f"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_26\\no_negative_reuse.mat",
+    "bytes": 20084506,
+    "sha256": "3cd92470f001bcbaa7b4d76b090f1459cac7c15a273a64f95a86b02026ce52d3"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_27\\case_result.mat",
+    "bytes": 2074,
+    "sha256": "db8a0e2fe4b4359771f12c97799d1ac1615deca4981991eb695a949f61a73195"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_27\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "48fa210f85cfe8e604378e2f0eb54f437c3ee539994be18415c4c8afd2057b82"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_27\\no_negative_reuse.mat",
+    "bytes": 20084886,
+    "sha256": "ed08a05838d6a31e9c2f4b31ca71ce711fa2afa1be84256bdaba8ee248c39d53"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_28\\case_result.mat",
+    "bytes": 2074,
+    "sha256": "3f3f6337e1c49a63313e55eb6d50ed874c6b628b3bdc7dc48a2982d1d6b7455f"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_28\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "d9d37680adf5d25115f7e3a4f5d24239f0eedb9a19e734fa31dfe0d1e6dde10b"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_28\\no_negative_reuse.mat",
+    "bytes": 19988867,
+    "sha256": "6b0b5e2324eb489a5dc993b6f518e05034076975f727dd7686c03e7e09b206b7"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_29\\case_result.mat",
+    "bytes": 2077,
+    "sha256": "abd1dc7ffcc314c0b17d4c0bbe53455052dbb8c5acecfc48166b6ee4ccca2bd3"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_29\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "5cff37e0bbbc3110e54ca2b9216b4e0925a133bca4b4be105408ef27ba494fdf"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_29\\no_negative_reuse.mat",
+    "bytes": 19960029,
+    "sha256": "86aaa324acccbed724f9ed09d1643db61cf6e8c56dc92e37b7cb5b765f94790e"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_30\\case_result.mat",
+    "bytes": 2075,
+    "sha256": "07a74a431035e31d0415f5cbeb6d381904f9f04b04e3d7946870fba7cc5bebdf"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_30\\effective_settings.mat",
+    "bytes": 2841,
+    "sha256": "a4cca4ad61a36790bcb956ba3dcb2717f1a4bd16d352600901b9a6f9137503fc"
+  },
+  {
+    "path": "C:\\Users\\-qian-\\Desktop\\LIM_NoNegativeCache_All90_Parfor\\results\\20261028_040701_540\\genda_cosine_quadratic_drag_seed_30\\no_negative_reuse.mat",
+    "bytes": 19946091,
+    "sha256": "d6b2b6d8c9e73e696a344c825654a41d7e615185d48b342d02a5e1d6b8618b17"
+  }
+]

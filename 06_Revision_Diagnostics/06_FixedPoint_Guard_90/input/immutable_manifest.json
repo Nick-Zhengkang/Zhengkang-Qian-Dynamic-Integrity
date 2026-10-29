@@ -1,0 +1,77 @@
+[
+  {
+    "path": "engines\\control\\sampled_forward_classifier.m",
+    "bytes": 4174,
+    "sha256": "1bfc86472552150d6e10cf567294086be4309bda9fbd27bc42dc27540f2ad819"
+  },
+  {
+    "path": "engines\\control\\sampled_forward_geometry.m",
+    "bytes": 563,
+    "sha256": "516f4472ee5c84aeb16f941fad4c984dcac14e3489ded943d7a8bd2065c5e04e"
+  },
+  {
+    "path": "engines\\control\\sampled_forward_integrate.m",
+    "bytes": 2408,
+    "sha256": "65754dd7380b7a0ff4d9dcb8a9c5ce29e9d5dc45110142622b1a25dba75ac58c"
+  },
+  {
+    "path": "engines\\control\\sampled_forward_proposed.m",
+    "bytes": 5122,
+    "sha256": "b98ecee27b668b56dc88b940a7c6b17c9e065eda66174e6a55fb013ce4d0925d"
+  },
+  {
+    "path": "engines\\control\\sampled_forward_step.m",
+    "bytes": 1316,
+    "sha256": "a2ffefaabb5ed3aa9ed2907cea3e07f7ee24afd95061a278d3dbd8c8f94e75fa"
+  },
+  {
+    "path": "engines\\fixed_point_guard\\sampled_forward_geometry.m",
+    "bytes": 563,
+    "sha256": "516f4472ee5c84aeb16f941fad4c984dcac14e3489ded943d7a8bd2065c5e04e"
+  },
+  {
+    "path": "engines\\fixed_point_guard\\sampled_forward_proposed.m",
+    "bytes": 5122,
+    "sha256": "b98ecee27b668b56dc88b940a7c6b17c9e065eda66174e6a55fb013ce4d0925d"
+  },
+  {
+    "path": "shared\\+limbench\\angular_with_oracle.m",
+    "bytes": 295,
+    "sha256": "9b4c9cb9857f54a0bbb73464cde6f34abbf50a14c91039fefda6523d850d34cc"
+  },
+  {
+    "path": "shared\\+limbench\\private\\angular_engine.m",
+    "bytes": 5616,
+    "sha256": "5c486b689558c922ede1e8228c648e2063cde1eb561abe91d505419e4d226450"
+  },
+  {
+    "path": "shared\\native\\find_cells_around_a_cell.m",
+    "bytes": 1225,
+    "sha256": "460e9699f795883227dac8bdd5aa496acbb0cdbbb311a89769be3e021bb7ea5d"
+  },
+  {
+    "path": "shared\\native\\find_index.m",
+    "bytes": 212,
+    "sha256": "46e1233522a294c68edb0601c2c0eb5ffdb92d8d19975f2b1275381cbe997b11"
+  },
+  {
+    "path": "models\\bistable_duffing\\sistema.m",
+    "bytes": 113,
+    "sha256": "4d68e767c6a28fb9f0c0598ddcb458536a111dc9bc7cd1f83f93370339232891"
+  },
+  {
+    "path": "models\\genda_cosine_quadratic_drag\\sistema.m",
+    "bytes": 111,
+    "sha256": "b15763df908fbf4da9d2c4a9d89ef79ea7f67424f7170d6115d536a0352d283f"
+  },
+  {
+    "path": "models\\quadratic_cubic\\sistema.m",
+    "bytes": 113,
+    "sha256": "6e8f96577216a8b1a5d0935c5c3a0b45bb3ae57aab8e7b57b24138eaa021b095"
+  },
+  {
+    "path": "input\\query567_native_trajectory.mat",
+    "bytes": 98952,
+    "sha256": "1ae717ec7ef625789e305b5b2a93164352b5ceca34362c53c80d2b081d328ae8"
+  }
+]

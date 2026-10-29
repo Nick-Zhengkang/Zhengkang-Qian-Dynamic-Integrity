@@ -1,6 +1,10 @@
 # Revision diagnostics and per-damping statistics
 
-This directory accompanies v13. It adds evidence without replacing the original algorithms or numerical results in directories 00--05. These are diagnostic experiments, not a corrected classifier or a new fair-speed comparison.
+Folders 01--05 accompany v13 and preserve the earlier diagnostic experiments.
+The new [06_FixedPoint_Guard_90](06_FixedPoint_Guard_90/README.md) adds the targeted
+2D correction and complete retest reported in v16. Neither stage replaces the
+original algorithms or numerical results in directories 00--05 of the repository.
+The v16 retest validates 90 final points, not every query or a new speed comparison.
 
 ## Recorded environment
 
@@ -36,6 +40,7 @@ The four `START_*.m` entry points locate it relative to their own files. Only pa
 | `03_Negative_Cache_90` | `START_ALL90_PARFOR.m` | `20261028_040701_540` | Three models, seeds 1:30; 90 control/ablation pairs (180 searches), using parfor |
 | `04_Query567` | `START_QUERY567_DIAGNOSTIC.m` | `20261028_044710_303` | QC seed 30, query 567 replay; no rule correction |
 | `05_B_PerAlpha` | `analyze_existing_data.py` | `recorded/` | Baseline/candidate median, P95, max and error >50% fraction from 4,800 run rows |
+| `06_FixedPoint_Guard_90` | `START_FIXEDPOINT_GUARD_PARFOR.m` | `20261029_064110_739` | v16: 90 cache-off controls + 90 corrected searches, query-567 regression and independent final-point validation |
 
 Open a MATLAB entry file and press Run. Defaults preserve recorded numerical settings. Outputs use a **new timestamped** `results/` subdirectory, never the original batch. The 90-case entry uses the existing local process pool or profile default; set `options.numWorkers` before creating a new pool to choose a worker count. It does not close an existing pool automatically.
 
@@ -72,7 +77,7 @@ The first checks portable entries, 90 original MAT files, models/dependencies, e
 
 `PREFLIGHT_MATLAB.m` provides a MATLAB-side path/source check without ODE integration. The publication session could not execute it because MATLAB startup reported MathWorks license-service error **5201**. Path checks and Python reproduction are **not** a fresh MATLAB numerical rerun. See `PUBLICATION_CHECKS.json` for verification scope.
 
-All failures are retained: no ablation estimate fell below the reference in these 90 runs, but only 89/90 final defining points were independently supported as non-target. QC seed 30 remained a false fixed-point classification. This is not complete classification validation and does not diagnose Experiment B or four-dimensional failures.
+All earlier failures are retained: no estimate in the cache-off ablation fell below the reference, but only 89/90 final defining points were independently supported as non-target. QC seed 30 remained a false fixed-point classification at that stage. The separate v16 guard retest subsequently corrected that label and supported 90/90 final non-target points, with no below-reference estimates. It does not establish complete classification correctness or correct Experiment B or four-dimensional results. The v16 package has its own Release, input-dependency instructions, preservation manifest and `check_publication.py`; the earlier checks above continue to cover folders 01--05 only.
 
 ## Provenance and AI assistance
 

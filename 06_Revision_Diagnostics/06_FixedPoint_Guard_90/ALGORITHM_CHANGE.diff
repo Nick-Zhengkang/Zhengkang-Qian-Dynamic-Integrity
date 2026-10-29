@@ -1,0 +1,124 @@
+--- control/fixed_point_non_target_certificate.m
++++ fixed_point_guard/fixed_point_non_target_certificate.m
+@@ -0,0 +1,26 @@
++function [accepted,energy,margin]=fixed_point_non_target_certificate(z,d)
++% AI-assisted implementation of the author's requested fixed-point repair.
++% Residence alone is not evidence of a non-target attractor. For these
++% autonomous quadratic-drag models, dE/dt=-alpha*abs(v)^3 <= 0.
++% No reference LIM, search radius, seed or query number enters this test.
++assert(numel(z)==2 && all(isfinite(z)) && d.par.alpha>0);
++id=char(d.model_id);
++x=z(1); v=z(2); accepted=false;
++switch id
++    case 'quadratic_cubic'
++        assert(norm(reshape(d.target,1,[])-[0,0],Inf)<1e-12);
++        energy=0.5*v^2+0.5*x^2-x^3/3; margin=1/6-energy;
++        % The other equilibrium is a saddle, not a stable non-target well.
++        % Reject residence-based termination; retain direct domain-exit logic.
++    case 'bistable_duffing'
++        assert(norm(reshape(d.target,1,[])-[-1,0],Inf)<1e-12);
++        energy=0.5*v^2+0.25*(x^2-1)^2; margin=0.25-energy;
++        accepted=x>0 && margin>1e-7;
++    case 'genda_cosine_quadratic_drag'
++        assert(norm(reshape(d.target,1,[])-[0,0],Inf)<1e-12);
++        energy=0.5*v^2+1-cos(x); margin=2-energy;
++        accepted=abs(x)>pi && margin>1e-7;
++    otherwise
++        error('Fixed-point certificate is not defined for model %s.',id);
++end
++end
+--- control/sampled_forward_classifier.m
++++ fixed_point_guard/sampled_forward_classifier.m
+@@ -1,6 +1,7 @@
+ function api=sampled_forward_classifier(d,canStart)
+ % Native sampled rules and label propagation, with one continuous ODE call.
+-% Private per-run state; no energy test, backward ODE, or conflict audit.
++% AI-assisted repair: confirm fixed-point candidates with a model-specific
++% non-target-well certificate. Other labels and cache writes are unchanged.
+ if nargin<2, canStart=@() true; end
+ g=sampled_forward_geometry(d); dim=numel(d.target);
+ initialTarget=g.cell_c;
+@@ -16,6 +17,8 @@
+             'rhs_count',0,'integration_count',0,'grid_cache_hit',false, ...
+             'grid_cache_kind',0,'native_tipo',0,'forced_non_target',false);
+         nIntegrations=0;
++        r.fp_candidate_count=0; r.fp_accepted_count=0; r.fp_rejected_count=0;
++        r.fp_events=zeros(0,8);
+         if ~canStart()
+             r.classification_reason="wall_guard_before_native_query";
+             return
+@@ -33,7 +36,11 @@
+             end
+         end
+         timer=tic;
+-        [xt,cells,tipo,count,rhsCalls]=sampled_forward_integrate(d,g,z0);
++        [xt,cells,tipo,count,rhsCalls,fpEvents]=sampled_forward_integrate(d,g,z0);
++        r.fp_events=fpEvents;
++        r.fp_candidate_count=size(fpEvents,1);
++        r.fp_accepted_count=nnz(fpEvents(:,6));
++        r.fp_rejected_count=r.fp_candidate_count-r.fp_accepted_count;
+         r.integration_runtime_s=toc(timer);
+         assert(count>=2 && size(xt,1)>=count && numel(cells)>=count);
+         xt=xt(1:count,:); cells=cells(1:count);
+--- control/sampled_forward_integrate.m
++++ fixed_point_guard/sampled_forward_integrate.m
+@@ -1,4 +1,5 @@
+-function [xt,cells,kind,count,rhsCalls]=sampled_forward_integrate(d,g,z0,solver)
++function [xt,cells,kind,count,rhsCalls,fpEvents]=sampled_forward_integrate(d,g,z0,solver)
++% AI-assisted repair logging; ODE options and output sampling are unchanged.
+ % One solver call. Only requested Ts samples can change a classification.
+ % The optional solver injection is for callback regression tests only.
+ if nargin<4, solver=@ode45; end
+@@ -7,6 +8,7 @@
+     'tfinal must be an integer multiple of Ts, with at least two intervals.');
+ times=(0:nSteps)*d.Ts; dim=numel(d.target);
+ xt=zeros(nSteps+1,dim); cells=zeros(nSteps+1,1);
++fpEvents=zeros(nSteps,8); fpCount=0;
+ count=1; kind=0; rhsCalls=0; xt(1,:)=reshape(z0,1,[]);
+ coordinates=zeros(1,dim);
+ for j=1:dim
+@@ -24,6 +26,7 @@
+ assert(kind~=0 || count==nSteps+1, ...
+     'ODE stopped before the horizon without a sampled classification. No labels were learned.');
+ xt=xt(1:count,:); cells=cells(1:count);
++fpEvents=fpEvents(1:fpCount,:);
+ 
+     function dz=rhs(t,z)
+         rhsCalls=rhsCalls+1;
+@@ -42,7 +45,12 @@
+             assert(index==count && count<=nSteps,'Missing or out-of-order sample.');
+             z=y(:,k).';
+             assert(all(isfinite(z)),'Nonfinite sampled trajectory.');
+-            [nextKind,cellId]=sampled_forward_step(z,g,d,cells(1:count));
++            [nextKind,cellId,fp]=sampled_forward_step(z,g,d,cells(1:count));
++            if ~isempty(fp)
++                fpCount=fpCount+1;
++                % sample, time, x, v, cell, accepted, energy, barrier margin
++                fpEvents(fpCount,:)=[count+1,t(k),z,cellId,fp];
++            end
+             count=count+1; xt(count,:)=z; cells(count)=cellId; kind=nextKind;
+             if kind~=0
+                 % Do not classify or propagate later samples in this batch.
+--- control/sampled_forward_step.m
++++ fixed_point_guard/sampled_forward_step.m
+@@ -1,4 +1,6 @@
+-function [kind,cellId]=sampled_forward_step(z,g,d,previousCells)
++function [kind,cellId,fp]=sampled_forward_step(z,g,d,previousCells)
++% AI-assisted change: require a sufficient non-target-well certificate.
++fp=[];
+ % Transcription of simulation_DI's checks AFTER each Ts interval.
+ % Keep native priority, strict domain tests, and recurrence inequalities.
+ dim=numel(d.target); coordinates=zeros(1,dim); cellId=0; kind=0;
+@@ -26,7 +28,11 @@
+ if isempty(prior), return; end
+ gaps=diff(prior);
+ if nnz(gaps==1)>d.repFixPoint
+-    kind=4;
++    [accepted,energy,margin]=fixed_point_non_target_certificate(z,d);
++    fp=[double(accepted),energy,margin];
++    if accepted, kind=4; end
++    % A rejected fixed-point candidate continues integration. Do not fall
++    % through to the periodic rule, preserving the original branch priority.
+ elseif numel(prior)>d.repPeriodic+1 && prior(end)~=count-1
+     if nnz(gaps~=1)>d.repPeriodic
+         kind=4;

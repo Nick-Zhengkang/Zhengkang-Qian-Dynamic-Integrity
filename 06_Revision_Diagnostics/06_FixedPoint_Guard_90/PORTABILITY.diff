@@ -1,0 +1,45 @@
+--- recorded/START_FIXEDPOINT_GUARD_PARFOR.m
++++ portable/START_FIXEDPOINT_GUARD_PARFOR.m
+@@ -2,8 +2,8 @@
+ % Original experiment and previous diagnostic results are read-only inputs.
+ packageDirectory=fileparts(mfilename('fullpath'));
+ options=struct;
+-options.previousResults=fullfile(getenv('USERPROFILE'),'Desktop', ...
+-    'LIM_NoNegativeCache_All90_Parfor','results','20261028_040701_540');
++options.previousResults=fullfile(fileparts(packageDirectory), ...
++    '03_Negative_Cache_90','results','20261028_040701_540');
+ options.outputRoot=fullfile(packageDirectory,'results');
+ options.numWorkers=4; % Existing local process pools are reused.
+ options.horizonFactors=[2,10];
+--- recorded/run_fixedpoint_all90.m
++++ portable/run_fixedpoint_all90.m
+@@ -7,7 +7,7 @@
+ assert(license('test','Distrib_Computing_Toolbox'), ...
+     'Parallel Computing Toolbox is required.');
+ assert(isfolder(o.previousResults),'Previous 90-case results folder is missing.');
+-expected=fullfile(getenv('USERPROFILE'),'Desktop','LIM_NoNegativeCache_All90_Parfor', ...
++expected=fullfile(fileparts(root),'03_Negative_Cache_90', ...
+     'results','20261028_040701_540');
+ assert(strcmpi(canonical(o.previousResults),canonical(expected)), ...
+     'Inputs must be the audited previous run, not a different result directory.');
+@@ -24,7 +24,8 @@
+     copyfile(fullfile(root,folder),fullfile(snapshot,folder));
+ end
+ copyfile(fullfile(root,'*.m'),snapshot);
+-copyfile(fullfile(root,'README.txt'),snapshot);
++copyfile(fullfile(root,'README.md'),snapshot);
++copyfile(fullfile(root,'RECORDED_RUN_README.txt'),snapshot);
+ environment=struct('matlab_version',version,'release',version('-release'), ...
+     'toolboxes',ver,'options',o,'computer',computer);
+ save(fullfile(out,'environment.mat'),'environment');
+--- recorded/verify_guard_inputs.m
++++ portable/verify_guard_inputs.m
+@@ -1,6 +1,7 @@
+ function T=verify_guard_inputs(root,out,stage)
+ % AI-assisted SHA-256 audit. JSON avoids CSV header/type inference.
+-M=jsondecode(fileread(fullfile(root,'input','source_manifest.json')));
++M=jsondecode(fileread(fullfile(root,'input','portable_source_manifest.json')));
++for k=1:numel(M), M(k).path=fullfile(root,M(k).path); end
+ I=jsondecode(fileread(fullfile(root,'input','immutable_manifest.json')));
+ for k=1:numel(I), I(k).path=fullfile(root,I(k).path); end
+ M=[M;I];

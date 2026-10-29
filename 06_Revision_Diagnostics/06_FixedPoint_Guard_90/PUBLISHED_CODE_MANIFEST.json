@@ -1,0 +1,67 @@
+[
+  {
+    "path": "activate_guard_engine.m",
+    "bytes": 1691,
+    "sha256": "bfccd322dbfda9b22a8e2352136a1c83e4b1ced25b760018ba281229faccc694"
+  },
+  {
+    "path": "collect_fixedpoint_results.m",
+    "bytes": 2404,
+    "sha256": "24ce6df583e2477b972828e8ec9a70f134cd94edc68590e992c3ac9f8785a357"
+  },
+  {
+    "path": "diagnostic_validate.m",
+    "bytes": 8839,
+    "sha256": "e539bbfb26b50fc14d42e178d44a74a6b5e027da34444d2c8fe71b09c4106179"
+  },
+  {
+    "path": "fpguard_launch.m",
+    "bytes": 485,
+    "sha256": "eeca84185d91cdbcfabde9bec39ddb73dc088e660076383aa6ad4fa04e801a6b"
+  },
+  {
+    "path": "fpguard_validate_independent.m",
+    "bytes": 8848,
+    "sha256": "647655e9f686b8498668a09f262b59d66bc519b06f28d4d40b5bc0fb846272f2"
+  },
+  {
+    "path": "run_fixedpoint_all90.m",
+    "bytes": 3210,
+    "sha256": "3e79cd0eef12409f8a9af9e13b2b22f2ac28cc3c62f829d89cba5d1cd0ea3c57"
+  },
+  {
+    "path": "run_fixedpoint_case.m",
+    "bytes": 8507,
+    "sha256": "493b83a6e1803b00fe1594c598644e74baf65078199236da7839e0159df98c4f"
+  },
+  {
+    "path": "run_guard_preflight.m",
+    "bytes": 5383,
+    "sha256": "acfaba31d01ac9c61cda869628e91425583700ffd32335576f3e11cafd850b0a"
+  },
+  {
+    "path": "START_FIXEDPOINT_GUARD_PARFOR.m",
+    "bytes": 895,
+    "sha256": "67a40631c0e60207183739fb70b15b1c003b6083b9df6e39b2b9904980e9ded0"
+  },
+  {
+    "path": "validate_guard_points.m",
+    "bytes": 1118,
+    "sha256": "6bb30ceeb860ce8260193e100b97a8cb910e1832c7a99d028bddba06ed2ab0e0"
+  },
+  {
+    "path": "verify_guard_inputs.m",
+    "bytes": 1295,
+    "sha256": "b61615318cf46d4f4545ae16fd01626c1a5ac0a7dcdea89dc7b303a8d1d84a8b"
+  },
+  {
+    "path": "check_publication.py",
+    "bytes": 6351,
+    "sha256": "4b7ccb553a45ac104433f4bfa06d4e2e4e3126994819b2d6b6f2da14790acd18"
+  },
+  {
+    "path": "input/portable_source_manifest.json",
+    "bytes": 68457,
+    "sha256": "7f2c6f5c1067a645d3e964f7436bac1f892b187dba7bbd4cf7bf1f83f09ad4e6"
+  }
+]

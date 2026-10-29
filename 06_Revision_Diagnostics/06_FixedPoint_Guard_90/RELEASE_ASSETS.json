@@ -1,0 +1,26 @@
+[
+  {
+    "name": "FixedPointGuard_00_Common.zip",
+    "bytes": 601664,
+    "sha256": "e4e8b903da9bef826868f805df331e1d19e6073338d0f431c98411e76297e590",
+    "files": 55
+  },
+  {
+    "name": "FixedPointGuard_01_Quadratic_Cubic.zip",
+    "bytes": 41538983,
+    "sha256": "1bdcaa46ef61ffa94e2baff53a92b0a1508a70ab86d6b19ddcc4e79a06ccba26",
+    "files": 510
+  },
+  {
+    "name": "FixedPointGuard_02_Bistable_Duffing.zip",
+    "bytes": 43780730,
+    "sha256": "8836db4347fe7482f5e02ebbcfc225706edfa18ae2d55298f3c93829eea5ac56",
+    "files": 510
+  },
+  {
+    "name": "FixedPointGuard_03_Cosine.zip",
+    "bytes": 99294086,
+    "sha256": "a7b24c41343ef36e11f683e164bc5e472571ce7b3fcc1f8a06381c9b9fbd46e3",
+    "files": 510
+  }
+]

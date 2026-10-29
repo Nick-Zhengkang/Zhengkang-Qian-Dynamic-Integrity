@@ -1,0 +1,4 @@
+model,expected_cases,recorded_cases,complete_cases,error_cases,control_reproduced,finite_estimates,under_reference,winning_non_target_supported,winning_label_contradicted,winning_unresolved_or_missing,all_checked_non_target_supported,time_guard_hits,runs_with_fixed_rejection,fixed_point_rejections,fixed_point_acceptances,periodic_terminations,forced_non_target,median_absolute_error_percent
+quadratic_cubic,30,30,30,0,30,30,0,30,0,0,30,0,1,2,0,0,0,0.389176449952282
+bistable_duffing,30,30,30,0,30,30,0,30,0,0,30,0,0,0,0,0,0,0.784280621018286
+genda_cosine_quadratic_drag,30,30,30,0,30,30,0,30,0,0,30,0,0,0,0,0,0,0.533344558602471
