@@ -79,6 +79,10 @@ final all-learned-cache-off stage supports both endpoints in every run. The
 coupled model, global search accuracy and untested intermediate labels remain
 outside that result. AI-use declarations and registers were not revised.
 
+`python 06_Revision_Diagnostics/summarize_v17.py` reproduces the three-stage
+Table 6.5 counts and midpoint-error summaries from the repository CSVs alone.
+Use `--output <new-directory>` to export CSV/JSON; an existing directory is refused.
+
 ## Complete diagnostic records
 
 All MAT/CSV/log files and source snapshots are in the [diagnostics Release](https://github.com/Nick-Zhengkang/Zhengkang-Qian-Dynamic-Integrity/releases/tag/diagnostics-2026-10-28). `recorded_summaries/` contains unchanged CSV/text/log evidence for browsing, not a substitute for full MAT records.

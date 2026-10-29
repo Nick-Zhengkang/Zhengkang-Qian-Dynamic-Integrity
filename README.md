@@ -59,6 +59,11 @@ records. See [verification scope](06_Revision_Diagnostics/V17_PUBLICATION_CHECKS
 These publication checks are not a fresh MATLAB numerical rerun. AI declarations
 and registers, older experiments and previous Release assets are unchanged.
 
+To reproduce the three-stage numbers in Table 6.5 without any ODE rerun, use
+`python 06_Revision_Diagnostics/summarize_v17.py`. It reads the unchanged browsing
+CSVs already in the repository; an optional `--output <new-directory>` writes
+CSV/JSON summaries without overwriting existing results.
+
 ## Download the complete Experiment B data
 
 The complete multi-alpha Bayesian-optimization batch is too large for an ordinary Git repository file. It is supplied as a GitHub Release asset:
