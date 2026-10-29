@@ -13,6 +13,28 @@
   "validated_final_points": 90,
   "independent_solver_outcomes": 180,
   "matlab_numerical_rerun_during_publication": false,
-  "fresh_download_verification": "pending",
-  "scope": "Only targeted 2D correction and retest. Original experiments and AI documentation unchanged."
+  "fresh_download_verification": "PASS: independent GitHub clone; four new Release archives and the prior all-90 archive downloaded from GitHub, hash-checked and extracted under a different root",
+  "scope": "Only targeted 2D correction and retest. Original experiments and AI documentation unchanged.",
+  "fresh_download_results": {
+    "source_files_identical_to_recorded_snapshot": 31,
+    "path_relocated_drivers": [
+      "START_FIXEDPOINT_GUARD_PARFOR.m",
+      "run_fixedpoint_all90.m",
+      "verify_guard_inputs.m"
+    ],
+    "prior_inputs_verified": 312,
+    "browsable_records_verified": 371,
+    "complete_records_verified": 1585,
+    "completed_cases": 90,
+    "under_reference": 0,
+    "validated_final_points": 90,
+    "independent_solver_outcomes": 180,
+    "control_checks": 360,
+    "query567_regression": "target supported by both solvers",
+    "matlab_numerical_rerun_performed": false
+  },
+  "verified_code_commit": "ac6a9827ba47191302a70ad663e52c6a9efc3ca1",
+  "original_experiment_directories_unchanged": true,
+  "ai_declaration_and_code_register_unchanged": true,
+  "matlab_entry_paths": "Repository-relative inputs resolve and all 312 hashes pass. MATLAB itself was not invoked in this publication."
 }
