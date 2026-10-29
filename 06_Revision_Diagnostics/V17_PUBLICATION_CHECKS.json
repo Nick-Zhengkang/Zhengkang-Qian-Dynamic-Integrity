@@ -1,0 +1,31 @@
+{
+  "matlab_numerical_rerun_performed": false,
+  "packages": [
+    {
+      "folder": "07_Separable4D_Diagnostics",
+      "files_verified": 372,
+      "cases": 30,
+      "independently_target_upper_points": 29
+    },
+    {
+      "folder": "08_Separable4D_NoNegativeCache",
+      "files_verified": 848,
+      "cases": 30,
+      "endpoint_pairs_passed": 2,
+      "below_reference": 0,
+      "median_error_percent": 0.11705524860564351
+    },
+    {
+      "folder": "09_Separable4D_NoLearnedCache",
+      "files_verified": 942,
+      "cases": 30,
+      "endpoint_pairs_passed": 30,
+      "below_reference": 0,
+      "median_error_percent": 0.07433640767559771,
+      "previous_lower_regressions_agree": 30
+    }
+  ],
+  "verification": "Independent extraction of all prepared Release archives; no MATLAB execution",
+  "source": "Local prepared archives; remote download checks recorded separately",
+  "preserved_AI_declaration": true
+}

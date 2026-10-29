@@ -1,0 +1,11 @@
+{
+  "baseline_complete_mat_files_verified": 30,
+  "frozen_input_and_source_copies_verified": 138,
+  "prior_package_files_still_match_manifest": 126,
+  "new_classifier_has_only_one_added_numerical_line": true,
+  "initial_target_neighbourhood_preserved": true,
+  "previous_no_negative_cache_classifier_unchanged_except_name": true,
+  "independent_validation_helpers_unchanged": true,
+  "matlab_R2025b_static_analyzer_no_syntax_errors": true,
+  "matlab_numerical_tests_run_during_preparation": false
+}

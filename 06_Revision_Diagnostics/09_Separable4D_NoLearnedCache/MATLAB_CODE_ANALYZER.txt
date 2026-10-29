@@ -1,0 +1,20 @@
+========== C:\Users\-qian-\Documents\Codex\2026-06-28\github\LIM_Separable4D_NoLearnedCache_30_Parfor\allcache4d_case.m ==========
+L 21 (C 49-59): MSNU: 此处之前隐藏了一条代码分析器消息，但该消息不再产生。
+========== C:\Users\-qian-\Documents\Codex\2026-06-28\github\LIM_Separable4D_NoLearnedCache_30_Parfor\allcache4d_chain_points.m ==========
+========== C:\Users\-qian-\Documents\Codex\2026-06-28\github\LIM_Separable4D_NoLearnedCache_30_Parfor\allcache4d_classifier.m ==========
+========== C:\Users\-qian-\Documents\Codex\2026-06-28\github\LIM_Separable4D_NoLearnedCache_30_Parfor\allcache4d_compare.m ==========
+========== C:\Users\-qian-\Documents\Codex\2026-06-28\github\LIM_Separable4D_NoLearnedCache_30_Parfor\allcache4d_endpoints.m ==========
+========== C:\Users\-qian-\Documents\Codex\2026-06-28\github\LIM_Separable4D_NoLearnedCache_30_Parfor\allcache4d_provenance.m ==========
+========== C:\Users\-qian-\Documents\Codex\2026-06-28\github\LIM_Separable4D_NoLearnedCache_30_Parfor\allcache4d_query_table.m ==========
+========== C:\Users\-qian-\Documents\Codex\2026-06-28\github\LIM_Separable4D_NoLearnedCache_30_Parfor\allcache4d_regression.m ==========
+========== C:\Users\-qian-\Documents\Codex\2026-06-28\github\LIM_Separable4D_NoLearnedCache_30_Parfor\allcache4d_validate.m ==========
+========== C:\Users\-qian-\Documents\Codex\2026-06-28\github\LIM_Separable4D_NoLearnedCache_30_Parfor\allcache4d_verify.m ==========
+========== C:\Users\-qian-\Documents\Codex\2026-06-28\github\LIM_Separable4D_NoLearnedCache_30_Parfor\noneg4d_classifier.m ==========
+========== C:\Users\-qian-\Documents\Codex\2026-06-28\github\LIM_Separable4D_NoLearnedCache_30_Parfor\read_allcache4d_csv.m ==========
+========== C:\Users\-qian-\Documents\Codex\2026-06-28\github\LIM_Separable4D_NoLearnedCache_30_Parfor\run_allcache4d.m ==========
+L 10 (C 75-85): MSNU: 此处之前隐藏了一条代码分析器消息，但该消息不再产生。
+L 23 (C 55-65): MSNU: 此处之前隐藏了一条代码分析器消息，但该消息不再产生。
+L 34 (C 41): PFBNS: 整个数组或结构体 'o' 是一个广播变量。这可能会导致不必要的通信开销。
+L 42 (C 35-45): MSNU: 此处之前隐藏了一条代码分析器消息，但该消息不再产生。
+========== C:\Users\-qian-\Documents\Codex\2026-06-28\github\LIM_Separable4D_NoLearnedCache_30_Parfor\START_SEPARABLE4D_ALLCACHE_PARFOR.m ==========
+========== C:\Users\-qian-\Documents\Codex\2026-06-28\github\LIM_Separable4D_NoLearnedCache_30_Parfor\test_allcache4d.m ==========

@@ -1,0 +1,2 @@
+previous_query,state_1,state_2,state_3,state_4,label,reason,recurrence_rule,end_time,sample_count,forced_non_target
+310,0.370827036433424,0.531275291789722,-1.00772472118437,0.0105366004467799,target,native_target_neighbourhood,not_triggered,132.75,2656,0

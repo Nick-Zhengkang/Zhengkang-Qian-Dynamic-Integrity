@@ -1,0 +1,41 @@
+[
+  {
+    "folder": "07_Separable4D_Diagnostics",
+    "run_id": "20261029_053219_578",
+    "entry": "START_SEPARABLE4D_DIAGNOSTIC.m",
+    "integrity_manifest": "input_manifest.csv",
+    "files": 315,
+    "runtime_files": 57,
+    "runtime": {
+      "matlab_version": "25.2.0.3177638 (R2025b) Update 5",
+      "release": "2025b",
+      "computer": "PCWIN64"
+    }
+  },
+  {
+    "folder": "08_Separable4D_NoNegativeCache",
+    "run_id": "20261030_032124_802",
+    "entry": "START_SEPARABLE4D_RETEST_PARFOR.m",
+    "integrity_manifest": "package_manifest.csv",
+    "files": 720,
+    "runtime_files": 128,
+    "runtime": {
+      "matlab_version": "25.2.0.3177638 (R2025b) Update 5",
+      "release": "2025b",
+      "computer": "PCWIN64"
+    }
+  },
+  {
+    "folder": "09_Separable4D_NoLearnedCache",
+    "run_id": "20261030_040059_619",
+    "entry": "START_SEPARABLE4D_ALLCACHE_PARFOR.m",
+    "integrity_manifest": "package_manifest.csv",
+    "files": 782,
+    "runtime_files": 160,
+    "runtime": {
+      "matlab_version": "25.2.0.3177638 (R2025b) Update 5",
+      "release": "2025b",
+      "computer": "PCWIN64"
+    }
+  }
+]

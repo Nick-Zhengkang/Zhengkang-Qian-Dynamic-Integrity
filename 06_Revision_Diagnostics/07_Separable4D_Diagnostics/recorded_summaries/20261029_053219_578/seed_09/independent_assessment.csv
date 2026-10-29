@@ -1,0 +1,8 @@
+point_id,role,query,parent_query,original_label,conclusion,original_label_contradicted
+1,winning_lower,364,0,target,both_solvers_support_non_target,1
+2,winning_upper,365,0,non_target,both_solvers_support_non_target,0
+3,reported_midpoint,0,0,not_classified_as_midpoint,both_solvers_support_non_target,0
+4,chain_initial_state,365,352,non_target,both_solvers_support_non_target,0
+5,cache_hit_state,365,352,non_target,both_solvers_support_non_target,0
+6,first_writer_state,365,352,non_target,both_solvers_support_non_target,0
+7,chain_initial_state,352,0,non_target,both_solvers_support_non_target,0

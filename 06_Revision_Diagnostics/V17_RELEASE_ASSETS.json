@@ -1,0 +1,107 @@
+[
+  {
+    "name": "07_Separable4D_Diagnostics_Runtime_Inputs.zip",
+    "bytes": 2656149,
+    "sha256": "766f9fb1a92608d0007f01115f485d57c5ea42a1bb4e1e9ed7bb30ff1ff8becf",
+    "files": 57,
+    "package": "07_Separable4D_Diagnostics"
+  },
+  {
+    "name": "07_Separable4D_Diagnostics_Records_Common.zip",
+    "bytes": 48159,
+    "sha256": "2a313890a58530e178efac8821485f756f19288472d785cfc2fa3d3a2a8f53cc",
+    "files": 21,
+    "package": "07_Separable4D_Diagnostics"
+  },
+  {
+    "name": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip",
+    "bytes": 59643236,
+    "sha256": "8dbe57a51bbacd5889c946cd9d6cce976286df8aaebc7303507642cd053a3f9b",
+    "files": 98,
+    "package": "07_Separable4D_Diagnostics"
+  },
+  {
+    "name": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip",
+    "bytes": 54682741,
+    "sha256": "d4d61e9befb677280b7882920f9656ac88be3a7de85f38ec708bb8308ea55fc4",
+    "files": 98,
+    "package": "07_Separable4D_Diagnostics"
+  },
+  {
+    "name": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip",
+    "bytes": 50028310,
+    "sha256": "98cd86b23bf011c8b8cc4fb238c6cc7832701a93308e2314b6acc22717ef6d1c",
+    "files": 98,
+    "package": "07_Separable4D_Diagnostics"
+  },
+  {
+    "name": "08_Separable4D_NoNegativeCache_Runtime_Inputs.zip",
+    "bytes": 2737722,
+    "sha256": "e583d0464df04f4311a5be3e9459f94804fad18949ee077a2617898af10b4a4e",
+    "files": 128,
+    "package": "08_Separable4D_NoNegativeCache"
+  },
+  {
+    "name": "08_Separable4D_NoNegativeCache_Records_Common.zip",
+    "bytes": 94242,
+    "sha256": "4b7117119552e193cf7ad854004d9bd96bc9420c641385cc1af8cd4b6ea9b7d2",
+    "files": 30,
+    "package": "08_Separable4D_NoNegativeCache"
+  },
+  {
+    "name": "08_Separable4D_NoNegativeCache_Records_Seeds_01_10.zip",
+    "bytes": 125943437,
+    "sha256": "93f845da94135d364446ba743e2a574c9fd62fe622dbc8c2482ff8dc15b8d092",
+    "files": 230,
+    "package": "08_Separable4D_NoNegativeCache"
+  },
+  {
+    "name": "08_Separable4D_NoNegativeCache_Records_Seeds_11_20.zip",
+    "bytes": 139865628,
+    "sha256": "803b23ed338f4008c63a58a8a8eb656e536194f8981c2691a32ced829998ec10",
+    "files": 230,
+    "package": "08_Separable4D_NoNegativeCache"
+  },
+  {
+    "name": "08_Separable4D_NoNegativeCache_Records_Seeds_21_30.zip",
+    "bytes": 154106987,
+    "sha256": "4c7a4b1ed4fb6abfde361ae02a882ebb567c0aa3a5d8562e9fda7c52a98596d9",
+    "files": 230,
+    "package": "08_Separable4D_NoNegativeCache"
+  },
+  {
+    "name": "09_Separable4D_NoLearnedCache_Runtime_Inputs.zip",
+    "bytes": 15775516,
+    "sha256": "9ab9eabb79a1d1d0358c5436a4cb401e2e883c825addda5b520cf77b2ee445a9",
+    "files": 160,
+    "package": "09_Separable4D_NoLearnedCache"
+  },
+  {
+    "name": "09_Separable4D_NoLearnedCache_Records_Common.zip",
+    "bytes": 101538,
+    "sha256": "408707bbdbe4593469c3c651a649c9e045e273dc171eb855fea93b19b5c8308b",
+    "files": 32,
+    "package": "09_Separable4D_NoLearnedCache"
+  },
+  {
+    "name": "09_Separable4D_NoLearnedCache_Records_Seeds_01_10.zip",
+    "bytes": 246679490,
+    "sha256": "72cbc54d1921e888fe15759c3867b6361a2fa86415d22f83400d2d11c4ee0da7",
+    "files": 250,
+    "package": "09_Separable4D_NoLearnedCache"
+  },
+  {
+    "name": "09_Separable4D_NoLearnedCache_Records_Seeds_11_20.zip",
+    "bytes": 220343037,
+    "sha256": "3157f9ed362df84a7f432cc0142d13f82fab0cd400e0855867965c3f2aa5c59d",
+    "files": 250,
+    "package": "09_Separable4D_NoLearnedCache"
+  },
+  {
+    "name": "09_Separable4D_NoLearnedCache_Records_Seeds_21_30.zip",
+    "bytes": 258029268,
+    "sha256": "16a4dec54a8fcf7d8d2a559bef31732837fa8e92bf7e8c4be3b58c4e46439f0d",
+    "files": 250,
+    "package": "09_Separable4D_NoLearnedCache"
+  }
+]

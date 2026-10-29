@@ -1,0 +1,3 @@
+point_id,role,query,parent_query,original_label,conclusion,original_label_contradicted
+1,chain_initial_state,301,0,non_target,both_solvers_support_non_target,0
+2,chain_initial_state,300,0,target,both_solvers_support_target,0

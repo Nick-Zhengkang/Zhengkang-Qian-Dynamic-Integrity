@@ -1,0 +1,23 @@
+--- frozen/sampled_forward_classifier.m
++++ retest4d_classifier.m
+@@ -1,4 +1,7 @@
+-function api=sampled_forward_classifier(d,canStart)
++function api=retest4d_classifier(d,canStart)
++% AI-assisted targeted ablation requested by the author.
++% Only non-target/domain-exit grid READS are suppressed. Writes, target
++% reuse, direct exits, recurrence, horizon and integration remain unchanged.
+ % Native sampled rules and label propagation, with one continuous ODE call.
+ % Private per-run state; no energy test, backward ODE, or conflict audit.
+ if nargin<2, canStart=@() true; end
+@@ -33,7 +36,10 @@
+             end
+         end
+         timer=tic;
+-        [xt,cells,tipo,count,rhsCalls]=sampled_forward_integrate(d,g,z0);
++        queryGeometry=g;
++        queryGeometry.cell_d=zeros(0,1);
++        queryGeometry.cell_dout=zeros(0,1);
++        [xt,cells,tipo,count,rhsCalls]=sampled_forward_integrate(d,queryGeometry,z0);
+         r.integration_runtime_s=toc(timer);
+         assert(count>=2 && size(xt,1)>=count && numel(cells)>=count);
+         xt=xt(1:count,:); cells=cells(1:count);

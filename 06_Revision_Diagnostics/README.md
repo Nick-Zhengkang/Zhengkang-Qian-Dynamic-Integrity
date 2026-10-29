@@ -52,6 +52,33 @@ python 06_Revision_Diagnostics/05_B_PerAlpha/analyze_existing_data.py
 
 Outputs go to `05_B_PerAlpha/reproduced_results`. An existing destination causes refusal rather than overwrite; use `--output <new-folder>` to choose another. Inputs are the four CSV exports under `05_Thesis_Result_Sources/source_data/experiment_B_multi_alpha`. This calculation needs no MATLAB, ODE integration or B1 Release download.
 
+## v17 separable four-dimensional supplement
+
+The later stages have separate, self-contained packages and their own
+[Release](https://github.com/Nick-Zhengkang/Zhengkang-Qian-Dynamic-Integrity/releases/tag/v17-separable4d-2026-10-30):
+
+| Package | Entry point | Completed run |
+|---|---|---|
+| [07_Separable4D_Diagnostics](07_Separable4D_Diagnostics/README.md) | `START_SEPARABLE4D_DIAGNOSTIC.m` | `20261029_053219_578` |
+| [08_Separable4D_NoNegativeCache](08_Separable4D_NoNegativeCache/README.md) | `START_SEPARABLE4D_RETEST_PARFOR.m` | `20261030_032124_802` |
+| [09_Separable4D_NoLearnedCache](09_Separable4D_NoLearnedCache/README.md) | `START_SEPARABLE4D_ALLCACHE_PARFOR.m` | `20261030_040059_619` |
+
+These map to v17 Section 6.4, Table 6.5 and the separable-4D diagnostic appendix.
+Extract each package's Runtime_Inputs ZIP into the repository root before running;
+all required baseline copies are included. The twelve Records ZIPs retain every
+file from the completed runs (1,817 files), separately from compact browsing CSVs.
+All three recorded runs used MATLAB R2025b Update 5 / 25.2.0.3177638 on Windows,
+with `parfor` and Parallel Computing Toolbox. Entry scripts resolve their own path.
+
+`python 06_Revision_Diagnostics/check_v17_download.py --require-records` checks
+all three packages after all Release ZIPs are extracted. It verifies hashes,
+runtime/source paths, successful source snapshots and saved summary outcomes;
+it does not rerun MATLAB. The earlier checkers retain their original scope.
+No below-reference estimate remains in either cache-read retest, but only the
+final all-learned-cache-off stage supports both endpoints in every run. The
+coupled model, global search accuracy and untested intermediate labels remain
+outside that result. AI-use declarations and registers were not revised.
+
 ## Complete diagnostic records
 
 All MAT/CSV/log files and source snapshots are in the [diagnostics Release](https://github.com/Nick-Zhengkang/Zhengkang-Qian-Dynamic-Integrity/releases/tag/diagnostics-2026-10-28). `recorded_summaries/` contains unchanged CSV/text/log evidence for browsing, not a substitute for full MAT records.

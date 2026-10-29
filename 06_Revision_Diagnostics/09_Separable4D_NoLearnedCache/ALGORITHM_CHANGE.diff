@@ -1,0 +1,21 @@
+--- previous/retest4d_classifier.m
++++ allcache4d_classifier.m
+@@ -1,7 +1,7 @@
+-function api=retest4d_classifier(d,canStart)
++function api=allcache4d_classifier(d,canStart)
+ % AI-assisted targeted ablation requested by the author.
+-% Only non-target/domain-exit grid READS are suppressed. Writes, target
+-% reuse, direct exits, recurrence, horizon and integration remain unchanged.
++% All LEARNED grid reads are suppressed; the initial target cells remain.
++% Writes, direct exits, recurrence, horizon and integration are unchanged.
+ % Native sampled rules and label propagation, with one continuous ODE call.
+ % Private per-run state; no energy test, backward ODE, or conflict audit.
+ if nargin<2, canStart=@() true; end
+@@ -37,6 +37,7 @@
+         end
+         timer=tic;
+         queryGeometry=g;
++        queryGeometry.cell_c=initialTarget;
+         queryGeometry.cell_d=zeros(0,1);
+         queryGeometry.cell_dout=zeros(0,1);
+         [xt,cells,tipo,count,rhsCalls]=sampled_forward_integrate(d,queryGeometry,z0);

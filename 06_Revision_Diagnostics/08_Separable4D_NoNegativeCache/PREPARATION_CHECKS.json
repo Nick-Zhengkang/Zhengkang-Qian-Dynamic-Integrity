@@ -1,0 +1,10 @@
+{
+  "frozen_files_verified": 107,
+  "saved_endpoint_mappings_verified": 30,
+  "all_30_first_writer_initial_states_independently_non_target": true,
+  "original_upper_endpoints_independently_target": 29,
+  "classifier_diff_exactly_negative_grid_read_suppression": true,
+  "independent_validation_numerical_helpers_unchanged": true,
+  "matlab_R2025b_code_analyzer_no_syntax_errors": true,
+  "matlab_numerical_tests_run_during_preparation": false
+}

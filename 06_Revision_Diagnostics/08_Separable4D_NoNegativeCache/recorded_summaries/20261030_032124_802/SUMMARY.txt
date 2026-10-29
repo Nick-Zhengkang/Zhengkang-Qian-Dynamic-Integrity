@@ -1,0 +1,13 @@
+Selected seeds: 30
+Original searches reproduced: 30
+Repair searches completed without harness error: 30
+Corrected finite midpoint estimates: 30
+Corrected midpoints below reference: 0
+Corrected upper endpoints below reference: 0
+Independent upper non-target support: 30
+Independent lower target support: 2
+Corrected provenance replays matched: 30
+Runs passing the defined endpoint checks: 2
+Searches with unresolved classifications: 0
+Cases with an execution error: 0
+Counts are not proof of global classifier correctness or nearest-boundary accuracy.

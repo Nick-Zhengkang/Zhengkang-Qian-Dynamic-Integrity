@@ -1,0 +1,2234 @@
+[
+  {
+    "path": "engine/sampled_forward_classifier.m",
+    "bytes": 4174,
+    "sha256": "1bfc86472552150d6e10cf567294086be4309bda9fbd27bc42dc27540f2ad819",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "engine/sampled_forward_geometry.m",
+    "bytes": 563,
+    "sha256": "516f4472ee5c84aeb16f941fad4c984dcac14e3489ded943d7a8bd2065c5e04e",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "engine/sampled_forward_integrate.m",
+    "bytes": 2408,
+    "sha256": "65754dd7380b7a0ff4d9dcb8a9c5ce29e9d5dc45110142622b1a25dba75ac58c",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "engine/sampled_forward_step.m",
+    "bytes": 1238,
+    "sha256": "332a95a10b730e8a7c2b8f61a87e9d94d89249c9026fe9d8b74a5036efbb3df2",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "FINDINGS_CN.txt",
+    "bytes": 2399,
+    "sha256": "882d83e43d2f1b25cdf7bd15860c33a7f23e2a94b21b113437a1c07a30af23d4",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_1.mat",
+    "bytes": 108695,
+    "sha256": "323546b8f623c99248511b139596878908f03bce9a2995d2b72bf8da67ade11f",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_10.mat",
+    "bytes": 80243,
+    "sha256": "dd7f4204f8a1dc4ca7b3d0a0f76209765e638a3c68bd88143cd108b418bd249c",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_11.mat",
+    "bytes": 102745,
+    "sha256": "5d0d3eabee64f7bfb079846d89ffbf56113d4f83b54d8372313932c4327ba450",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_12.mat",
+    "bytes": 84941,
+    "sha256": "da1083d9c786420651bb7f711b47fa56a813a205a07a114d1431a58d58ee6ebe",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_13.mat",
+    "bytes": 63581,
+    "sha256": "4c8ceb063a1b0d4952426d967eb2db6be90c9fd78645ace315033b3f716fae72",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_14.mat",
+    "bytes": 76889,
+    "sha256": "7216c6d2db2cf61f0e11614346ed097d719cd22dcb27fd9f39a831ae409a81a2",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_15.mat",
+    "bytes": 72775,
+    "sha256": "08a440a9be462f891a894b65205c794f569d73760a4d591d36567e00e8f755f3",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_16.mat",
+    "bytes": 120701,
+    "sha256": "7fa5cce5006acce2486ee97c465f0b186b19893ff32dab40c858b0ef2c841abb",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_17.mat",
+    "bytes": 82144,
+    "sha256": "eb6cfb88fd857147c8a2bdd8f7e2a9daccdfd7eb0f719beb53dc8240578e8d7b",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_18.mat",
+    "bytes": 72424,
+    "sha256": "418c2d6f6df4ba2cde1cbf3a4aa9e8a75cbab0bd6d28e17f73cdc60767859c0a",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_19.mat",
+    "bytes": 85705,
+    "sha256": "2e791cd8b8d97cf81ae7d52eca15f2199fdf98559f1f42785b501a57ead0a24a",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_2.mat",
+    "bytes": 88864,
+    "sha256": "5f5b9080530191367e18314f55351dbe49c63e3f61efc09ba869450522ee6151",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_20.mat",
+    "bytes": 80547,
+    "sha256": "69ed1c38d75ad12f823f8ba1acb171b56fd85d2a21ca8a2a99856415a5fa9691",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_21.mat",
+    "bytes": 103762,
+    "sha256": "56f9ef3513937f172f4411fbe842551d069e6b057d76b42e9a2cbf74aab832f1",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_22.mat",
+    "bytes": 97966,
+    "sha256": "4d755de4e8b1fd46a3864cd7a63bdf43563167a513801737faf3464b5199fc82",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_23.mat",
+    "bytes": 116027,
+    "sha256": "8c9e00fc1824652275ebc097e857c68abd13b0ae72d5bfeafb72ce14a15b0983",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_24.mat",
+    "bytes": 104540,
+    "sha256": "10e0d1ea089945f65a22d5106e2bed1f9114841bba41eb104df6f6e7ca8d444f",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_25.mat",
+    "bytes": 81136,
+    "sha256": "dd13c818b23492e1345d004bf26f4823ff4a00f4007445510715c12412e7c1ed",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_26.mat",
+    "bytes": 95658,
+    "sha256": "ea8f145a9fb94e27b360fb054707a2ab0d9f3b052c085bfbeac7e1faa4ccf9af",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_27.mat",
+    "bytes": 90525,
+    "sha256": "868415a4c88630ba0d9a276425a474e8837a03bfd2487f73ce33355e2402b59c",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_28.mat",
+    "bytes": 87019,
+    "sha256": "36da9f8dc38ab13c146656bab3889002b09f48fd1dd17222c41b89a0c74140db",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_29.mat",
+    "bytes": 103513,
+    "sha256": "e587f7c8e51bf89ecd3ec39562f2ee7e2058b7005e21e460c86f72706a36e14a",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_3.mat",
+    "bytes": 81776,
+    "sha256": "c13b618d749710141763330d30db46a086409f04cfb49dfede6991124acc569f",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_30.mat",
+    "bytes": 103957,
+    "sha256": "550b4fd237da9b13b527403aeab45b1947d9b1157a69ba8e5e22b818513098ff",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_4.mat",
+    "bytes": 93023,
+    "sha256": "ada022722ae6f4d981633e4690739ee6c0fd7fd07933c372bb67f4f82af0ece9",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_5.mat",
+    "bytes": 96055,
+    "sha256": "722a68d92a66bc3e16e35c192b8ebfcc492dc1d2495b77c3e6498e8dabfae413",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_6.mat",
+    "bytes": 108896,
+    "sha256": "8a832a866f0aed985e75fee5a02bbd26eb1d406774d151e31bba2fc70d4f47c5",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_7.mat",
+    "bytes": 71556,
+    "sha256": "9d50c996d1bbf070d5494dfbca65a72725e3a9165fe163fe2a7784edd2500899",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_8.mat",
+    "bytes": 94941,
+    "sha256": "183b4933e77f59343fe0e83956cd8297126b4c60a54b301a748b9eb8748f8212",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/runs/separable_qc_bd_4d__proposed_sampled_forward__seed_9.mat",
+    "bytes": 109486,
+    "sha256": "f1c74dd90d83d1c5abb21f6a56a30909f7275b5b8d67033ec715087c58f3a30c",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input/separable_qc_bd_4d_settings.mat",
+    "bytes": 3838,
+    "sha256": "0ddb475fa8f7411e706bb9468b0d57464f2cdc2a09cffeb0f4b150c2035cdb55",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "input_manifest.csv",
+    "bytes": 13169,
+    "sha256": "38b55c057b1c751bea8ac89747e4ff3534126c496f295075156359c65e606a97",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "inspect_saved_records.py",
+    "bytes": 8081,
+    "sha256": "c12e8e7fca820465656ffeea1785317b9d245b10e39054ec2adef763bb6d5a23",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "model/sistema.m",
+    "bytes": 176,
+    "sha256": "c55cc0a8e8d514792cec8b0901631042a1f750d93ce256f82fd74be56d1f53a9",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "native/find_cells_around_a_cell.m",
+    "bytes": 1225,
+    "sha256": "460e9699f795883227dac8bdd5aa496acbb0cdbbb311a89769be3e021bb7ea5d",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "native/find_index.m",
+    "bytes": 212,
+    "sha256": "46e1233522a294c68edb0601c2c0eb5ffdb92d8d19975f2b1275381cbe997b11",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "native/LICENSE",
+    "bytes": 35823,
+    "sha256": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "prepare_inputs.py",
+    "bytes": 1946,
+    "sha256": "72e3aedbb6785ad6de7b280da278b679875799925e4b15309f10fa997d70bb5a",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "read_separable4d_csv.m",
+    "bytes": 2037,
+    "sha256": "a7abd07eb8a738d902475c23712d3c0b753ce400d316635a1bd95881347514ba",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "README.txt",
+    "bytes": 6263,
+    "sha256": "144fa40a0175d4785f4605e0b90effb243e5960d5711a58a28e626ee7d302d08",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "replay_separable4d.m",
+    "bytes": 6753,
+    "sha256": "c30f8ed0858713fd60048070cfdc093d7fcb11f83cd581ad99a9af5e2e641dae",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "run_separable4d_diagnostic.m",
+    "bytes": 3381,
+    "sha256": "23ffc7fb812e3f8823492ce435a56a829de9caf985ac8a08c4564f4abeef3975",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "separable4d_case.m",
+    "bytes": 2851,
+    "sha256": "fb49e9792b310dbb99edb5fea12a4cdc9f5f63635e3b6d421750c5d1f4ede739",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "START_SEPARABLE4D_DIAGNOSTIC.m",
+    "bytes": 751,
+    "sha256": "c2f89ffa5edce94e872992836ff81cf307408f7a9b9309c8cc89100e66e73823",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "static_audit/all30_endpoint_audit.csv",
+    "bytes": 10486,
+    "sha256": "44782cd53d248b8d700a8266083755e46f820e422098f4b83307783746e9d9d1",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "static_audit/all_query_numeric_labels.csv",
+    "bytes": 1509588,
+    "sha256": "678b7aad2c97574cfcffb0b09a51d35847adf4795338d82768a13bda38be6946",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "static_audit/all_ray_brackets.csv",
+    "bytes": 172224,
+    "sha256": "10eba974a967caf89d917f46eb6778f26e8bbbffeec29ee40379ddbd751a3e2e",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "static_audit/audit_summary.json",
+    "bytes": 1116,
+    "sha256": "798dc8e18ca87b12343c0cb6e1b6643030ad6ae9187c417e4915fe5b2427a3bb",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "static_audit/saved_reason_counts.csv",
+    "bytes": 5522,
+    "sha256": "29a914cb745310d3ae3abd3635a863794b36ea6d3e95546fa2bfd5b2d824eb65",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "static_audit/source_sha256.csv",
+    "bytes": 8467,
+    "sha256": "890b7142d20073ce86e1e2ac5c89f2c63f48b54b2936a166a65aef43d5245396",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "TEST_INPUT_READING.m",
+    "bytes": 952,
+    "sha256": "f09d6f71d67eaa48dab05d1d2c771f828670cb50d05164e887ad89ff4aa8037a",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "validate_separable4d.m",
+    "bytes": 6537,
+    "sha256": "128fe67c69e9de38116a1ee4bfcbf60e49809e4c7275ac0282068f416f05f6ae",
+    "archive": "07_Separable4D_Diagnostics_Runtime_Inputs.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/case_summary.csv",
+    "bytes": 4258,
+    "sha256": "3c23a37d677e7d0388b98f9b28aa36f4ed9bd4e12a17b60cdc284dd37d14012e",
+    "archive": "07_Separable4D_Diagnostics_Records_Common.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/diagnostic_source_snapshot/engine/sampled_forward_classifier.m",
+    "bytes": 4174,
+    "sha256": "1bfc86472552150d6e10cf567294086be4309bda9fbd27bc42dc27540f2ad819",
+    "archive": "07_Separable4D_Diagnostics_Records_Common.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/diagnostic_source_snapshot/engine/sampled_forward_geometry.m",
+    "bytes": 563,
+    "sha256": "516f4472ee5c84aeb16f941fad4c984dcac14e3489ded943d7a8bd2065c5e04e",
+    "archive": "07_Separable4D_Diagnostics_Records_Common.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/diagnostic_source_snapshot/engine/sampled_forward_integrate.m",
+    "bytes": 2408,
+    "sha256": "65754dd7380b7a0ff4d9dcb8a9c5ce29e9d5dc45110142622b1a25dba75ac58c",
+    "archive": "07_Separable4D_Diagnostics_Records_Common.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/diagnostic_source_snapshot/engine/sampled_forward_step.m",
+    "bytes": 1238,
+    "sha256": "332a95a10b730e8a7c2b8f61a87e9d94d89249c9026fe9d8b74a5036efbb3df2",
+    "archive": "07_Separable4D_Diagnostics_Records_Common.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/diagnostic_source_snapshot/model/sistema.m",
+    "bytes": 176,
+    "sha256": "c55cc0a8e8d514792cec8b0901631042a1f750d93ce256f82fd74be56d1f53a9",
+    "archive": "07_Separable4D_Diagnostics_Records_Common.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/diagnostic_source_snapshot/native/find_cells_around_a_cell.m",
+    "bytes": 1225,
+    "sha256": "460e9699f795883227dac8bdd5aa496acbb0cdbbb311a89769be3e021bb7ea5d",
+    "archive": "07_Separable4D_Diagnostics_Records_Common.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/diagnostic_source_snapshot/native/find_index.m",
+    "bytes": 212,
+    "sha256": "46e1233522a294c68edb0601c2c0eb5ffdb92d8d19975f2b1275381cbe997b11",
+    "archive": "07_Separable4D_Diagnostics_Records_Common.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/diagnostic_source_snapshot/native/LICENSE",
+    "bytes": 35823,
+    "sha256": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809",
+    "archive": "07_Separable4D_Diagnostics_Records_Common.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/diagnostic_source_snapshot/read_separable4d_csv.m",
+    "bytes": 2037,
+    "sha256": "a7abd07eb8a738d902475c23712d3c0b753ce400d316635a1bd95881347514ba",
+    "archive": "07_Separable4D_Diagnostics_Records_Common.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/diagnostic_source_snapshot/replay_separable4d.m",
+    "bytes": 6753,
+    "sha256": "c30f8ed0858713fd60048070cfdc093d7fcb11f83cd581ad99a9af5e2e641dae",
+    "archive": "07_Separable4D_Diagnostics_Records_Common.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/diagnostic_source_snapshot/run_separable4d_diagnostic.m",
+    "bytes": 3381,
+    "sha256": "23ffc7fb812e3f8823492ce435a56a829de9caf985ac8a08c4564f4abeef3975",
+    "archive": "07_Separable4D_Diagnostics_Records_Common.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/diagnostic_source_snapshot/separable4d_case.m",
+    "bytes": 2851,
+    "sha256": "fb49e9792b310dbb99edb5fea12a4cdc9f5f63635e3b6d421750c5d1f4ede739",
+    "archive": "07_Separable4D_Diagnostics_Records_Common.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/diagnostic_source_snapshot/START_SEPARABLE4D_DIAGNOSTIC.m",
+    "bytes": 751,
+    "sha256": "c2f89ffa5edce94e872992836ff81cf307408f7a9b9309c8cc89100e66e73823",
+    "archive": "07_Separable4D_Diagnostics_Records_Common.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/diagnostic_source_snapshot/TEST_INPUT_READING.m",
+    "bytes": 952,
+    "sha256": "f09d6f71d67eaa48dab05d1d2c771f828670cb50d05164e887ad89ff4aa8037a",
+    "archive": "07_Separable4D_Diagnostics_Records_Common.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/diagnostic_source_snapshot/validate_separable4d.m",
+    "bytes": 6537,
+    "sha256": "128fe67c69e9de38116a1ee4bfcbf60e49809e4c7275ac0282068f416f05f6ae",
+    "archive": "07_Separable4D_Diagnostics_Records_Common.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/environment.mat",
+    "bytes": 3061,
+    "sha256": "ba43e79f32842ee7089a5957338cca2e707843c9195437fb2bf01639127fddbb",
+    "archive": "07_Separable4D_Diagnostics_Records_Common.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/input_hashes_after.csv",
+    "bytes": 13169,
+    "sha256": "38b55c057b1c751bea8ac89747e4ff3534126c496f295075156359c65e606a97",
+    "archive": "07_Separable4D_Diagnostics_Records_Common.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/input_hashes_before.csv",
+    "bytes": 13169,
+    "sha256": "38b55c057b1c751bea8ac89747e4ff3534126c496f295075156359c65e606a97",
+    "archive": "07_Separable4D_Diagnostics_Records_Common.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/input_manifest.csv",
+    "bytes": 13169,
+    "sha256": "38b55c057b1c751bea8ac89747e4ff3534126c496f295075156359c65e606a97",
+    "archive": "07_Separable4D_Diagnostics_Records_Common.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/run_log.txt",
+    "bytes": 24954,
+    "sha256": "76f6c2c46d1008229d6bc93048588f042f3435cee43aa3ee5201e5fb6a419fa4",
+    "archive": "07_Separable4D_Diagnostics_Records_Common.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_01/case_summary.csv",
+    "bytes": 357,
+    "sha256": "172fc072014740646183c5baf7b597e609960789bcb08f955c5d487106670490",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_01/first_below_reference_label_chain.csv",
+    "bytes": 1382,
+    "sha256": "c383df47832d9a3759c9cda9a6026bf920161ffdb4e21f760f30fcec57748153",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_01/independent_assessment.csv",
+    "bytes": 1013,
+    "sha256": "8449bb71f12018b60a1234066b68de0a17bd3668a5595c15ba3fee033fe7f738",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_01/independent_test_points.csv",
+    "bytes": 1554,
+    "sha256": "4376d7de1b168f41386b9a8a4c79159a53fcce1330f9103b689addbe11fa1908",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_01/independent_trajectories.mat",
+    "bytes": 6147130,
+    "sha256": "9209e7842b8d1e6af2f05bf6b1b9edd376fecf2c539f0a27b725bdec575590b6",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_01/independent_validation.csv",
+    "bytes": 7710,
+    "sha256": "f9af0d5a0cfd9beb18f5124dedd19a815510cb729dad7186260f47ffa264f5b4",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_01/query_provenance.csv",
+    "bytes": 157830,
+    "sha256": "70f1c97531b0a9ec39a589ea22ab26e383fd3e6db10949a49acc31802483fc29",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_01/replay_details.mat",
+    "bytes": 1101014,
+    "sha256": "230b91ef3e25958252bf7013c292b97e6958a2ef8faf8362b0d301124e99a8a1",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_01/replayed_prefix_reason_counts.csv",
+    "bytes": 203,
+    "sha256": "1ae776b9544f8584c61a9338c1aa3d0cd142dafea1612fff57dad5d5df1b8603",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_01/winning_upper_label_chain.csv",
+    "bytes": 1902,
+    "sha256": "2ca20498a5415a0357b28f5ac815ba3a2daffd1619cf5617e1cd64b43cd1e764",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_02/case_summary.csv",
+    "bytes": 357,
+    "sha256": "0cbceed1a144c685df714902a1173c004f5fb40e68fd79846eab6abfd2570366",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_02/first_below_reference_label_chain.csv",
+    "bytes": 1398,
+    "sha256": "25f66bec55fa22507cddc87b349b8b35f3f3873cccabc20727bb0303b2236e44",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_02/independent_assessment.csv",
+    "bytes": 1441,
+    "sha256": "39a0b89fc3b4c6c62de716a09a12be69e60cf9b968bbd42228d3d1f85776bf7a",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_02/independent_test_points.csv",
+    "bytes": 2275,
+    "sha256": "5e5addbcf1271fbf6bf99ba01ce56bb54c5b0f8b1fe92cb3c0590ae31130c520",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_02/independent_trajectories.mat",
+    "bytes": 8970699,
+    "sha256": "61057910d111661731426e633d0faebb5003e83d19c18b439871ec5a02d07af6",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_02/independent_validation.csv",
+    "bytes": 11130,
+    "sha256": "cedfc81ae7376b841a1e8239e3ddeec5bee1981cd94fb334b1ba4dd07182c7bb",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_02/query_provenance.csv",
+    "bytes": 119450,
+    "sha256": "c33ca962009d281374f7366b2bb225747946b3ca9e759b7bd8415f4c103b438b",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_02/replay_details.mat",
+    "bytes": 462382,
+    "sha256": "c1d48734ffb9706797b31ca2f187c276753c620d107b27cce39bf9377ddadadb",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_02/replayed_prefix_reason_counts.csv",
+    "bytes": 140,
+    "sha256": "a728e6fa5acd87b6254a87701fd071c0e719c2bcccefd239850500dad3fff29e",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_02/winning_upper_label_chain.csv",
+    "bytes": 2958,
+    "sha256": "70def0f8d794d54423a3fcfe8a9a8c0800a6564b792ee93e30167ba114d55697",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_03/case_summary.csv",
+    "bytes": 355,
+    "sha256": "89ed95aa56db559ccc1876a8958b3aa1bb78e87caa44f1a108491bfeaa984cdc",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_03/independent_assessment.csv",
+    "bytes": 795,
+    "sha256": "89367f59a678973367b1362f0b0fffea70cd4f0728f973c5f56c104fd581f867",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_03/independent_test_points.csv",
+    "bytes": 1243,
+    "sha256": "2b3ef3b3c07a521f73f1ce58c13eb0e55918e969277288318db3c810f61eb731",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_03/independent_trajectories.mat",
+    "bytes": 4783174,
+    "sha256": "e2cbb097fd3d72b860b6a899271879555458fde1843365efa9c92b37d03b9307",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_03/independent_validation.csv",
+    "bytes": 6014,
+    "sha256": "45973776818d7c6fe0e7f0446f29f3882de31c4cc57099b10e9e35eb415368b8",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_03/query_provenance.csv",
+    "bytes": 78288,
+    "sha256": "58adafbe658cf85eedca658a56f982f2b5d35c2a181e308d51d674ecfbf5a567",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_03/replay_details.mat",
+    "bytes": 823404,
+    "sha256": "4a7974f175aee29e7d769c47c3cac75909e6defff9281acad5eeeda8b8d379cf",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_03/replayed_prefix_reason_counts.csv",
+    "bytes": 201,
+    "sha256": "a1b0975fc02035b291c4490e190203a724c7236129750a206f955f651c11cf3b",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_03/winning_upper_label_chain.csv",
+    "bytes": 1925,
+    "sha256": "baea84a2fe09c45afe099f7d525800a8e0904343361b9bb20710daa7206593a4",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_04/case_summary.csv",
+    "bytes": 357,
+    "sha256": "5399ddf8575be61015fe4831fa3943783abb418d1d0a0e9231218a4e7a75c910",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_04/first_below_reference_label_chain.csv",
+    "bytes": 1906,
+    "sha256": "0919b8da816def8c114d452f3e90db0bfa175d2925bae75d8f648e0c528b902b",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_04/independent_assessment.csv",
+    "bytes": 1009,
+    "sha256": "7625240420815b190ca85ba7730b96f0ff2f06b27a465c63f56588d5ff1d62c8",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_04/independent_test_points.csv",
+    "bytes": 1560,
+    "sha256": "a92755c44946db357e4674442b8d7c670e2de055c1b17674e771634c64513910",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_04/independent_trajectories.mat",
+    "bytes": 6160895,
+    "sha256": "e40a01da9e6f6b7e3d713a6b985785ef28bf5714dbe035b7678a48c7907e58c6",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_04/independent_validation.csv",
+    "bytes": 7685,
+    "sha256": "e1b80382264e54a9739b0c1d0a54e46a844d752eb2b20bafdb13de0443dd025e",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_04/query_provenance.csv",
+    "bytes": 126816,
+    "sha256": "adf087844aac38a4cd08574ebaa064a00633652fc7db3370da6e924c57533ea2",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_04/replay_details.mat",
+    "bytes": 756038,
+    "sha256": "b7a2f956b26fbcf26814974fac4b205cb6fc2252c274c8b085ca67fda3f7a80d",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_04/replayed_prefix_reason_counts.csv",
+    "bytes": 202,
+    "sha256": "5dec73fcac66ee779d9ab4491b1240e2db9235d6a40ce3553380884d2901d8b6",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_04/winning_upper_label_chain.csv",
+    "bytes": 1905,
+    "sha256": "31db14b9e5b1051a64e0ed86c62da4d42e1dc1c20001128871f5c6e99145b7a9",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_05/case_summary.csv",
+    "bytes": 357,
+    "sha256": "e27005346734e71ad51d1ecfa51818314bc4012357b58883fa96343e2c1aa86d",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_05/first_below_reference_label_chain.csv",
+    "bytes": 1911,
+    "sha256": "3b33ec0c6c5028e1a2a31d65ca60cfe98a2e72e15813a703346d7c947b946999",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_05/independent_assessment.csv",
+    "bytes": 1009,
+    "sha256": "620b0a0d18769cb74d74c86cc5d02edb456ae60bc8a3b47d6d9ce935dc5ab46a",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_05/independent_test_points.csv",
+    "bytes": 1575,
+    "sha256": "0f7a77234863d1229a2fdf5d1bd2608d4350f3ddaa4d99252143321620473d63",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_05/independent_trajectories.mat",
+    "bytes": 6143177,
+    "sha256": "ba58fa5326d8dbdfa1d06ec492eee50ddc4790c7058979df9a7259ee4f8d94f6",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_05/independent_validation.csv",
+    "bytes": 7760,
+    "sha256": "41ed5b9f8ce31cf1b73bda158a6aaffcb4cc22ac12e893e2b16fd46b4638f347",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_05/query_provenance.csv",
+    "bytes": 122146,
+    "sha256": "a0b42a607e02ee582ffe24b13e43d1f1e6b3b02d5d8a269a6dbb657ba3dc94f4",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_05/replay_details.mat",
+    "bytes": 878914,
+    "sha256": "e9f17cbc554f73a034ae92379912f3b34dcacc5ef7eaa0e8099c5c2c7bc6618d",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_05/replayed_prefix_reason_counts.csv",
+    "bytes": 202,
+    "sha256": "8e89556bf3b562df6d0213b48a840e9f7ac49118e77d04faf0c398f351dd66f9",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_05/winning_upper_label_chain.csv",
+    "bytes": 1911,
+    "sha256": "8c9bdda0d62b6803d9cd644438100fc6e2b7a742926ca7121f380060e379654d",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_06/case_summary.csv",
+    "bytes": 357,
+    "sha256": "3b4ce0dbbbebab9ec3208188422d3faa87a5c2f4286a69b8568d8ccda2d9e6a0",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_06/first_below_reference_label_chain.csv",
+    "bytes": 1400,
+    "sha256": "7493ab863665a0ac0409839bc7c59c62f255d9df6abc1074d360d1c1d8b4e0c8",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_06/independent_assessment.csv",
+    "bytes": 1009,
+    "sha256": "456bfc1346bdbe2823b3cc5ef3c757e1c766c2089934039ec5b73053f342d2ec",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_06/independent_test_points.csv",
+    "bytes": 1579,
+    "sha256": "28c724ee1e0390e26830dc3181ccbba0ac02f902b65c8348ba43ec5434be6a31",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_06/independent_trajectories.mat",
+    "bytes": 6158002,
+    "sha256": "0b1704ee7fd34ab1bb1ba80ce63de034a070b6d973c7340b1c27faf3c7bbb68e",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_06/independent_validation.csv",
+    "bytes": 7735,
+    "sha256": "e2cac75ed07a4d937844261b05eb6319a51a9ef664be1d15d97ab6e981fca1e2",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_06/query_provenance.csv",
+    "bytes": 157894,
+    "sha256": "1384241b163395cee63e42ddf2d02b4d3b2034d1f1fcb2a3d4a7b2d1012e25aa",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_06/replay_details.mat",
+    "bytes": 956210,
+    "sha256": "5c6c63a20728c810bfe0986c2e30763974aebebe4434cbd5c6598f58e27fee8d",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_06/replayed_prefix_reason_counts.csv",
+    "bytes": 203,
+    "sha256": "cd27d7fef441d274ca05fbd601533bdb846ad6d8393dc7c68cda7d626d3f46fc",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_06/winning_upper_label_chain.csv",
+    "bytes": 2444,
+    "sha256": "75c28d19973e87656fbe7fccacbeaa586a344de6b2ce36dbfb8d6ac4b5960e53",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_07/case_summary.csv",
+    "bytes": 357,
+    "sha256": "c374e61a3970fc109f234e597876ed2a5e6eb301edb93680fdcd1c45ac217436",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_07/first_below_reference_label_chain.csv",
+    "bytes": 1389,
+    "sha256": "efb203850e04c7f96efc7c69d5ec9cf0fe1e2e82104b3feab5e83279d7402f48",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_07/independent_assessment.csv",
+    "bytes": 1013,
+    "sha256": "d3d4ae5f985f4cf38c370d5e8251ae93c79375101aba32423ae8f691caacce61",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_07/independent_test_points.csv",
+    "bytes": 1562,
+    "sha256": "aa6d46d065f69843255d3e3fc8ce579dc55528199c8149810b15e82580eef485",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_07/independent_trajectories.mat",
+    "bytes": 6148306,
+    "sha256": "8a24302c2772d3fb1c9bf0093549097f48627aa6fbcf237a6e437d098117c254",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_07/independent_validation.csv",
+    "bytes": 7751,
+    "sha256": "cd7f9908bbceb90214560a427eed8556acb04a72228da3af0974bd34e92527b1",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_07/query_provenance.csv",
+    "bytes": 71935,
+    "sha256": "d6da69528ffa97ef4d6eb6c7f6823f6651aa49463f08fbad6378f600fe157360",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_07/replay_details.mat",
+    "bytes": 781307,
+    "sha256": "c8ab6dad5f84742c4cc70a6c8c9301d2fef7f9cad8ab3cc4ec6271ef4eb24882",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_07/replayed_prefix_reason_counts.csv",
+    "bytes": 201,
+    "sha256": "179f4631236d9487633a30bd3c27ba5e52e95c2a9550720aca12b305586934ca",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_07/winning_upper_label_chain.csv",
+    "bytes": 1902,
+    "sha256": "f308a54600a54e402a3f90171ad640a726dbf04af11c2dfe142c1b13c705c05b",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_08/case_summary.csv",
+    "bytes": 357,
+    "sha256": "2b90d856bd8c3983e6018804140fdba452d60240a8fc7fefbb9eeca4dce16dc7",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_08/first_below_reference_label_chain.csv",
+    "bytes": 1400,
+    "sha256": "f097173c800b89a33816ad2c14f9256c6af5dc3d550b8de3cece3ed5a0472c5c",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_08/independent_assessment.csv",
+    "bytes": 799,
+    "sha256": "7539f7ae7268317842c5a7ad7c823f17401c08a32085fac2a7c1281a497ea4e7",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_08/independent_test_points.csv",
+    "bytes": 1227,
+    "sha256": "ae5bdfab62fde75a5ab40f0bf12037be5b4d428cc4d631f48f97c5fd7ada2120",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_08/independent_trajectories.mat",
+    "bytes": 4757501,
+    "sha256": "31f5fc9c96f2c1ad730193dede02444882e8aab66daf17bdafa7a0f6c1a93387",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_08/independent_validation.csv",
+    "bytes": 6037,
+    "sha256": "1337a435e15414f9f8ac9e08c6eb229817ec5c0a3c56290c65383fc172922a41",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_08/query_provenance.csv",
+    "bytes": 103515,
+    "sha256": "5a9942d617e16fe155d91227a71809d8be0e4102366143b8bf3b57a18095eca4",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_08/replay_details.mat",
+    "bytes": 895078,
+    "sha256": "3715059f8bdfd261f135606588d4d9f067fbdfedb4bcec80185b324a679f9c8f",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_08/replayed_prefix_reason_counts.csv",
+    "bytes": 202,
+    "sha256": "10cc9cec75c0ef4c5e2a732d7a7e8250df2b39de6727564d541634559de91db2",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_08/winning_upper_label_chain.csv",
+    "bytes": 1400,
+    "sha256": "498f9890edcd53b8aa7cc127a0698849798610abfa9a9b8a4989a583cc0dee04",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_09/case_summary.csv",
+    "bytes": 367,
+    "sha256": "57e8c42709d4079f3d67782728a810ab8f30999fd0e823954018a54a31f16ec5",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_09/independent_assessment.csv",
+    "bytes": 603,
+    "sha256": "99d8a0c503480b404af593b254a971918382e5f8735ff6d54406fcef3da6fb13",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_09/independent_test_points.csv",
+    "bytes": 881,
+    "sha256": "87e715aa16acedc5f9a6129421edcb5e80794c81619283b31af89dc251c7048f",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_09/independent_trajectories.mat",
+    "bytes": 3416461,
+    "sha256": "25602cf70717b2f1b571eaba1cdbe576c679a491789d6fdc18a58a203c0ccfa2",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_09/independent_validation.csv",
+    "bytes": 4648,
+    "sha256": "b1e4ab0a88725326241523fe85adf1f06df54f0a1901500b6d5e184f73ee523f",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_09/query_provenance.csv",
+    "bytes": 184937,
+    "sha256": "01fd8ac303deb7ba8709f815bc0a85e6f46da11ebe768a6c6c913b8fba18548b",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_09/replay_details.mat",
+    "bytes": 602739,
+    "sha256": "3b10f645ffffde3a1c4700840e13c35aea4807188ed7b1dbc251729e17c92042",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_09/replayed_prefix_reason_counts.csv",
+    "bytes": 139,
+    "sha256": "5ff777ae42befe741409c3f88024fa521a6ce0097037d3e9c555eed8493ce919",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_09/winning_upper_label_chain.csv",
+    "bytes": 1397,
+    "sha256": "cc5c6adc5dccb4594541053acf6f500efc446393ff7691a8a5584b2513f5f7fe",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_10/case_summary.csv",
+    "bytes": 358,
+    "sha256": "d87aa0d2ac330f0938e024b52593122daf2ee83ad6e4c729e0fd9a7c77cf7425",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_10/first_below_reference_label_chain.csv",
+    "bytes": 1913,
+    "sha256": "bdd2b37c9ffcff8c1ed36d00d3069cadef463337f70e01e20717ce66eeab8f34",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_10/independent_assessment.csv",
+    "bytes": 1021,
+    "sha256": "8d246f82d75988de29babe8b9aa35478bce5c18ffbe5ee09e6e06397ef58565a",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_10/independent_test_points.csv",
+    "bytes": 1573,
+    "sha256": "015451b06de2fd5119cb06829a48ef90c8c4f8a5402e7d43e4f57e05bc162169",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_10/independent_trajectories.mat",
+    "bytes": 6186141,
+    "sha256": "f64f3c055bad7c3d09c4b07088489e240e3ff50d8d9afb98fe693d23a47e8ee5",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_10/independent_validation.csv",
+    "bytes": 7813,
+    "sha256": "8ec7163ac992b091912d956105bc2830172102b0e283d9c11d40cfeae527e012",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_10/query_provenance.csv",
+    "bytes": 71724,
+    "sha256": "5507d91d08abc68ff4f63b74868fd1c457f7b31f80a30aef3e7dc53e18e4a5b1",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_10/replay_details.mat",
+    "bytes": 660397,
+    "sha256": "f686d614c7e308d6a53aeea9800901da6a4058023d102a27ab71978695370f4a",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_10/replayed_prefix_reason_counts.csv",
+    "bytes": 201,
+    "sha256": "69ce4391ebe9e29fe06bacb4b54aa83e1d36823227af15ae608ab53cdd1ed521",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_10/winning_upper_label_chain.csv",
+    "bytes": 2431,
+    "sha256": "3a621f47fb5326a56d7afffdcf0bd122f1b5040742365579d7c18df477922629",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_01_10.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_11/case_summary.csv",
+    "bytes": 358,
+    "sha256": "5cd1fac5523e3320a630c28706503fd164b468010874ff18762807ac3551e5a8",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_11/first_below_reference_label_chain.csv",
+    "bytes": 2415,
+    "sha256": "982fbe55363fe25572dab9de2ec32ea480786fc28615965d22e7810007abb0d6",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_11/independent_assessment.csv",
+    "bytes": 1235,
+    "sha256": "9d4a6971e2becd78adea9fca24d85d2d4f441b5828933296e5e8ee5eecf61696",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_11/independent_test_points.csv",
+    "bytes": 1894,
+    "sha256": "a6f862fa75784cf7fa583af1c6255e2685dc13fe8531c3f8351fe12856f79c08",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_11/independent_trajectories.mat",
+    "bytes": 7544761,
+    "sha256": "377339ddb5d512d3f0b80410a7e407316e7143c991eba1c87c8845c1ec7c4cdb",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_11/independent_validation.csv",
+    "bytes": 9488,
+    "sha256": "e490c1500b88737516412bb7f8acac3753eb954a0b08c597ea945a5853819dd2",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_11/query_provenance.csv",
+    "bytes": 133673,
+    "sha256": "0a5bf01825522c1a0be637a940766cbcce97761d9f9514078886c26f5a3d60d9",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_11/replay_details.mat",
+    "bytes": 902484,
+    "sha256": "88a5c4857c5cddbcface3cb691ed3594a84ca944e4df1b25ec790e7964f49948",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_11/replayed_prefix_reason_counts.csv",
+    "bytes": 203,
+    "sha256": "63fcefd5852241b394271a6a1af79c7eb7914081fb09b8da80d4ea1c80314818",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_11/winning_upper_label_chain.csv",
+    "bytes": 2411,
+    "sha256": "b1cbd5f644880a91d4385d4bbf75ffed49e91c108480fd4779bb4520eb581aa4",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_12/case_summary.csv",
+    "bytes": 358,
+    "sha256": "6dd4ec0494affd13dfbb3c1c0843cb4867a9df17ed3eea7d50d1a69af0c22143",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_12/first_below_reference_label_chain.csv",
+    "bytes": 1392,
+    "sha256": "e1482ffd9e45b2952745335483acad76818f5610766a1c53513a4a25a07ee2ab",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_12/independent_assessment.csv",
+    "bytes": 795,
+    "sha256": "0b18b97745c8ad74b705915c71d8a4f8807cd8fc41b60b94b106f83253e6391b",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_12/independent_test_points.csv",
+    "bytes": 1228,
+    "sha256": "e5a4a30d2cd6183a572c0c6c7c7c0f2b7b4b9aa907dd23cb4274caad87a23576",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_12/independent_trajectories.mat",
+    "bytes": 4775025,
+    "sha256": "9d8b53bcf7640ddcc78058aabe128226e138832907407c2d592a3db3fbc4e815",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_12/independent_validation.csv",
+    "bytes": 6011,
+    "sha256": "f5eb99c97c67898e1d0aac6d24ac2b241da084c3606b4affbbe9320f89dad9a7",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_12/query_provenance.csv",
+    "bytes": 85259,
+    "sha256": "2d706b7ddfe5e15f934a7ba6c9ef6a44676986fa85688bf99722e7fbcc731648",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_12/replay_details.mat",
+    "bytes": 692738,
+    "sha256": "a18831fc5abe813470535c9282654afc938692be6f628bff7908e9c3462a02da",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_12/replayed_prefix_reason_counts.csv",
+    "bytes": 202,
+    "sha256": "aca7f88f0bb2ebce82353acdbbd7fb1229b85fa25814de94aaca391caa9cb443",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_12/winning_upper_label_chain.csv",
+    "bytes": 1913,
+    "sha256": "8b667487532264e7f73405d8105367674983733ba0a1fde58e9a65daaf5d68be",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_13/case_summary.csv",
+    "bytes": 353,
+    "sha256": "e710fa0af3f240af9fff2868d4a4a0c0abcbf3971fbc38a85aeb5db15af9d7ea",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_13/independent_assessment.csv",
+    "bytes": 574,
+    "sha256": "2d62fddf56335f0e87d756683d51f40e72445013984411b61d0b4934fcf03e87",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_13/independent_test_points.csv",
+    "bytes": 866,
+    "sha256": "ff10de773da5f8fab8f1bfe2ed5c8d94b63d419f5706c75b28cdb2c15f84fd68",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_13/independent_trajectories.mat",
+    "bytes": 3390131,
+    "sha256": "c44047f0a367b765b0b82490cfec5a4d865c1446ddae2805ca9d5b1144436886",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_13/independent_validation.csv",
+    "bytes": 4314,
+    "sha256": "c4c21f06263b2061dfb1f83b0a14dbafae8bf21fbb3d1d6411fdafb6dacddef5",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_13/query_provenance.csv",
+    "bytes": 42318,
+    "sha256": "37e33faf4c2ed37a0672c998d1b88a9c623abca12513d2319d79b76d6f4951d0",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_13/replay_details.mat",
+    "bytes": 684971,
+    "sha256": "033406c4f538b5b84cfe195fc645e6adc9715513ccd394b1e9c1dd7f4453a4c0",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_13/replayed_prefix_reason_counts.csv",
+    "bytes": 199,
+    "sha256": "df52b1d06c6ecd2d5ce5726a90ef0dda220de89b82b8215e56a87f68c995b133",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_13/winning_upper_label_chain.csv",
+    "bytes": 1386,
+    "sha256": "8148419fb69ba63237dfd9aad717c9e106ad50df1d266c49469956e67b45c15e",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_14/case_summary.csv",
+    "bytes": 358,
+    "sha256": "a2d74bc17ec1507badf549e10c42aff789c578dd84a7f28a4fb43431288b81a3",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_14/first_below_reference_label_chain.csv",
+    "bytes": 1389,
+    "sha256": "a2eb71985cac7ec5ed4296c23f2f70de477414404eb08a60e7962892d027a534",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_14/independent_assessment.csv",
+    "bytes": 795,
+    "sha256": "cafe8867a2877cf3eac93651f1e2a793f5d635bfb0878bb3a1ee561776b57a0b",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_14/independent_test_points.csv",
+    "bytes": 1217,
+    "sha256": "4d54370fea62407e83a2ba6c1400c8968e9c44128796973cac2aa88e5a81bc1b",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_14/independent_trajectories.mat",
+    "bytes": 4771305,
+    "sha256": "6c1557bf49fca39226eedfc1adb0c5a09958cb9f4cb4f755f1ec21c8def6bb7f",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_14/independent_validation.csv",
+    "bytes": 6029,
+    "sha256": "2e8bbabbef7687a42f61404dbe8ead2a9a464a22234b5ea21313aef0c041ce25",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_14/query_provenance.csv",
+    "bytes": 65339,
+    "sha256": "99e124ca66ef42810d52d1ccffe6dc7d6c41d7e2f0d22c4d5ca517ced5b9e9bd",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_14/replay_details.mat",
+    "bytes": 308080,
+    "sha256": "0f5f79cf7410ff33a26ba4d494cb2ebae3609bb1a61463c128b5e1bc8aec9d0a",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_14/replayed_prefix_reason_counts.csv",
+    "bytes": 139,
+    "sha256": "a892558c17dcd7eb1627ab440b856fc74f183d5f0ab32cc6353c807b94397e8c",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_14/winning_upper_label_chain.csv",
+    "bytes": 1904,
+    "sha256": "4108f2479bff2df4ea88aa90b9829977a4727134fd41b9eaa5f3e3f6ca2f8c94",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_15/case_summary.csv",
+    "bytes": 356,
+    "sha256": "362e61b243d875987285f05f9d00b9399a3aa106ef97f6285367efa229073779",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_15/first_below_reference_label_chain.csv",
+    "bytes": 2421,
+    "sha256": "89ada59b85d93d52118692cc7ee4d403285b110ecb5f4617a3ec2c88b76bc573",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_15/independent_assessment.csv",
+    "bytes": 1201,
+    "sha256": "f70341bc92e88f2134bd4bc2e8d6a89950bcf19acfcef34026720b4c454aef10",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_15/independent_test_points.csv",
+    "bytes": 1898,
+    "sha256": "77cac4690e6de35712f2dcf982db5a5896ec7bc8a28ec7acc5dad2646e6cf73c",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_15/independent_trajectories.mat",
+    "bytes": 7546775,
+    "sha256": "7cdb11d8424f91ccfa95af2d2ddc8f0c19ce6ff743f3aabb53a29a7f16240b74",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_15/independent_validation.csv",
+    "bytes": 9344,
+    "sha256": "397e395c5d774b71ee7b4ca3189036b21e16fcd75d8c92d255fbcf84be21f908",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_15/query_provenance.csv",
+    "bytes": 74012,
+    "sha256": "b858f7f7b2145ef12ea5b63f88c47bf727b28fba046524edac3966d4825d6d01",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_15/replay_details.mat",
+    "bytes": 398407,
+    "sha256": "cd02ecc937dc8784a1a2b292e5790ca54c446d7fcc26ec24141abe8a2543c585",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_15/replayed_prefix_reason_counts.csv",
+    "bytes": 139,
+    "sha256": "79e769e8e975dcad21e903e7ad84e20ec91a8809f1cc5767888a44364b967a2c",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_15/winning_upper_label_chain.csv",
+    "bytes": 2422,
+    "sha256": "244759df7a2028fb28c2ed952cfa9fb3cd6b44ad720fbeaf7cb893c2dfa8a7dc",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_16/case_summary.csv",
+    "bytes": 358,
+    "sha256": "3ad42c3faed8d8cff9e9290afaf6288aa229df69eca75377dd62df661adb820d",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_16/first_below_reference_label_chain.csv",
+    "bytes": 1394,
+    "sha256": "5727644c9b3d0fdc786520bfbd26ae874d23faa1a006185fc0f6b47c096441b8",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_16/independent_assessment.csv",
+    "bytes": 795,
+    "sha256": "22ff8e5c34bc711eff9a430807e7f50c9115bda9c7ec6235ccf9d4efeb93adf6",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_16/independent_test_points.csv",
+    "bytes": 1223,
+    "sha256": "89557e675baae4bc00c8e500fff5476556cad791b4daa42ef65d74bdf670eb99",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_16/independent_trajectories.mat",
+    "bytes": 4742568,
+    "sha256": "297445cfb37801e3059aded489fadf028e0781fc05033cddc917a9d90d93b3c6",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_16/independent_validation.csv",
+    "bytes": 6026,
+    "sha256": "1f12c5b92c7b946c274885f431482de67f10452aa3b8efcf07d428c4c0454726",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_16/query_provenance.csv",
+    "bytes": 164145,
+    "sha256": "bb77732eba4bbf74959c5d69e2bf5e15e4916b26bdd0b5315456599f9fa7896b",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_16/replay_details.mat",
+    "bytes": 1171215,
+    "sha256": "d365d4254871c6ae61b5cd85f968c19a8ba092f6ea68ee020c67a2a39d51aa14",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_16/replayed_prefix_reason_counts.csv",
+    "bytes": 203,
+    "sha256": "d3cbba056aa900a3d4ab8f53337b69e27e22b6f8baf65287f2baa821f83d8087",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_16/winning_upper_label_chain.csv",
+    "bytes": 1912,
+    "sha256": "f0195191c150f6bd6edd1154a7c63a3459c403585036d6c2f7b03f37582be6d1",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_17/case_summary.csv",
+    "bytes": 356,
+    "sha256": "e9dbeb1d503cf561a26aa6edba8977f018ac8ebb69cce4dffe323cf52485287b",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_17/independent_assessment.csv",
+    "bytes": 583,
+    "sha256": "a7185395d3928665141ba256dac4c1e41c6ba5996bc0d14de658853a8c4be8d3",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_17/independent_test_points.csv",
+    "bytes": 864,
+    "sha256": "defe4ccb3fab76599d34f01bc0448724645a1cc91a4774b10602cc62f89eadfd",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_17/independent_trajectories.mat",
+    "bytes": 3386405,
+    "sha256": "97317b73caf97abcebf900397025b3b5c0ad0a4882f8918b4ca0bb8bb174afcf",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_17/independent_validation.csv",
+    "bytes": 4341,
+    "sha256": "d84f126f4f92f11765b1fa775e388184ab25dd23f2f5b9344e48bd4434a1a9db",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_17/query_provenance.csv",
+    "bytes": 77800,
+    "sha256": "ae9e6db9a295fdabb7044f3ac77505430fecce97d367d0fd68db0e31150efb97",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_17/replay_details.mat",
+    "bytes": 656108,
+    "sha256": "be378f6553ab4c20b2c68be8db5e4082b2c69427bbf3f2bc5281f64058628502",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_17/replayed_prefix_reason_counts.csv",
+    "bytes": 203,
+    "sha256": "19109eb877293f5528cdaa7a98660b7c9501424f75849cba02e7e4789c7ff762",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_17/winning_upper_label_chain.csv",
+    "bytes": 1379,
+    "sha256": "12c6ec528f2079d28354a07f76578821f4214d734d63b286a30d3066ed754dce",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_18/case_summary.csv",
+    "bytes": 357,
+    "sha256": "fd784782e9913cb58b2b4e7808a9ec6d1e41789aff736937573821e4e3e9f1c1",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_18/first_below_reference_label_chain.csv",
+    "bytes": 1892,
+    "sha256": "6836a30510124f74a9f62a06fb447b78c37e0d16a14a9f4ee21aefc2c2fdbc4c",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_18/independent_assessment.csv",
+    "bytes": 1005,
+    "sha256": "0c943b102c9ab1e8c322211b08a28a26776ebb936510b080e709eca34ce2c8f2",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_18/independent_test_points.csv",
+    "bytes": 1554,
+    "sha256": "a6690e67fe3d3a06caadf9ac51947dc5045e1c0b888e309816a1454d81a98327",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_18/independent_trajectories.mat",
+    "bytes": 6158901,
+    "sha256": "499e5cd610e5439f3542b944c0aa316266f558c424eea19e2f06f04a02578ef6",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_18/independent_validation.csv",
+    "bytes": 7692,
+    "sha256": "7beb8278f34484b81cdc1d28fde0e9c535b07176e558212b7ade4d3956811c38",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_18/query_provenance.csv",
+    "bytes": 66845,
+    "sha256": "3242de31d44abe586d6a4d69837cf4e3e0a512fa8c30b87acedffc239c48cf89",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_18/replay_details.mat",
+    "bytes": 714711,
+    "sha256": "50061a93ec434db81bb23027c38e849ac1339266ba39c0770ab8352dc72ec09c",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_18/replayed_prefix_reason_counts.csv",
+    "bytes": 200,
+    "sha256": "d06762f0224cdaf84c1bec1e1f1b595950d07d5f62a419e60fc606e27c92747d",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_18/winning_upper_label_chain.csv",
+    "bytes": 1895,
+    "sha256": "7ab7a6b42673e549b7731b5c9c27a47fdf33c99eb2dc27b61831280405ba4e16",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_19/case_summary.csv",
+    "bytes": 358,
+    "sha256": "a8909198d9880c19c4729c67a01f89f4e235ea018758ae285851cf22c23229f2",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_19/first_below_reference_label_chain.csv",
+    "bytes": 1912,
+    "sha256": "207c5ae6016c67e18d8ece9168a73f8ea85138146089a7ac9052dd6a6bb6fac5",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_19/independent_assessment.csv",
+    "bytes": 1009,
+    "sha256": "aee249af4f1a4bed4c678bc97c220be77802fe2666f95cd48155d04af88eb84b",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_19/independent_test_points.csv",
+    "bytes": 1571,
+    "sha256": "49930639b6016b427b7d27f5192b2b880f9aec464c5c5277bb7abb8584a97cab",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_19/independent_trajectories.mat",
+    "bytes": 6178397,
+    "sha256": "577680d91830d1b66a77abcf60e4c354d432d33bdbb100c9360c48db779e9ada",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_19/independent_validation.csv",
+    "bytes": 7694,
+    "sha256": "b4e546107c3fc0d85192d6a9ae82666dd0e850d0fa90f02e6e24a99fd0a8a26f",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_19/query_provenance.csv",
+    "bytes": 77281,
+    "sha256": "9cabd74fe9f11f7f46c67bdd82e39b6b999e9b64132710d968a577e04c74f3ef",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_19/replay_details.mat",
+    "bytes": 860556,
+    "sha256": "56aba7f26f6d409dfae3d3a54d5039351107ff5c2036152417072a3513f47658",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_19/replayed_prefix_reason_counts.csv",
+    "bytes": 202,
+    "sha256": "c32827461d88b1fd3268e05d127f2f423ae127cde11b706d676a93008a45a357",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_19/winning_upper_label_chain.csv",
+    "bytes": 2432,
+    "sha256": "706187d50412fa8f1fb9bc8857d0b4cc4736b323afe2f151d95444b06b5ca899",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_20/case_summary.csv",
+    "bytes": 358,
+    "sha256": "7b2467edcb965032ec0254352ff9e7f607310126ad04bcbb5e1ef54d21b0d287",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_20/first_below_reference_label_chain.csv",
+    "bytes": 1389,
+    "sha256": "725c377e1b60465363033a4e59b02135f773586941cf2da6ffe895547f1f5f20",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_20/independent_assessment.csv",
+    "bytes": 1013,
+    "sha256": "299ea34ec20bcadb4837c4f60e2742add3a80768c7e4778eeba34b1f14009ce9",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_20/independent_test_points.csv",
+    "bytes": 1565,
+    "sha256": "9157c9e180ea2e0fba94034e337cf675d04be96c31a01707d5c1b8c802267aea",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_20/independent_trajectories.mat",
+    "bytes": 6143505,
+    "sha256": "cc0d47e6cfaf4525227c2e5cefb498f19291ffc60e46ad927572d90079683700",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_20/independent_validation.csv",
+    "bytes": 7718,
+    "sha256": "929912eed9bb276b4f4b6a19b8b4bdaba092a20e2f094881545295a210850261",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_20/query_provenance.csv",
+    "bytes": 102178,
+    "sha256": "905c994a9fb9eb8220b400f04077f9a36166455f34c0c5b68f9416796d512304",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_20/replay_details.mat",
+    "bytes": 413677,
+    "sha256": "c22230b863b9ae0cc0d6123c12ba566192acdd7670648b9fa03aea82650d09b4",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_20/replayed_prefix_reason_counts.csv",
+    "bytes": 139,
+    "sha256": "9ab1c3c0530d7272cf143e7bd0635c2127583ac24b8e984f00e4f6ecf93b7234",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_20/winning_upper_label_chain.csv",
+    "bytes": 1913,
+    "sha256": "4a0dbe30a4e81fc25387faa0b65108197854677c6c77dcde893b9290cee1b821",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_11_20.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_21/case_summary.csv",
+    "bytes": 358,
+    "sha256": "48d086ed399066b4432a90ac1323d60d5dc675d872625f69c5d3898542a8682f",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_21/first_below_reference_label_chain.csv",
+    "bytes": 1387,
+    "sha256": "2095d286b7d9f9821bc01aee0eb3c12212d8b57c3b11e412c09eac6d0c7f1bf8",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_21/independent_assessment.csv",
+    "bytes": 795,
+    "sha256": "344c0c2810c245693a15fc84b56c1c3672a64ace66559520ff15c0e3a507cd4b",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_21/independent_test_points.csv",
+    "bytes": 1216,
+    "sha256": "8ef25cf12a36e417c7f89bc1ada1b4de7ff94f23efedf5dfac1f35aa8b92960f",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_21/independent_trajectories.mat",
+    "bytes": 4776652,
+    "sha256": "b649886e11bb7e05447ce9f414653f15a92914a09592c339b8344dd5b1d55218",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_21/independent_validation.csv",
+    "bytes": 6013,
+    "sha256": "a26e4497d8c1ccb01de6222840b5ebd330d231552ecfac36c2065d06f276ffc0",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_21/query_provenance.csv",
+    "bytes": 143389,
+    "sha256": "ed7d76386e4677e173f3543d040474eec73df36b22d861fb1d1faae5e7265e1a",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_21/replay_details.mat",
+    "bytes": 540266,
+    "sha256": "4ff613c0bb971f89ea7f86a0665efe0972938b2859fec5a20d9473be11863dc9",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_21/replayed_prefix_reason_counts.csv",
+    "bytes": 140,
+    "sha256": "9cfb2575b5087d678f5f7a6b802e851aa80fe686f1f9e734349436e4400d230a",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_21/winning_upper_label_chain.csv",
+    "bytes": 1903,
+    "sha256": "2bcd0df7952240a81dc9c1c6017122c4cfc13233a40b8ab1827cd99fe7fb068a",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_22/case_summary.csv",
+    "bytes": 358,
+    "sha256": "12118caa750bdb6f2bc1757da3918631c5a8d3f39c75cc1b356289c9c4150832",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_22/first_below_reference_label_chain.csv",
+    "bytes": 1390,
+    "sha256": "165e1263d56788cd78c8cc55d1d5859bf8c47b68c733b9c067209b19d16cfe6d",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_22/independent_assessment.csv",
+    "bytes": 799,
+    "sha256": "01088852db98cdea58e35c3b9c894d6792f2192395d83c58d883953e1008e71f",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_22/independent_test_points.csv",
+    "bytes": 1213,
+    "sha256": "9658f333363a571a44a76945a201818733dbf925a4b575c6ecded4691a3b9c16",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_22/independent_trajectories.mat",
+    "bytes": 4775888,
+    "sha256": "23735b89a82fdb3069862c2cd575654c0615b770e850a2d1657523ab3faa27e7",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_22/independent_validation.csv",
+    "bytes": 6028,
+    "sha256": "b942c534c9c116754a32605b4e1a5de26599f4273dd81a3efe3d2ec39bfbadbf",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_22/query_provenance.csv",
+    "bytes": 115193,
+    "sha256": "4987abfaac550106f954c6924a0fa86efab70412c982803bd95f8fdc0603e1be",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_22/replay_details.mat",
+    "bytes": 817038,
+    "sha256": "fd83b3e3f86767e23eb1964f204311f9c8ed2b72c0230e1cb9ea975d0fd56082",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_22/replayed_prefix_reason_counts.csv",
+    "bytes": 202,
+    "sha256": "52a8fea11b551c4ab587459b967fe6c15a7b59e27f47a2f98091f5338163f8d1",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_22/winning_upper_label_chain.csv",
+    "bytes": 1386,
+    "sha256": "0e1ce2d50618f12352a3b9f5f9c5d742edcb185109b6ebe22331743995a92cab",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_23/case_summary.csv",
+    "bytes": 358,
+    "sha256": "01f587a3077f1a7044c77dc62fb449b7a9802f5bdae5be70bd1e5316c4cefc04",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_23/first_below_reference_label_chain.csv",
+    "bytes": 1392,
+    "sha256": "6653cf664047b40e9a8cf7bbe4018ad7d7a5c8a993976ea7f41be9ef9725d124",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_23/independent_assessment.csv",
+    "bytes": 1227,
+    "sha256": "de721bc1f4bc8b3b1b2257a3477029d125e0ea07f9b6db0f19ac85fdfabc15d8",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_23/independent_test_points.csv",
+    "bytes": 1911,
+    "sha256": "8b08da647bbdada23d62a31068850e58abcd9350545ae45331f0dcd7379eeeab",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_23/independent_trajectories.mat",
+    "bytes": 7557327,
+    "sha256": "61b92076c76685f478d947dac8d467fe1372a8d745802c2963be6ae269535f91",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_23/independent_validation.csv",
+    "bytes": 9476,
+    "sha256": "dff58ab5208b6c5898d09d363387d9b82cacd43075eb633ce46e4ad242128968",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_23/query_provenance.csv",
+    "bytes": 159812,
+    "sha256": "00cc290c598b10c2f1c9e8f62301b826dff3323c035f2fb554109d3c9a6355e7",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_23/replay_details.mat",
+    "bytes": 875884,
+    "sha256": "9e2b36082d180bbc685a2b4464d26fb8675c29e6ace1fe85483d7856ab24dd15",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_23/replayed_prefix_reason_counts.csv",
+    "bytes": 202,
+    "sha256": "cf5edc5ac61917747b43c06cf43c6692fdbd674f277c1ed8fc62b51af552aeb0",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_23/winning_upper_label_chain.csv",
+    "bytes": 2427,
+    "sha256": "498c97722ddb9df65cff6903b1420d2215fa82c489429714b0fc61bff5596075",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_24/case_summary.csv",
+    "bytes": 356,
+    "sha256": "a7339d7f4551d18d9cedd4a8aaa527363abd583f29183e493164a8fa8156d839",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_24/independent_assessment.csv",
+    "bytes": 583,
+    "sha256": "c8e7688e85c046c5051d206cdf30f064b65a5de7913e7b74fa670b73fb327d89",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_24/independent_test_points.csv",
+    "bytes": 881,
+    "sha256": "437930c952f7c3c4798adcb95c94c241d3c5fac9e6d0dcad08cb2c388757a98d",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_24/independent_trajectories.mat",
+    "bytes": 3375492,
+    "sha256": "f742dc20d7dcd453e9bd5fdeeb9b1a3cb6f46176c74281be13f30cb1e81c5994",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_24/independent_validation.csv",
+    "bytes": 4323,
+    "sha256": "6299263ea3380b0ae0a723c0650e0d604bee7c1ac911b7ede406b9771ee0af16",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_24/query_provenance.csv",
+    "bytes": 125400,
+    "sha256": "72e577a606851c9d106f744ceee48d341aba9eb78ffa065100f6ccca2d745051",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_24/replay_details.mat",
+    "bytes": 786842,
+    "sha256": "613228ab3bcaa41a0eec1638c37d28322770c77eb7d801f2f1d6055d19bda060",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_24/replayed_prefix_reason_counts.csv",
+    "bytes": 203,
+    "sha256": "dfb2b832869c0647bc242fdbb00ddafe6a6b9572364fd5129b25e0d493062990",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_24/winning_upper_label_chain.csv",
+    "bytes": 1399,
+    "sha256": "5e12ba3a6cf1f49975260ff69028020dbe239f3cae620a0fc933da4daa2517fa",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_25/case_summary.csv",
+    "bytes": 358,
+    "sha256": "21dd134be13010fd0e080fb4bf2c951ea453d263264d34bc80d563435d9220b6",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_25/first_below_reference_label_chain.csv",
+    "bytes": 1397,
+    "sha256": "186359acf75f4d5539fc687c7364889b16d4675d300494a1c8dfd8e6421f9f43",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_25/independent_assessment.csv",
+    "bytes": 799,
+    "sha256": "f72d324fc55b461f290784aa5a5c4a8f0b01727c91e2dfee57febb0898dee47c",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_25/independent_test_points.csv",
+    "bytes": 1229,
+    "sha256": "45e7938b2a692a0f89dae63a39548e5ba89265c18725c867134a76ad8aecea9a",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_25/independent_trajectories.mat",
+    "bytes": 4728677,
+    "sha256": "2f44f49e4d01bbdd1b995fddde550b504a7ffae67c7774cbf09087828c2366f3",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_25/independent_validation.csv",
+    "bytes": 6148,
+    "sha256": "98fd2cc77963a2c0790f190b562512b0f14fb0522fa1ed9aa8e4a8c26de87bf2",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_25/query_provenance.csv",
+    "bytes": 83004,
+    "sha256": "618d8509d0721a4232d4b61ceb6270895c9be9b9f7cd0980f3ac19c38d418115",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_25/replay_details.mat",
+    "bytes": 859221,
+    "sha256": "f05cde275d9ae006bee6d386b5f9f18264fe1b9fae29c137376e954e4c1f22e6",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_25/replayed_prefix_reason_counts.csv",
+    "bytes": 202,
+    "sha256": "8a0e4902e65176852a32bfd1110d737bf203b5949ea8d79ec49d9d154f9c4329",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_25/winning_upper_label_chain.csv",
+    "bytes": 1395,
+    "sha256": "8bd89fdce22eec9ee0c9726610657667fcec52b38e35b75b3ee17888900c6a2f",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_26/case_summary.csv",
+    "bytes": 356,
+    "sha256": "082589a3c1be354869eade57e0e948391697b44b0ea2c3aa4106e886bebd1512",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_26/independent_assessment.csv",
+    "bytes": 583,
+    "sha256": "cefde41bf82d74d43e8b3713b48a7494999126d9be32c211c742b57606dc4de1",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_26/independent_test_points.csv",
+    "bytes": 875,
+    "sha256": "7e1960cc96fffe8ab1155354357469e70bf3a63982192fb8c19c01068ceeb5b4",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_26/independent_trajectories.mat",
+    "bytes": 3372167,
+    "sha256": "0e707379a93f7c644334dbca98ef60f3d21c605ff012b59aedea107053862845",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_26/independent_validation.csv",
+    "bytes": 4306,
+    "sha256": "13f4bf0aa03cc7834aea0176e9cd3ad41ccdb7d254dfeb18de38ea016162067f",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_26/query_provenance.csv",
+    "bytes": 100773,
+    "sha256": "81fd5dd0c441c80b46812770759b95c484047ae4df154e1b3d879bcf669dfcfb",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_26/replay_details.mat",
+    "bytes": 337920,
+    "sha256": "6791dc532b08d2c2a1159807127c83a12f6bded5728c3fa8dd59cd09f98e8017",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_26/replayed_prefix_reason_counts.csv",
+    "bytes": 140,
+    "sha256": "86f5efe1f54fb83c023838e9e649bb661a4adbcbfaefee7be19ecf442932852f",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_26/winning_upper_label_chain.csv",
+    "bytes": 1385,
+    "sha256": "7328aa6325b425efbeadb0a84e978cb67b7ce3040aa3ca3cec10ef827a6cdbc9",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_27/case_summary.csv",
+    "bytes": 358,
+    "sha256": "dd23132c15a732f7ae0cb8264923efc2bc3d3a8f52b884c96bd2f55013c5e64b",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_27/first_below_reference_label_chain.csv",
+    "bytes": 1387,
+    "sha256": "7e000bd4de9c72eb40f1bd21e84e3cbc98dc1cf28b059075afe23ce5f377cdc2",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_27/independent_assessment.csv",
+    "bytes": 795,
+    "sha256": "258108a5b9bab0fc32d99f6593df1b2b03d1a1bde4af9ab8f1d60f4cd313dd03",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_27/independent_test_points.csv",
+    "bytes": 1213,
+    "sha256": "6c94b43ff9a52c0971b3de6f113a41b9df8dceac3f69ab19d657b91c5fdca14d",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_27/independent_trajectories.mat",
+    "bytes": 4759393,
+    "sha256": "432cd9d111dcd38723fc2a4e31a02eee5a1501225a91063f0b9cb98d87e51d91",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_27/independent_validation.csv",
+    "bytes": 6009,
+    "sha256": "79761325813168f397d58e96f6d1cc9e21c260b8c21e72dc1e04a06c8b10637c",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_27/query_provenance.csv",
+    "bytes": 114654,
+    "sha256": "74a56b60af9a49700a0b31aed8edb6b456a997a1f5d21448ca237b6c904b6ae4",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_27/replay_details.mat",
+    "bytes": 764741,
+    "sha256": "3bb8a256b7543b394231d5dfbea7268216459aeea3e27c533a615eaef6c26268",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_27/replayed_prefix_reason_counts.csv",
+    "bytes": 203,
+    "sha256": "eeaa07e60514d7b14d5ef96efef5057033f56b3811942d6e8c1fb2ef87a3b583",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_27/winning_upper_label_chain.csv",
+    "bytes": 1899,
+    "sha256": "f53c99d4099924dcb11e348c87ccbcbe5eaf01b5b529048a92cd424e1dbaec16",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_28/case_summary.csv",
+    "bytes": 358,
+    "sha256": "3f59a9a86f7d4f5688a17744096383d8d2038b1419141d1c495d4da4edd5f09e",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_28/first_below_reference_label_chain.csv",
+    "bytes": 1387,
+    "sha256": "4446cd34c70c9371d1a3de55ce4666b5f17fed77c73f0494b0f2a15a3334f4e3",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_28/independent_assessment.csv",
+    "bytes": 799,
+    "sha256": "1c482fc4ef324c5c8e0a3717f5218cb6a11be13baf02a3c82f159c469166de9e",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_28/independent_test_points.csv",
+    "bytes": 1216,
+    "sha256": "75ed233d40ab241ef3a401ae0dee9ca2422be5bff3bd0fa4832e719b22debf17",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_28/independent_trajectories.mat",
+    "bytes": 4786670,
+    "sha256": "4daa63198c70078385119162296677bfb2c2b99376959d9e96550c71bf9aa4cc",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_28/independent_validation.csv",
+    "bytes": 6078,
+    "sha256": "501cc6bca1e67632e796875ccdc7bd476e111e7a0e3696938e3ee120448ea415",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_28/query_provenance.csv",
+    "bytes": 103939,
+    "sha256": "61330eaf471bc1aaecdc40fa028545800e091a95353cd351669366c10f5c5f17",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_28/replay_details.mat",
+    "bytes": 808860,
+    "sha256": "2487d9c7636dc565db0deafaddf1664500607095d6abaa3e9d6ece690e77d85a",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_28/replayed_prefix_reason_counts.csv",
+    "bytes": 202,
+    "sha256": "c9d4f66697ad5203f05bcde946b012536179c26fb42d08912e85c1400ade17b1",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_28/winning_upper_label_chain.csv",
+    "bytes": 1390,
+    "sha256": "a48a355a6168752a4c015310ab77197147cc6b1d633624f867f857ceae018235",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_29/case_summary.csv",
+    "bytes": 358,
+    "sha256": "a8cff1179b077ee1b55e2eaf004f3fa06ff738069fa6b4c597190bfe93edb6aa",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_29/first_below_reference_label_chain.csv",
+    "bytes": 1385,
+    "sha256": "0787a4c528162d1875a57294cf8edb0a9cc1c8e7f2d02fac0ed64b90a1460c82",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_29/independent_assessment.csv",
+    "bytes": 795,
+    "sha256": "17ed1c946fc808a8bcfb6bc3b2871a9e4b61e58744a822f9a3de454afdd2e392",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_29/independent_test_points.csv",
+    "bytes": 1206,
+    "sha256": "3fe6b2af92cb7decadbf59d3ce1ab803ef14c15a53d6ff76901abede451fbb4e",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_29/independent_trajectories.mat",
+    "bytes": 4760396,
+    "sha256": "f47a04c31a9307eac0829e13705358457f9c114e22994c651343ac9a47433994",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_29/independent_validation.csv",
+    "bytes": 5995,
+    "sha256": "503f23a388f704200481bb81fddf9d796da85adadb910abaf0c639f6a2d41692",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_29/query_provenance.csv",
+    "bytes": 125179,
+    "sha256": "98d61a2a80a37ab3c34b922acc863a4b0ed4588d2077cd0ca5bf7bbf6f38e78f",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_29/replay_details.mat",
+    "bytes": 819748,
+    "sha256": "2530c1905e49d429c5da5b149bbc8e910d900d338b98572afb49894c48f55a7f",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_29/replayed_prefix_reason_counts.csv",
+    "bytes": 203,
+    "sha256": "1e95f1eecdc42dfda3e5300bd578d9120462152bc87e625a52cd777eb9e41e8a",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_29/winning_upper_label_chain.csv",
+    "bytes": 1894,
+    "sha256": "e2447e59239ba22c570daf9eaf655fc05574f34578e582ba35f76ecf5c9edaf5",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_30/case_summary.csv",
+    "bytes": 358,
+    "sha256": "718409b23f6b2780fe3a621d89a00becd8d317d116fb0aa9a1e0b41407d4e242",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_30/first_below_reference_label_chain.csv",
+    "bytes": 1901,
+    "sha256": "a75b301c83cfbb94d20f5f246ff5d62199d6b6216a589c1e61ef319ed4a632d8",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_30/independent_assessment.csv",
+    "bytes": 1009,
+    "sha256": "c112a10435ac2ca405a420d5693669cf25a2b9773fe01ab85bf6d4b018e11703",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_30/independent_test_points.csv",
+    "bytes": 1556,
+    "sha256": "cfdb5c23e43c5dfda8ab8e7b50ce709baeac2864106f5e1e0d5f7287f9ef1a11",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_30/independent_trajectories.mat",
+    "bytes": 6181360,
+    "sha256": "0927f09140255d2d316bf335d6b847fa3674611111c8d1a19acd8738e136370c",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_30/independent_validation.csv",
+    "bytes": 7675,
+    "sha256": "100495de6dcafc6ff31cba94a27054beae8d03a1c58eb7ad4fc5d670435245b2",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_30/query_provenance.csv",
+    "bytes": 134789,
+    "sha256": "6ea102a82343dfe0bc202e8eb66409501266fec9c80bc8db8e7030358f526a86",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_30/replay_details.mat",
+    "bytes": 787531,
+    "sha256": "5f4c659b5759f40e8aa450e8efce5247f3e8be2cb7a3b26636792a54e141f17d",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_30/replayed_prefix_reason_counts.csv",
+    "bytes": 202,
+    "sha256": "1f0426d672de49780dbd5d49522c50c2fde0fb0834ddf28d2fb8938fc716b1a1",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  },
+  {
+    "path": "results/20261029_053219_578/seed_30/winning_upper_label_chain.csv",
+    "bytes": 1898,
+    "sha256": "f6a59f27b389eaa5e0b58ece8f7edb0196b206952d8c62905107110cc9082b42",
+    "archive": "07_Separable4D_Diagnostics_Records_Seeds_21_30.zip"
+  }
+]

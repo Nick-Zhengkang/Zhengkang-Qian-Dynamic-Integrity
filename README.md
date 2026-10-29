@@ -20,6 +20,45 @@ root. Rerunning requires the previous all-90 cache-off Release; the package READ
 gives exact paths and the `parfor` entry point. No original experiment files or old
 Release assets are replaced.
 
+## v17: separable four-dimensional diagnosis and corrections
+
+The v17 supplement provides three independent, completed 30-seed stages:
+
+| Stage | Code and run entry | Recorded result |
+|---|---|---|
+| [Original-label diagnosis](06_Revision_Diagnostics/07_Separable4D_Diagnostics/README.md) | `START_SEPARABLE4D_DIAGNOSTIC.m` | 24/30 midpoint **and upper** radii below reference; 29/30 upper points independently target |
+| [Non-target cache reads off](06_Revision_Diagnostics/08_Separable4D_NoNegativeCache/README.md) | `START_SEPARABLE4D_RETEST_PARFOR.m` | No below-reference estimates; all upper points valid, but 28/30 lower points incorrectly target |
+| [All learned-cell reads off](06_Revision_Diagnostics/09_Separable4D_NoLearnedCache/README.md) | `START_SEPARABLE4D_ALLCACHE_PARFOR.m` | No below-reference estimates; independent support for both endpoints in 30/30 runs |
+
+These support **v17 Section 6.4, Table 6.5, the diagnostic appendix and the updated
+scope statements**. The final median midpoint error is 0.0743364%, with a maximum
+of 1.1785055%; 29/30 runs are within 1%. Seven searches reach the direction limit.
+The 236 intermediate fixed-point terminations were not all independently checked.
+This is not a coupled-model repair, a corrected BO study, or a new speed comparison.
+
+**[Download complete v17 code inputs and raw records](https://github.com/Nick-Zhengkang/Zhengkang-Qian-Dynamic-Integrity/releases/tag/v17-separable4d-2026-10-30)**
+
+The Release contains all **1,817 completed-run files**, including every MAT file,
+independent trajectory, replay, query table, log and source snapshot from these
+three runs, plus complete self-contained runtime/input packages. No failed or
+anomalous records have been removed. Package READMEs link each asset directly.
+
+Extract the three `Runtime_Inputs` ZIPs into the **repository root** to run the
+three packages. Each contains all needed inputs, including the preceding baseline
+records, so earlier Releases and historical desktop paths are not needed for these
+entries. For complete archived outputs also extract all twelve `Records` ZIPs there.
+Do not extract them inside the individual code folder: the ZIP already includes
+the repository-relative prefix. Run one package at a time; do not use `genpath`.
+
+The actual recorded environment for all three runs is **MATLAB R2025b Update 5,
+25.2.0.3177638, Windows (PCWIN64)**, with Parallel Computing Toolbox. Defaults
+retain `parfor` and four process workers. They write new timestamped results.
+From the repository root, run `python 06_Revision_Diagnostics/check_v17_download.py`
+after extracting runtime inputs, or add `--require-records` after extracting all
+records. See [verification scope](06_Revision_Diagnostics/V17_PUBLICATION_CHECKS.json).
+These publication checks are not a fresh MATLAB numerical rerun. AI declarations
+and registers, older experiments and previous Release assets are unchanged.
+
 ## Download the complete Experiment B data
 
 The complete multi-alpha Bayesian-optimization batch is too large for an ordinary Git repository file. It is supplied as a GitHub Release asset:
@@ -48,7 +87,7 @@ The adjacent `CSV_Quick_View` and `Runtime_Source_Snapshot` directories are avai
 | [03_Experiment_C](03_Experiment_C) | Integration-time tests, controlled domain correction, cosine transfer, and separately identified supporting diagnostics |
 | [04_Method_Comparison](04_Method_Comparison) | Original DynIn GA versus adaptive angular-radial search: six models and 360 runs |
 | [05_Thesis_Result_Sources](05_Thesis_Result_Sources) | Retained thesis chapters, tables and numerical exports used to map results to datasets |
-| [06_Revision_Diagnostics](06_Revision_Diagnostics) | Earlier 2D diagnosis, cache ablations and per-alpha statistics, plus the v16 fixed-point correction and 90-case retest |
+| [06_Revision_Diagnostics](06_Revision_Diagnostics) | 2D diagnosis, cache ablations, per-alpha statistics, v16 fixed-point correction, and v17 separable-4D diagnosis and two 30-seed retests |
 
 [THESIS_RESULT_INDEX.csv](THESIS_RESULT_INDEX.csv) maps the reported analyses to entry points and records. [DATASET_MANIFEST.csv](DATASET_MANIFEST.csv) identifies all 11 preserved data batches. Experiment C's time batch includes diagnostic-order studies; the thesis horizon table uses three fixed-grid profiles from that batch. C4 folders contain supporting diagnostics, not additional primary comparison results.
 

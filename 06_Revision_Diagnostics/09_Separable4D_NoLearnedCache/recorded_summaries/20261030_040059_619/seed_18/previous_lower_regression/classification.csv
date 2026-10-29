@@ -1,0 +1,2 @@
+previous_query,state_1,state_2,state_3,state_4,label,reason,recurrence_rule,end_time,sample_count,forced_non_target
+269,0.348673001817815,0.545925617942651,-0.999607732416905,-0.00107256924654343,non_target,left_computational_domain,not_triggered,9.4,189,0

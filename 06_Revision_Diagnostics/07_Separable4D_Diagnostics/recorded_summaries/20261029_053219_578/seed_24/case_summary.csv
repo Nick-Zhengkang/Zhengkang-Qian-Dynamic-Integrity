@@ -1,0 +1,2 @@
+seed,replay_matches,queries_replayed,upper_query,first_under_query,winning_root_query,winning_root_reason,winning_chain_length,upper_independent_outcome,lower_independent_outcome,midpoint_independent_outcome,error_message
+24,1,252,250,0,239,left_computational_domain,2,both_solvers_support_target,both_solvers_support_target,both_solvers_support_target,

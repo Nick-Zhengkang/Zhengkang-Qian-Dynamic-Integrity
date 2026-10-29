@@ -1,0 +1,12 @@
+point_id,role,query,parent_query,original_label,conclusion,original_label_contradicted
+1,chain_initial_state,309,0,non_target,both_solvers_support_non_target,0
+2,chain_initial_state,310,303,target,both_solvers_support_target,0
+3,cache_hit_state,310,303,target,both_solvers_support_target,0
+4,first_writer_state,310,303,target,both_solvers_support_target,0
+5,chain_initial_state,303,197,target,both_solvers_support_target,0
+6,cache_hit_state,303,197,target,both_solvers_support_target,0
+7,first_writer_state,303,197,target,both_solvers_support_target,0
+8,chain_initial_state,197,196,target,both_solvers_support_target,0
+9,cache_hit_state,197,196,target,both_solvers_support_target,0
+10,first_writer_state,197,196,target,both_solvers_support_target,0
+11,chain_initial_state,196,0,target,both_solvers_support_target,0
